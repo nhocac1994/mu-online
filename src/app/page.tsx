@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import PageBackground from '@/components/PageBackground';
-import PWAInstallPrompt from '@/components/PWAInstallPrompt';
 import EventCountdown from '@/components/EventCountdown';
 import siteConfigStatic from '@/config/site.config.json';
 import { getSiteConfig, getDownloadConfig, type SiteConfig, type DownloadLinks } from '@/lib/config-api';
@@ -574,8 +573,6 @@ export default function Home() {
             </div>
           </section>
         </main>
-
-      <PWAInstallPrompt />
     </div>
   );
 }
