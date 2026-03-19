@@ -194,7 +194,7 @@ export default function Home() {
     <div className="min-h-screen relative overflow-x-hidden bg-black">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         <PageBackground />
-        <main className="relative z-10 pt-20 md:pt-[160px]">
+        <main className="relative z-10 pt-0 md:pt-[160px]">
           {/* Hero: full viewport, logo + tên + 2 nút CTA */}
           <section className="min-h-[85vh] flex flex-col items-center justify-center px-4 py-12 relative">
             {/* Chỉ chữ: tên/domain từ config + SEASON 1, căn giữa */}
