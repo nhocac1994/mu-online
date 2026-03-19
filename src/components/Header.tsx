@@ -83,8 +83,15 @@ export default function Header() {
         borderBottom: '1px solid rgba(184, 115, 51, 0.45)',
       }}
     >
-      {/* Hiệu ứng hover: thanh vàng + glow dưới menu (inline để chắc chắn áp dụng) */}
+      {/* Mobile: ẩn nền đen header; desktop: giữ gradient */}
       <style dangerouslySetInnerHTML={{ __html: `
+        @media (max-width: 767px) {
+          header[data-header-version="2"] {
+            background: transparent !important;
+            box-shadow: none !important;
+            border-bottom: none !important;
+          }
+        }
         header .nav-link-glow { position: relative; padding-bottom: 10px; transition: color 0.2s, text-shadow 0.2s; }
         header .nav-link-glow::after {
           content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
