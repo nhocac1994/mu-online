@@ -200,8 +200,8 @@ export default function Header() {
         LOGIN
       </Link>
 
-      {/* Mobile - cùng chiều cao 80px */}
-      <div className="md:hidden flex items-center justify-between h-0 px-4">
+      {/* Mobile - thanh nav 80px */}
+      <div className="md:hidden flex items-center justify-between h-20 px-4">
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -247,27 +247,54 @@ export default function Header() {
 
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden overflow-hidden border-t border-[#B87333]/30"
-            style={{ background: 'rgba(30, 30, 35, 0.98)' }}
-          >
-            <div className="py-4 px-4 space-y-1">
-              {allNavLinks.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block py-3 px-4 text-base font-medium uppercase tracking-wider rounded hover:bg-white/5"
-                  style={{ fontFamily: 'system-ui, sans-serif', color: 'rgba(255, 255, 255, 0.98)' }}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
+          <>
+            {/* Overlay: bấm ra ngoài để đóng menu */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden fixed inset-0 top-20 z-[99] bg-black/50"
+              aria-hidden
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <motion.div
+              key="mobile-menu"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.25 }}
+              className="md:hidden overflow-hidden border-t border-[#B87333]/30 relative z-[101]"
+              style={{ background: 'rgba(30, 30, 35, 0.98)' }}
+            >
+              <div className="py-4 px-4 space-y-1">
+                <div className="flex items-center justify-between mb-2 px-2">
+                  <span className="text-sm font-semibold text-[#B87333] uppercase">Menu</span>
+                  <button
+                    type="button"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="p-2 rounded border border-white/20 text-white hover:bg-white/10"
+                    aria-label="Đóng menu"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                {allNavLinks.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-3 px-4 text-base font-medium uppercase tracking-wider rounded hover:bg-white/5"
+                    style={{ fontFamily: 'system-ui, sans-serif', color: 'rgba(255, 255, 255, 0.98)' }}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
