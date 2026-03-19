@@ -3,13 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 :root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-main);
+  --font-mono: var(--font-main);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,7 +33,7 @@ html {
 body {
   background: #000000;
   color: var(--foreground);
-  font-family: 'Cinzel', 'Times New Roman', serif;
+  font-family: var(--font-main);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -987,7 +988,7 @@ h3.mu-retro-title,
 h4.mu-retro-title,
 h5.mu-retro-title,
 h6.mu-retro-title {
-  font-family: 'Cinzel', 'Times New Roman', serif !important;
+  font-family: var(--font-main) !important;
   color: #FFD700 !important;
   font-weight: 700 !important;
   text-shadow: 
@@ -1008,7 +1009,7 @@ h3.mu-retro-title-small,
 h4.mu-retro-title-small,
 h5.mu-retro-title-small,
 h6.mu-retro-title-small {
-  font-family: 'Cinzel', 'Times New Roman', serif !important;
+  font-family: var(--font-main) !important;
   color: #FFA500 !important;
   font-weight: 700 !important;
   text-shadow: 
@@ -1082,7 +1083,7 @@ h6.mu-retro-title-small {
   background: linear-gradient(135deg, #FFA500 0%, #FF8C00 50%, #FF7F00 100%);
   border: 2px solid #FFD700;
   color: #000000;
-  font-family: 'Cinzel', serif;
+  font-family: var(--font-main);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1164,7 +1165,7 @@ h4.mu-text-gold,
 h5.mu-text-gold,
 h6.mu-text-gold {
   color: #FFD700 !important;
-  font-family: 'Cinzel', 'Times New Roman', serif !important;
+  font-family: var(--font-main) !important;
   font-weight: 700 !important;
   text-shadow: 
     0 0 12px rgba(255, 215, 0, 0.9),
@@ -1188,7 +1189,7 @@ h4.mu-text-orange,
 h5.mu-text-orange,
 h6.mu-text-orange {
   color: #FFA500 !important;
-  font-family: 'Cinzel', 'Times New Roman', serif !important;
+  font-family: var(--font-main) !important;
   font-weight: 700 !important;
   text-shadow: 
     0 0 10px rgba(255, 165, 0, 0.9),
@@ -1212,21 +1213,21 @@ h6.mu-text-orange {
   color: #d1d5db;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
   font-weight: 500;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
 }
 
 .text-gray-400 {
   color: #9ca3af;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
   font-weight: 500;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
 }
 
 /* Text trắng tối hơn */
 .text-white {
   color: #ffffff;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
 }
 
 /* Retro Background Overlay */
@@ -1334,7 +1335,7 @@ h6.mu-text-orange {
   color: var(--mu-text-gold);
   padding: 10px 15px;
   border-radius: 4px;
-  font-family: Arial, Helvetica, sans-serif !important;
+  font-family: var(--font-main) !important;
   font-variant: normal !important;
   font-feature-settings: normal !important;
   text-transform: none !important;
@@ -1391,7 +1392,7 @@ input[type="text"].mu-retro-input:focus,
 input[type="password"].mu-retro-input:focus,
 input[type="email"].mu-retro-input:focus,
 input[type="tel"].mu-retro-input:focus {
-  font-family: Arial, Helvetica, sans-serif !important;
+  font-family: var(--font-main) !important;
   font-variant: normal !important;
   font-feature-settings: normal !important;
   text-transform: none !important;
@@ -1585,10 +1586,10 @@ input.mu-retro-input:-ms-input-placeholder,
 }
 
 /* Gold Metallic Text */
-/* Classic Text Style - Kiểu cổ điển cho toàn bộ trang */
+/* Classic Text Style - Đồng nhất font toàn trang */
 .mu-classic-text,
 .mu-classic-text * {
-  font-family: 'Cinzel', 'Times New Roman', serif !important;
+  font-family: var(--font-main) !important;
   color: #FFA500 !important;
   font-weight: 700 !important;
   text-shadow: 
@@ -1655,7 +1656,7 @@ input.mu-retro-input:-ms-input-placeholder,
 .mu-retro-title-small.text-3xl,
 .mu-retro-title-small.text-4xl,
 .mu-retro-title-small.text-5xl {
-  font-family: 'Cinzel', 'Times New Roman', serif !important;
+  font-family: var(--font-main) !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 1px !important;
@@ -1666,12 +1667,12 @@ input.mu-retro-input:-ms-input-placeholder,
 .mu-text-orange *,
 .mu-retro-title *,
 .mu-retro-title-small * {
-  font-family: 'Cinzel', 'Times New Roman', serif !important;
+  font-family: var(--font-main) !important;
   text-transform: uppercase !important;
 }
 
 .mu-gold-metallic {
-  font-family: 'Cinzel', 'Times New Roman', serif;
+  font-family: var(--font-main);
   font-weight: 700;
   background: linear-gradient(135deg, 
     #FFD700 0%,

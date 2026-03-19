@@ -15,7 +15,7 @@ const LogoFallback = ({ className = 'w-20 h-20' }: { className?: string }) => (
       background: 'linear-gradient(180deg,rgb(104, 102, 102) 0%,rgb(124, 121, 121) 100%)',
       borderColor: 'rgba(255, 215, 0, 0.6)',
       boxShadow: 'inset 0 0 24px rgba(0,0,0,0.5)',
-      fontFamily: 'Cinzel, serif',
+      fontFamily: 'var(--font-main)',
       fontSize: 'clamp(1.75rem, 4vw, 2.75rem)',
       textShadow: '0 0 14px rgba(255, 215, 0, 0.4)',
     }}
@@ -34,6 +34,12 @@ const rightNavLinks = [
   { label: 'Bản tin', href: '/news' },
 ];
 const allNavLinks = [...leftNavLinks, ...rightNavLinks];
+
+const LoginIcon = ({ className = 'w-6 h-6' }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+  </svg>
+);
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -124,7 +130,7 @@ export default function Header() {
                 className="nav-link-glow text-base md:text-[17px] font-medium uppercase tracking-wider whitespace-nowrap"
                 data-active={isActive ? 'true' : undefined}
                 style={{
-                  fontFamily: 'system-ui, -apple-system, sans-serif',
+                  fontFamily: 'var(--font-main)',
                   color: isActive ? '#FFD700' : 'rgba(255, 255, 255, 0.98)',
                   textShadow: isActive ? '0 0 8px rgba(255, 215, 0, 0.3)' : '0 1px 2px rgba(0,0,0,0.3)',
                 }}
@@ -174,7 +180,7 @@ export default function Header() {
                 className="nav-link-glow text-base md:text-[17px] font-medium uppercase tracking-wider whitespace-nowrap"
                 data-active={isActive ? 'true' : undefined}
                 style={{
-                  fontFamily: 'system-ui, -apple-system, sans-serif',
+                  fontFamily: 'var(--font-main)',
                   color: isActive ? '#FFD700' : 'rgba(255, 255, 255, 0.98)',
                   textShadow: isActive ? '0 0 8px rgba(255, 215, 0, 0.3)' : '0 1px 2px rgba(0,0,0,0.3)',
                 }}
@@ -187,16 +193,15 @@ export default function Header() {
       </nav>
       <Link
         href="/login"
-        className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 items-center px-6 py-2.5 text-base font-semibold uppercase tracking-wider text-white transition-all hover:brightness-110"
+        className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 items-center justify-center w-12 h-12 text-white transition-all hover:brightness-110 rounded-lg"
         style={{
           background: 'linear-gradient(180deg, #5c4535 0%, #4a3728 50%, #3d2e22 100%)',
           border: '2px solid #B87333',
-          borderRadius: '8px',
           boxShadow: '0 4px 14px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)',
-          textShadow: '0 1px 2px rgba(0,0,0,0.6)',
         }}
+        aria-label="Đăng nhập"
       >
-        LOGIN
+        <LoginIcon className="w-6 h-6" />
       </Link>
       </div>
 
@@ -235,13 +240,14 @@ export default function Header() {
         </Link>
         <Link
           href="/login"
-          className="px-4 py-2.5 text-xs font-bold uppercase text-white rounded-lg"
+          className="flex items-center justify-center w-11 h-11 text-white rounded-lg"
           style={{
             background: 'linear-gradient(180deg, #4a3728 0%, #3d2e22 100%)',
             border: '2px solid #B87333',
           }}
+          aria-label="Đăng nhập"
         >
-          LOGIN
+          <LoginIcon className="w-6 h-6" />
         </Link>
       </div>
 
@@ -287,7 +293,7 @@ export default function Header() {
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-3 px-4 text-base font-medium uppercase tracking-wider rounded hover:bg-white/5"
-                    style={{ fontFamily: 'system-ui, sans-serif', color: 'rgba(255, 255, 255, 0.98)' }}
+                    style={{ fontFamily: 'var(--font-main)', color: 'rgba(255, 255, 255, 0.98)' }}
                   >
                     {item.label}
                   </Link>

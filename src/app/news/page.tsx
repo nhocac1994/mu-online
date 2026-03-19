@@ -43,7 +43,7 @@ export default function News() {
     : newsItems;
 
   return (
-    <div className="min-h-screen relative bg-black" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+    <div className="min-h-screen relative bg-black" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
       <div className="relative z-10 pt-24 pb-12 px-4">
       <div className="max-w-5xl mx-auto">

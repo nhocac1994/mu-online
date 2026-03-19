@@ -9,7 +9,7 @@ import { getSiteConfig, getDownloadConfig, type SiteConfig, type DownloadLinks }
 const SECTION_HEADER_STYLE = {
   background: 'rgba(40, 40, 45, 0.95)',
   color: '#E8A84A',
-  fontFamily: 'system-ui, -apple-system, sans-serif',
+  fontFamily: 'var(--font-main)',
   fontSize: '0.9rem',
   paddingTop: '1.5rem',
   fontWeight: 700,
@@ -96,7 +96,7 @@ export default function Download() {
             </span>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-0 p-4 md:p-6" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+          <div className="grid md:grid-cols-2 gap-0 p-4 md:p-6" style={{ fontFamily: 'var(--font-main)' }}>
             {/* CỘT TRÁI */}
             <div className="space-y-6">
               {/* Client Downloads */}

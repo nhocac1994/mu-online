@@ -84,7 +84,7 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen relative bg-black flex flex-col" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+    <div className="min-h-screen relative bg-black flex flex-col" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
       <div className="relative z-10 flex flex-col flex-1 pt-24 pb-12 px-4">
       {/* Breadcrumb */}

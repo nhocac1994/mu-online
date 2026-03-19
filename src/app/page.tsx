@@ -202,7 +202,7 @@ export default function Home() {
               <h1
                 className="font-bold text-white tracking-wide"
                 style={{
-                  fontFamily: 'Cinzel, serif',
+                  fontFamily: 'var(--font-main)',
                   fontSize: 'clamp(1.75rem, 5vw, 3rem)',
                   textShadow: '0 0 20px rgba(255,255,255,0.3), 0 2px 8px rgba(0,0,0,0.8)',
                 }}
@@ -293,7 +293,7 @@ export default function Home() {
               >
                 <h3
                   className="font-bold uppercase tracking-widest"
-                  style={{ color: '#FFD700', fontFamily: 'Cinzel, serif', fontSize: 'clamp(1rem, 2.2vw, 1.25rem)' }}
+                  style={{ color: '#FFD700', fontFamily: 'var(--font-main)', fontSize: 'clamp(1rem, 2.2vw, 1.25rem)' }}
                 >
                   Sự kiện
                 </h3>
@@ -327,7 +327,7 @@ export default function Home() {
                   className="font-bold uppercase tracking-widest"
                   style={{
                     color: '#FFD700',
-                    fontFamily: 'Cinzel, serif',
+                    fontFamily: 'var(--font-main)',
                     fontSize: 'clamp(1rem, 2.2vw, 1.25rem)',
                     textShadow: '0 1px 2px rgba(0,0,0,0.5)',
                   }}
@@ -422,7 +422,7 @@ export default function Home() {
                 <Link
                   href="/news"
                   className="inline-block text-white font-semibold uppercase tracking-wider transition-colors duration-200 hover:text-[#FFD700] hover:underline"
-                  style={{ fontSize: '0.9rem', fontFamily: 'system-ui, -apple-system, sans-serif' }}
+                  style={{ fontSize: '0.9rem', fontFamily: 'var(--font-main)' }}
                 >
                   Xem tất cả tin →
                 </Link>
@@ -446,7 +446,7 @@ export default function Home() {
               >
                 <h3
                   className="font-bold uppercase tracking-widest"
-                  style={{ color: '#FFD700', fontFamily: 'Cinzel, serif', fontSize: 'clamp(1rem, 2.2vw, 1.25rem)' }}
+                  style={{ color: '#FFD700', fontFamily: 'var(--font-main)', fontSize: 'clamp(1rem, 2.2vw, 1.25rem)' }}
                 >
                   Top players
                 </h3>
@@ -517,7 +517,7 @@ export default function Home() {
               >
                 <h3
                   className="font-bold uppercase tracking-widest"
-                  style={{ color: '#FFD700', fontFamily: 'Cinzel, serif', fontSize: 'clamp(1rem, 2.2vw, 1.25rem)' }}
+                  style={{ color: '#FFD700', fontFamily: 'var(--font-main)', fontSize: 'clamp(1rem, 2.2vw, 1.25rem)' }}
                 >
                   Top guilds
                 </h3>

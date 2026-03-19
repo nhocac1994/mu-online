@@ -316,7 +316,7 @@ const EventCountdown: React.FC = () => {
             <div className="flex items-center justify-between gap-2">
               <span
                 className="font-semibold uppercase truncate leading-tight"
-                style={{ color: '#FFD700', fontSize: '0.8rem', fontFamily: 'Cinzel, serif' }}
+                style={{ color: '#FFD700', fontSize: '0.8rem', fontFamily: 'var(--font-main)' }}
               >
                 {event.name}
                 {isEventRunning(event) && <span className="ml-1 text-[0.65rem] opacity-90 font-sans">(Đang diễn ra)</span>}

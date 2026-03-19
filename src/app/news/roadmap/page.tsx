@@ -13,7 +13,7 @@ export default function NewsRoadmap() {
   }, []);
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-black" style={{ fontFamily: 'system-ui, sans-serif' }}>
+    <div className="min-h-screen relative overflow-hidden bg-black" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
       <div className="fixed inset-0 bg-black/40 z-[1]" aria-hidden />
       <div className="relative z-10" style={{ paddingTop: '92px' }}>

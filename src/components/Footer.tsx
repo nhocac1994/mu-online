@@ -80,7 +80,7 @@ const footerColumns = [
   },
 ];
 
-const footerFont = 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+const footerFont = 'var(--font-main)';
 
 export default function Footer() {
   const [siteConfig, setSiteConfig] = useState<SiteConfig | null>(siteConfigStatic as unknown as SiteConfig);

@@ -59,7 +59,7 @@ export default function Info() {
   }, []);
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-black" style={{ fontFamily: 'Cinzel, serif' }}>
+    <div className="min-h-screen relative overflow-hidden bg-black" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
       {/* Content */}
       <div className="relative z-10" style={{ paddingTop: '92px' }}>
