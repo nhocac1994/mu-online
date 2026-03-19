@@ -162,9 +162,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <SecurityGuard />
-        <div className="hidden md:block">
-          <Header />
-        </div>
+        <Header />
         {children}
         <Footer />
       </body>
