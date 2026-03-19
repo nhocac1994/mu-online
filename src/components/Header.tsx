@@ -83,10 +83,15 @@ export default function Header() {
         borderBottom: '1px solid rgba(184, 115, 51, 0.45)',
       }}
     >
-      {/* Mobile: chỉ ẩn nền đen (header vẫn hiện menu + logo + LOGIN); desktop: giữ gradient */}
+      {/* Mobile: ẩn nền đen; ép header sát top, không margin/padding tạo khoảng trống */}
       <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 767px) {
           header[data-header-version="2"] {
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            margin: 0 !important;
+            padding-top: 0 !important;
             background: transparent !important;
             box-shadow: none !important;
             border-bottom: none !important;
