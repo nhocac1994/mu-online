@@ -201,7 +201,7 @@ export default function Header() {
       </Link>
 
       {/* Mobile - cùng chiều cao 80px */}
-      <div className="md:hidden flex items-center justify-between h-20 px-4">
+      <div className="md:hidden flex items-center justify-between h-0 px-4">
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
