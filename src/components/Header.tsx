@@ -76,7 +76,7 @@ export default function Header() {
   return (
     <header
       data-header-version="2"
-      className="fixed right-0 left-0 top-0 z-[100] h-20 overflow-visible"
+      className="fixed right-0 left-0 top-0 z-[100] overflow-visible"
       style={{
         background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.85) 100%)',
         boxShadow: '0 4px 24px rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.03) inset',
@@ -110,7 +110,8 @@ export default function Header() {
           width: 85% !important; box-shadow: 0 0 16px #FFD700, 0 0 32px rgba(255,215,0,0.7) !important;
         }
       `}} />
-      {/* Thanh nav cao 80px (trùng với header); logo gấp đôi (160px), nửa trong header nửa tràn xuống */}
+      {/* Desktop: module riêng, tự set chiều cao h-20 */}
+      <div className="hidden md:block h-20 relative">
       <nav className="relative max-w-7xl mx-auto px-6 h-full min-h-0 flex items-center justify-between overflow-visible">
         {/* Trái: Trang chủ | Xếp hạng */}
         <div className="hidden md:flex flex-1 items-center justify-end gap-8 pr-20 md:pr-24">
@@ -184,8 +185,6 @@ export default function Header() {
           })}
         </div>
       </nav>
-
-      {/* LOGIN cố định góc phải, nằm trong thanh header 80px (không tràn xuống dưới) */}
       <Link
         href="/login"
         className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 items-center px-6 py-2.5 text-base font-semibold uppercase tracking-wider text-white transition-all hover:brightness-110"
@@ -199,8 +198,9 @@ export default function Header() {
       >
         LOGIN
       </Link>
+      </div>
 
-      {/* Mobile - thanh nav 80px */}
+      {/* Mobile: module riêng, tự set chiều cao h-20 */}
       <div className="md:hidden flex items-center justify-between h-20 px-4">
         <button
           type="button"
