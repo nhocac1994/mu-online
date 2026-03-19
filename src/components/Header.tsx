@@ -122,8 +122,8 @@ export default function Header() {
           })}
         </div>
 
-        {/* Logo 160px (gấp đôi header 80px): nửa trong header, nửa tràn xuống; căn giữa ngang, mép trên logo = mép trên header */}
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 flex-shrink-0 pointer-events-none w-30 h-30">
+        {/* Logo 160px (desktop only): ẩn trên mobile để tránh trùng với logo trong thanh mobile */}
+        <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 flex-shrink-0 pointer-events-none w-30 h-30">
           <Link href="/" className="pointer-events-auto flex items-center justify-center w-full h-full">
             <div
               className="w-30 h-30 rounded-full overflow-hidden border-[3px] flex items-center justify-center bg-black/50"
