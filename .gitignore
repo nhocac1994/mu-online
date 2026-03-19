@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+node_modules/
+**/node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -11,6 +13,8 @@
 
 # next.js
 /.next/
+.next/
+**/.next/
 /out/
 
 # production
@@ -90,3 +94,21 @@ Thumbs.db
 # SQL files (except MuOnline.sql if needed for schema)
 *.sql
 !MuOnline.sql
+
+# Backend API build files
+backend-api/dist/*.exe
+backend-api/dist/mu-backend-api.exe
+backend-api/*.exe
+backend-api/config.txt
+backend-api/.env
+backend-api/config.vps
+
+# Backend build directory (keep source, ignore compiled)
+backend-api/dist/*.js.map
+
+# Test files
+*test*.html
+*test*.sh
+
+# Backend (chỉ đẩy frontend lên repo)
+/backend/

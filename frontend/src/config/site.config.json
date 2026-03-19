@@ -1,0 +1,58 @@
+{
+  "nameGame": "Mu-hnss1.com",
+  "gameTitle": "Mu Online Season 1",
+  "gameSubtitle": "Hành trình huyền thoại bắt đầu",
+  "serverName": "Mu-hnss1.com",
+  "serverVersion": "Season 1",
+  "serverIP": "your-server-ip",
+  "serverPort": "55900",
+  "linkFacebook": "https://facebook.com/Mu-hnss1.com",
+  "linkDiscord": "https://discord.gg/Mu-hnss1.com",
+  "linkYoutube": "https://youtube.com/@Mu-hnss1.com",
+  "linkZalo": "https://zalo.me/Mu-hnss1.com",
+  "linkTikTok": "https://www.tiktok.com/@Mu-hnss1.com",
+  "email": "support@Mu-hnss1.com",
+  "phone": "033.77.44.456",
+  "address": "Việt Nam",
+  "websiteUrl": "https://Mu-hnss1.com",
+  "websiteName": "Mu-hnss1.com",
+  "expRate": "100x",
+  "dropRate": "50%",
+  "resetLevel": 400,
+  "maxReset": 999,
+  "eventStartDate": "2025-10-10",
+  "eventStartTime": "13:00",
+  "metaDescription": "Mu-hnss1.com - Server Mu Online Season 1 với tỷ lệ exp cao, drop rate tốt. Game MMORPG miễn phí, PvP, Guild System, Events đặc biệt.",
+  "metaKeywords": [
+    "Mu Online",
+    "Mu Online Season 1",
+    "Mu-hnss1.com",
+    "Server Mu Online",
+    "Game Mu Online Việt Nam"
+  ],
+  "logoImage": "/icon.jpg",
+  "bannerImage": "/panael-mu.jpg",
+  "favicon": "/favicon.ico",
+  "primaryColor": "#FFD700",
+  "secondaryColor": "#FFA500",
+  "accentColor": "#FF0000",
+  "downloadLinks": {
+    "mediafire": "https://www.mediafire.com/file/0tp6wj1yko12318/Mu-DauTruongs1.net_v1.1.7z/file",
+    "mega": "https://mega.nz/file/4UNwiZhL#MJzsMKtdv4vQI765iDdd200fdOPZPwSBxoB1xUaacyw",
+    "clientVersion": "v1.1"
+  },
+  "bankTransfer": {
+    "accountNumber": "03566730165",
+    "accountHolder": "NGUYEN VAN A",
+    "bankName": "MB-BANK",
+    "qrCodeUrl": "https://img.vietqr.io/image/MB-0356673016-qr_only.png"
+  },
+  "features": {
+    "pvp": true,
+    "guild": true,
+    "events": true,
+    "reset": true,
+    "chaosMix": true
+  }
+}
+
