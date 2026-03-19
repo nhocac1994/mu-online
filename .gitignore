@@ -50,10 +50,11 @@ clean_*.js
 clean_*.sh
 restart-*.sh
 
-# Documentation files (keep only README.md and SECURITY_GUIDE.md)
+# Documentation files (keep only README.md, SECURITY_GUIDE.md, DEPLOY.md)
 *.md
 !README.md
 !SECURITY_GUIDE.md
+!DEPLOY.md
 
 # Sensitive configuration files
 *config*.js
