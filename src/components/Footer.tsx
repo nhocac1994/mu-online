@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import siteConfigStatic from '@/config/site.config.json';
 import { getSiteConfig, type SiteConfig } from '@/lib/config-api';
 
@@ -111,7 +112,6 @@ export default function Footer() {
   const serverName = currentConfig?.serverName || currentConfig?.nameGame || 'MuDauTruongSS1.net';
   const serverVersion = currentConfig?.serverVersion || 'Season 1';
   const year = new Date().getFullYear();
-  const displayName = serverName.replace(/\.(net|com|vn)$/i, '');
 
   return (
     <footer className="relative z-10 w-full" style={{ background: '#0a0a0a' }}>
@@ -186,20 +186,15 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Giữa: chỉ tên server + season (không icon) */}
-            <div className="flex flex-col items-center gap-0.5 order-1 md:order-2" style={{ fontFamily: footerFont }}>
-              <span
-                className="text-xl font-bold uppercase tracking-wider text-white"
-                style={{
-                  textShadow: '0 0 12px rgba(255,255,255,0.2)',
-                  letterSpacing: '0.08em',
-                }}
-              >
-                {displayName}
-              </span>
-              <span className="text-sm text-[#E8A84A] uppercase tracking-widest">
-                {serverVersion}
-              </span>
+            {/* Giữa: ảnh tên server + season */}
+            <div className="flex flex-col items-center gap-0 order-1 md:order-2" style={{ fontFamily: footerFont }}>
+              <Image
+                src="/NAME.PNG"
+                alt={serverName}
+                width={320}
+                height={80}
+                className="w-auto h-8 md:h-10 object-contain drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]"
+              />
             </div>
 
             {/* Phải: Powered by */}
