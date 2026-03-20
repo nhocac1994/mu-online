@@ -165,23 +165,23 @@ export default function Footer() {
 
       {/* Phần dưới: thanh đen — Copyright | Logo + tên | Powered by */}
       <div
-        className="w-full py-6"
+        className="w-full py-12 md:py-16"
         style={{
           background: '#000000',
           borderTop: '1px solid rgba(255,255,255,0.06)',
         }}
       >
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12">
             {/* Trái: Copyright + disclaimer */}
             <div className="text-center md:text-left order-2 md:order-1" style={{ fontFamily: footerFont }}>
               <p
-                className="text-sm font-semibold uppercase tracking-wide"
+                className="text-lg md:text-xl font-semibold uppercase tracking-wide"
                 style={{ color: '#E8A84A' }}
               >
                 Copyright {year} © {serverName}
               </p>
-              <p className="text-xs mt-1 text-gray-500">
+              <p className="text-sm md:text-base mt-2 text-gray-500">
                 This site is in no way associated or endorsed by Webzen Inc.
               </p>
             </div>
@@ -191,17 +191,17 @@ export default function Footer() {
               <Image
                 src="/NAME.PNG"
                 alt={serverName}
-                width={420}
-                height={100}
-                className="w-auto h-10 md:h-12 object-contain drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]"
+                width={760}
+                height={180}
+                className="w-auto h-20 md:h-24 object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]"
               />
             </div>
 
             {/* Phải: Powered by */}
             <div className="text-center md:text-right order-3" style={{ fontFamily: footerFont }}>
-              <p className="text-xs text-gray-500">
+              <p className="text-sm md:text-base text-gray-500">
                 Powered by{' '}
-                <span className="font-semibold" style={{ color: '#E8A84A' }}>
+                <span className="font-semibold text-base md:text-lg" style={{ color: '#E8A84A' }}>
                   {serverName}
                 </span>
               </p>
