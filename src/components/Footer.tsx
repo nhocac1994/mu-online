@@ -191,9 +191,9 @@ export default function Footer() {
               <Image
                 src="/NAME.PNG"
                 alt={serverName}
-                width={320}
-                height={80}
-                className="w-auto h-8 md:h-10 object-contain drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]"
+                width={420}
+                height={100}
+                className="w-auto h-10 md:h-12 object-contain drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]"
               />
             </div>
 
