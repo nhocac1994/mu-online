@@ -182,25 +182,19 @@ export default function Home() {
     <div className="min-h-screen relative overflow-x-hidden bg-black">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         <PageBackground />
-        <main className="relative z-10 pt-20 md:pt-[160px]">
+        <main className="relative z-10 pt-10 md:pt-[160px]">
           {/* Hero: full viewport, logo + tên + 2 nút CTA */}
           <section className="min-h-[85vh] flex flex-col items-center justify-center px-4 py-12 relative">
             {/* Chỉ chữ: tên/domain từ config + SEASON 1, căn giữa */}
-            <div className="flex flex-col items-center justify-center text-center mb-8 md:mb-12 w-full">
+            <div className="flex flex-col items-center justify-center text-center mb-2 md:mb-4 w-full">
               <Image
                 src="/NAME.PNG"
                 alt={serverName}
-                width={980}
-                height={220}
+                width={480}
+                height={120}
                 priority
-                className="w-full max-w-[820px] h-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]"
+                className="w-full max-w-[520px] md:max-w-[600px] h-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]"
               />
-              <p
-                className="text-white/90 uppercase tracking-widest mt-2"
-                style={{ fontSize: 'clamp(0.8rem, 1.5vw, 0.95rem)' }}
-              >
-                {serverVersion}
-              </p>
             </div>
 
             {/* Phần Đăng ký và Tải xuống: hai khối cạnh nhau, nửa trong suốt, icon riêng */}
