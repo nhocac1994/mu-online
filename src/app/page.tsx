@@ -103,19 +103,7 @@ export default function Home() {
   const currentConfig = siteConfig || (siteConfigStatic as unknown as SiteConfig);
   const serverName = currentConfig?.serverName || 'MuDauTruongSS1.net';
   const serverVersion = currentConfig?.serverVersion || 'Season 1';
-  const displayName = serverName.replace(/\.(net|com|vn)$/i, '').toUpperCase();
   const downloadSize = '397.5 MB';
-
-  // Tên/domain hiển thị trên hero: từ websiteUrl (hostname) hoặc websiteName/serverName trong config
-  const heroTitle = (() => {
-    const cfg = currentConfig as { websiteUrl?: string; websiteName?: string };
-    try {
-      if (cfg?.websiteUrl) return new URL(cfg.websiteUrl).hostname;
-    } catch {
-      // URL không hợp lệ thì bỏ qua
-    }
-    return cfg?.websiteName || serverName;
-  })();
 
   useEffect(() => {
     setIsClient(true);
@@ -199,16 +187,14 @@ export default function Home() {
           <section className="min-h-[85vh] flex flex-col items-center justify-center px-4 py-12 relative">
             {/* Chỉ chữ: tên/domain từ config + SEASON 1, căn giữa */}
             <div className="flex flex-col items-center justify-center text-center mb-8 md:mb-12 w-full">
-              <h1
-                className="font-bold text-white tracking-wide"
-                style={{
-                  fontFamily: 'var(--font-main)',
-                  fontSize: 'clamp(1.75rem, 5vw, 3rem)',
-                  textShadow: '0 0 20px rgba(255,255,255,0.3), 0 2px 8px rgba(0,0,0,0.8)',
-                }}
-              >
-                {heroTitle}
-              </h1>
+              <Image
+                src="/NAME.PNG"
+                alt={serverName}
+                width={980}
+                height={220}
+                priority
+                className="w-full max-w-[820px] h-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]"
+              />
               <p
                 className="text-white/90 uppercase tracking-widest mt-2"
                 style={{ fontSize: 'clamp(0.8rem, 1.5vw, 0.95rem)' }}
