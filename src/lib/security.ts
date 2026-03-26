@@ -81,10 +81,11 @@ export function validatePassword(password: string | null | undefined): { valid: 
     return { valid: false, error: 'Password is required' };
   }
   
-  if (password.length < 6) {
-    return { valid: false, error: 'Password phải có ít nhất 6 ký tự' };
+  // Mu Online / backend thường cho phép 4–10 ký tự
+  if (password.length < 4) {
+    return { valid: false, error: 'Mật khẩu phải có ít nhất 4 ký tự' };
   }
-  
+
   if (password.length > 20) {
     return { valid: false, error: 'Password quá dài (tối đa 20 ký tự)' };
   }

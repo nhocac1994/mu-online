@@ -39,11 +39,12 @@ export async function GET(request: NextRequest) {
     const token = request.headers.get('authorization')?.replace('Bearer ', '') || 
                   request.headers.get('x-auth-token') || '';
 
-    // Gọi Backend API
-    const backendResponse = await fetch(getBackendUrl('/api/characters'), {
+    const backendUrl = new URL(getBackendUrl('/api/characters'));
+    backendUrl.searchParams.set('accountId', accountId);
+
+    const backendResponse = await fetch(backendUrl.toString(), {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
         ...(token && { 'Authorization': `Bearer ${token}` }),
       },
     });

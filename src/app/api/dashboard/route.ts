@@ -122,11 +122,12 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ success: true, data: sampleData });
     }
 
-    // Gọi Backend API
-    const backendResponse = await fetch(getBackendUrl('/api/dashboard'), {
+    const backendUrl = new URL(getBackendUrl('/api/dashboard'));
+    backendUrl.searchParams.set('accountId', accountId);
+
+    const backendResponse = await fetch(backendUrl.toString(), {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
       },
     });
