@@ -44,7 +44,7 @@ export async function GET() {
       message: 'Không thể kết nối đến backend',
       error: error instanceof Error ? error.message : 'Unknown error',
       backendUrl: getBackendUrl('/health'),
-      hint: 'Kiểm tra: 1) Backend đang chạy trên VPS, 2) Firewall đã mở port 56666, 3) IP đúng trong .env.local',
+      hint: 'Kiểm tra: 1) Backend đang chạy, 2) Firewall đã mở đúng port, 3) NEXT_PUBLIC_BACKEND_API_URL trong .env.local',
     }, { status: 500 });
   }
 }

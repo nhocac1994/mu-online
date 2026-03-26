@@ -1,11 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getBackendUrl } from '@/config/backend.config';
 import { securityMiddleware } from '@/lib/security-middleware';
+import { RANKING_LEVEL_FALLBACK } from '@/lib/ranking-fallback-data';
+
+function fallbackResponse() {
+  return NextResponse.json({
+    success: true,
+    data: RANKING_LEVEL_FALLBACK,
+    message: 'Dữ liệu mẫu (backend ranking chưa kết nối được).',
+  });
+}
 
 export async function GET(request: NextRequest) {
   try {
-    // ✅ Security: Kiểm tra bảo mật tổng quát
-    const securityCheck = await securityMiddleware(request, '/api/rankings/level');
+    let securityCheck: Awaited<ReturnType<typeof securityMiddleware>>;
+    try {
+      securityCheck = await securityMiddleware(request, '/api/rankings/level');
+    } catch (mwErr) {
+      console.error('Rankings level securityMiddleware:', mwErr);
+      return fallbackResponse();
+    }
     if (securityCheck && !securityCheck.allowed) {
       return NextResponse.json({ 
         success: false, 
@@ -22,44 +36,38 @@ export async function GET(request: NextRequest) {
     });
 
     if (!backendResponse.ok) {
-      const errorText = await backendResponse.text();
-      console.error('Backend API error:', backendResponse.status, errorText);
-      return NextResponse.json({
-        success: false,
-        message: `Lỗi từ backend API: ${backendResponse.status}`
-      }, { status: backendResponse.status });
+      const errorText = await backendResponse.text().catch(() => '');
+      console.warn('Ranking level backend:', backendResponse.status, errorText);
+      return fallbackResponse();
     }
 
-    const backendData = await backendResponse.json();
+    let backendData: { success?: boolean; data?: unknown; message?: string };
+    try {
+      backendData = await backendResponse.json();
+    } catch {
+      return fallbackResponse();
+    }
 
-    if (backendData.success) {
-      // Transform data để match với format frontend cần
-          const transformedData = backendData.data.map((char: any) => ({
-            account: char.AccountID || char.account || '',
-            character: char.Name || char.character || '',
-            class: char.Class ?? char.class ?? 0,
-            resets: char.ResetCount ?? char.resets ?? 0,
-            level: char.cLevel ?? char.level ?? 0,
-            isOnline: char.IsOnline ?? char.isOnline ?? 0
-          }));
+    if (backendData.success && Array.isArray(backendData.data)) {
+      const transformedData = backendData.data.map((char: any) => ({
+        account: char.AccountID || char.account || '',
+        character: char.Name || char.character || '',
+        class: char.Class ?? char.class ?? 0,
+        resets: char.ResetCount ?? char.resets ?? 0,
+        level: char.cLevel ?? char.level ?? 0,
+        isOnline: char.IsOnline ?? char.isOnline ?? 0,
+      }));
 
       return NextResponse.json({
         success: true,
         data: transformedData,
-        message: 'Lấy danh sách ranking thành công!'
+        message: 'Lấy danh sách ranking thành công!',
       });
-    } else {
-      return NextResponse.json({
-        success: false,
-        message: backendData.message || 'Lỗi khi lấy danh sách ranking'
-      }, { status: backendResponse.status });
     }
-    
+
+    return fallbackResponse();
   } catch (error) {
     console.error('Ranking error:', error);
-    return NextResponse.json({
-      success: false,
-      message: 'Lỗi kết nối đến server. Vui lòng thử lại sau.'
-    }, { status: 500 });
+    return fallbackResponse();
   }
 }

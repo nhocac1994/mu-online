@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { RANKING_GUILD_FALLBACK } from '@/lib/ranking-fallback-data';
 
 function isSameGuildData(a: GuildRank[], b: GuildRank[]): boolean {
   if (a.length !== b.length) return false;
@@ -18,14 +19,7 @@ interface GuildRank {
   guildMark?: string | null;
 }
 
-// Dữ liệu mẫu khi backend chưa trả về hoặc lỗi
-const SAMPLE_GUILDS: GuildRank[] = [
-  { guildName: 'MuOnline', guildMaster: 'Demonu', memberCount: 1, score: 1000 },
-  { guildName: 'DragonSlayer', guildMaster: 'TestMu', memberCount: 12, score: 800 },
-  { guildName: 'Phoenix', guildMaster: 'Mazoku', memberCount: 8, score: 600 },
-  { guildName: 'Shadow', guildMaster: 'DarkKnight', memberCount: 5, score: 400 },
-  { guildName: 'Legends', guildMaster: 'TestMu3', memberCount: 3, score: 200 },
-];
+const SAMPLE_GUILDS: GuildRank[] = RANKING_GUILD_FALLBACK;
 
 interface GuildRankingTableProps {
   title: string;

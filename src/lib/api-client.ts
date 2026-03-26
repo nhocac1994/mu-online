@@ -1,10 +1,8 @@
+import { getBackendBaseUrl } from '@/config/backend.config';
+
 /**
- * API Client để kết nối với Backend C#
- * Backend chạy trên VPS với port 55777
+ * API Client — gọi trực tiếp backend (cùng base URL với getBackendUrl / NEXT_PUBLIC_BACKEND_API_URL).
  */
-
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:55777';
-
 export interface ApiResponse<T> {
   success: boolean;
   message: string;
@@ -44,7 +42,7 @@ export interface UpdatePasswordRequest {
 export class ApiClient {
   private baseUrl: string;
 
-  constructor(baseUrl: string = API_BASE_URL) {
+  constructor(baseUrl: string = getBackendBaseUrl()) {
     this.baseUrl = baseUrl;
   }
 

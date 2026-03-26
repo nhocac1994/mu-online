@@ -8,13 +8,10 @@ import EventCountdown from '@/components/EventCountdown';
 import siteConfigStatic from '@/config/site.config.json';
 import { getSiteConfig, getDownloadConfig, type SiteConfig, type DownloadLinks } from '@/lib/config-api';
 
-/**
- * Logo icon cho CTA: có thể dùng ảnh PNG/WebP (đặt trong public/) hoặc SVG fallback.
- * Icon kiểu "sách vàng, khiên đỏ trong khung kim cương" trong mẫu thường là ẢNH do designer
- * vẽ (Photoshop/Illustrator), không phải CSS hay Canvas — bạn đặt file vào public/ và đổi path bên dưới.
- */
-const CTA_ICON_REGISTER = '/icons/icon-registration.png'; // PNG/WebP: sách vàng, khung kim cương
-const CTA_ICON_DOWNLOAD = '/icons/icon-download.png';   // PNG/WebP: khiên đỏ-vàng, khung kim cương
+/** Đặt true khi đã có file trong public/icons/ để tránh 404 */
+const CTA_USE_CUSTOM_PNG_ICONS = false;
+const CTA_ICON_REGISTER = '/icons/icon-registration.png';
+const CTA_ICON_DOWNLOAD = '/icons/icon-download.png';
 
 // Icon Đăng ký: người dùng + dấu cộng (tạo tài khoản)
 const RegisterIcon = ({ className = 'w-12 h-12' }: { className?: string }) => (
@@ -33,9 +30,9 @@ const DownloadIcon = ({ className = 'w-12 h-12' }: { className?: string }) => (
   </svg>
 );
 
-// Hiển thị icon: ưu tiên ảnh (nếu có), không thì dùng SVG
+// Hiển thị icon: chỉ tải PNG khi CTA_USE_CUSTOM_PNG_ICONS và file tồn tại; mặc định SVG (không 404)
 function CTAIcon({ src, alt, fallback }: { src: string; alt: string; fallback: React.ReactNode }) {
-  const [useFallback, setUseFallback] = useState(false);
+  const [useFallback, setUseFallback] = useState(!CTA_USE_CUSTOM_PNG_ICONS);
   const iconSize = 56; // 14 * 4 = 56px cho md
 
   if (useFallback) return <>{fallback}</>;
@@ -49,7 +46,7 @@ function CTAIcon({ src, alt, fallback }: { src: string; alt: string; fallback: R
         height={iconSize}
         className="object-contain w-full h-full"
         onError={() => setUseFallback(true)}
-        unoptimized={src.startsWith('http')}
+        unoptimized={!src.startsWith('http')}
       />
     </div>
   );

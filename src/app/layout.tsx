@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         alt: `${config.nameGame} - ${config.gameTitle} - Hệ thống PvP và chiến đấu`,
       },
       {
-        url: '/logoweb.jpg',
+        url: '/icon.jpg',
         width: 1200,
         height: 630,
         alt: `${config.nameGame} - ${config.gameTitle} - Logo chính thức`,
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${config.nameGame} - ${config.gameTitle} | Server Game MU Online`,
     description: config.metaDescription,
-    images: ['/panael-mu.jpg', '/logoweb.jpg'],
+    images: ['/panael-mu.jpg', '/icon.jpg'],
   },
   robots: {
     index: true,

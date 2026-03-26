@@ -1,19 +1,35 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getBackendUrl } from '@/config/backend.config';
 import { securityMiddleware } from '@/lib/security-middleware';
+import { RANKING_GUILD_FALLBACK } from '@/lib/ranking-fallback-data';
+
+function fallbackResponse() {
+  return NextResponse.json({
+    success: true,
+    data: RANKING_GUILD_FALLBACK,
+    message: 'Dữ liệu mẫu (backend ranking chưa kết nối được).',
+  });
+}
 
 export async function GET(request: NextRequest) {
   try {
-    // ✅ Security: Kiểm tra bảo mật tổng quát
-    const securityCheck = await securityMiddleware(request, '/api/rankings/guild');
+    let securityCheck: Awaited<ReturnType<typeof securityMiddleware>>;
+    try {
+      securityCheck = await securityMiddleware(request, '/api/rankings/guild');
+    } catch (mwErr) {
+      console.error('Rankings guild securityMiddleware:', mwErr);
+      return fallbackResponse();
+    }
     if (securityCheck && !securityCheck.allowed) {
-      return NextResponse.json({ 
-        success: false, 
-        message: securityCheck.error || 'Request không hợp lệ' 
-      }, { status: securityCheck.statusCode || 400 });
+      return NextResponse.json(
+        {
+          success: false,
+          message: securityCheck.error || 'Request không hợp lệ',
+        },
+        { status: securityCheck.statusCode || 400 }
+      );
     }
 
-    // Gọi Backend API
     const backendResponse = await fetch(getBackendUrl('/api/rankings/guild'), {
       method: 'GET',
       headers: {
@@ -21,35 +37,38 @@ export async function GET(request: NextRequest) {
       },
     });
 
-    const backendData = await backendResponse.json();
+    if (!backendResponse.ok) {
+      const errorText = await backendResponse.text().catch(() => '');
+      console.warn('Ranking guild backend:', backendResponse.status, errorText);
+      return fallbackResponse();
+    }
 
-    if (backendData.success) {
-      // Transform data để match với format cũ nếu cần
+    let backendData: { success?: boolean; data?: unknown; message?: string };
+    try {
+      backendData = await backendResponse.json();
+    } catch {
+      return fallbackResponse();
+    }
+
+    if (backendData.success && Array.isArray(backendData.data)) {
       const transformedData = backendData.data.map((guild: any) => ({
         guildName: guild.G_Name || guild.guildName,
         score: guild.G_Score || guild.score || 0,
         guildMaster: guild.G_Master || guild.guildMaster || 'Unknown',
         memberCount: guild.G_Count || guild.memberCount || 0,
-        guildMark: guild.G_Mark || guild.guildMark
+        guildMark: guild.G_Mark || guild.guildMark,
       }));
 
       return NextResponse.json({
         success: true,
         data: transformedData,
-        message: 'Lấy danh sách guild ranking thành công!'
+        message: 'Lấy danh sách guild ranking thành công!',
       });
-    } else {
-      return NextResponse.json({
-        success: false,
-        message: backendData.message || 'Lỗi khi lấy danh sách guild ranking'
-      }, { status: backendResponse.status });
     }
-    
+
+    return fallbackResponse();
   } catch (error) {
     console.error('Guild ranking error:', error);
-    return NextResponse.json({
-      success: false,
-      message: 'Lỗi kết nối đến server. Vui lòng thử lại sau.'
-    }, { status: 500 });
+    return fallbackResponse();
   }
 }

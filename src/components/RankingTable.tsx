@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { RANKING_LEVEL_FALLBACK } from '@/lib/ranking-fallback-data';
 
 function isSameRankingData(a: CharacterRank[], b: CharacterRank[]): boolean {
   if (a.length !== b.length) return false;
@@ -27,13 +28,7 @@ interface RankingTableProps {
   embedded?: boolean;
 }
 
-// Dữ liệu mẫu khi backend chưa trả về hoặc lỗi
-const SAMPLE_CHARACTERS: CharacterRank[] = [
-  { account: '', character: 'TestMu3', class: 66, level: 400, resets: 71 },
-  { account: '', character: 'TestMu', class: 34, level: 400, resets: 50 },
-  { account: '', character: 'Demonu', class: 50, level: 400, resets: 40 },
-  { account: '', character: 'Mazoku', class: 18, level: 400, resets: 0 },
-];
+const SAMPLE_CHARACTERS: CharacterRank[] = RANKING_LEVEL_FALLBACK;
 
 const classNames: { [key: number]: string } = {
   0: 'Dark Wizard',

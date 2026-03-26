@@ -1,4 +1,31 @@
-import { getBackendUrl } from '@/config/backend.config';
+/** Origin nội bộ để server gọi chính proxy Next (fetch Node cần URL tuyệt đối) */
+function getAppOriginForServerFetch(): string {
+  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/+$/, '');
+  if (fromEnv) return fromEnv;
+  if (process.env.VERCEL_URL?.trim()) return `https://${process.env.VERCEL_URL}`;
+  const port = process.env.PORT || '3000';
+  return `http://127.0.0.1:${port}`;
+}
+
+function isBrowser(): boolean {
+  return typeof globalThis !== 'undefined' && typeof (globalThis as { document?: unknown }).document !== 'undefined';
+}
+
+/**
+ * Config từ backend: luôn qua proxy Next `/api/remote/...`.
+ * Không import getBackendUrl ở đây — tránh nhúng `http://...` vào bundle client (Mixed Content trên Vercel HTTPS).
+ */
+function configApiFetchUrl(backendPath: string): string {
+  if (!backendPath.startsWith('/api/config')) {
+    throw new Error(`configApiFetchUrl chỉ hỗ trợ /api/config/* (nhận: ${backendPath})`);
+  }
+  const tail = backendPath.replace(/^\/api\//, '');
+  const proxyPath = `/api/remote/${tail}`;
+  if (isBrowser()) {
+    return proxyPath;
+  }
+  return `${getAppOriginForServerFetch()}${proxyPath}`;
+}
 
 export interface EventConfig {
   id: number;
@@ -69,7 +96,7 @@ export interface SiteConfig {
  */
 export async function getSiteConfig(): Promise<SiteConfig | null> {
   try {
-    const url = getBackendUrl('/api/config');
+    const url = configApiFetchUrl('/api/config');
     console.log('🌐 Gọi API:', url);
     
     const response = await fetch(url, {
@@ -108,8 +135,12 @@ export async function getSiteConfig(): Promise<SiteConfig | null> {
   } catch (error) {
     console.error('❌ Get site config error:', error);
     if (error instanceof TypeError && error.message.includes('fetch')) {
-      console.error('💡 Có thể backend chưa chạy hoặc URL không đúng');
-      console.error('💡 Kiểm tra:', getBackendUrl('/api/config'));
+      console.error('💡 Có thể proxy /api/remote hoặc backend VPS không phản hồi');
+      if (isBrowser()) {
+        console.error('💡 Thử mở cùng site (HTTPS):', `${window.location.origin}/api/remote/config`);
+      } else {
+        console.error('💡 Proxy phía server:', `${getAppOriginForServerFetch()}/api/remote/config`);
+      }
     }
     return null;
   }
@@ -120,7 +151,7 @@ export async function getSiteConfig(): Promise<SiteConfig | null> {
  */
 export async function getEventsConfig(): Promise<EventConfig[]> {
   try {
-    const response = await fetch(getBackendUrl('/api/config/events'), {
+    const response = await fetch(configApiFetchUrl('/api/config/events'), {
       cache: 'no-store',
       headers: {
         'Cache-Control': 'no-cache',
@@ -143,21 +174,29 @@ export async function getEventsConfig(): Promise<EventConfig[]> {
  */
 export async function getDownloadConfig(): Promise<DownloadLinks | null> {
   try {
-    const response = await fetch(getBackendUrl('/api/config/download'), {
+    const response = await fetch(configApiFetchUrl('/api/config/download'), {
       cache: 'no-store',
       headers: {
         'Cache-Control': 'no-cache',
       },
     });
-    const result = await response.json();
-    
-    if (result.success) {
-      return result.data;
+    if (response.ok) {
+      const result = await response.json();
+      if (result.success && result.data) {
+        return result.data;
+      }
     }
-    return null;
+    // Một số backend chỉ trả downloadLinks trong GET /api/config
+    const site = await getSiteConfig();
+    return site?.downloadLinks ?? null;
   } catch (error) {
     console.error('Get download config error:', error);
-    return null;
+    try {
+      const site = await getSiteConfig();
+      return site?.downloadLinks ?? null;
+    } catch {
+      return null;
+    }
   }
 }
 
@@ -166,7 +205,7 @@ export async function getDownloadConfig(): Promise<DownloadLinks | null> {
  */
 export async function getSocialMediaConfig(): Promise<SocialMedia | null> {
   try {
-    const response = await fetch(getBackendUrl('/api/config/social'), {
+    const response = await fetch(configApiFetchUrl('/api/config/social'), {
       cache: 'no-store',
       headers: {
         'Cache-Control': 'no-cache',
@@ -189,7 +228,7 @@ export async function getSocialMediaConfig(): Promise<SocialMedia | null> {
  */
 export async function getBankTransferConfig(): Promise<BankTransfer | null> {
   try {
-    const response = await fetch(getBackendUrl('/api/config/bank'), {
+    const response = await fetch(configApiFetchUrl('/api/config/bank'), {
       cache: 'no-store',
       headers: {
         'Cache-Control': 'no-cache',
@@ -212,7 +251,7 @@ export async function getBankTransferConfig(): Promise<BankTransfer | null> {
  */
 export async function getServerInfoConfig(): Promise<ServerInfo | null> {
   try {
-    const response = await fetch(getBackendUrl('/api/config/server'), {
+    const response = await fetch(configApiFetchUrl('/api/config/server'), {
       cache: 'no-store',
       headers: {
         'Cache-Control': 'no-cache',
