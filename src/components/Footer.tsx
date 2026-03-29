@@ -6,25 +6,8 @@ import Image from 'next/image';
 import siteConfigStatic from '@/config/site.config.json';
 import { getSiteConfig, type SiteConfig } from '@/lib/config-api';
 
-// Nút Back to Top — hình thoi, mũi tên vàng lên trên
-const BackToTopButton = () => (
-  <button
-    type="button"
-    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-    className="flex items-center justify-center gap-1 px-3 py-1.5 rounded transition-transform hover:scale-105"
-    style={{
-      background: 'linear-gradient(180deg, rgba(60,60,60,0.9) 0%, rgba(30,30,30,0.95) 100%)',
-      border: '1px solid rgba(212, 175, 55, 0.65)',
-      boxShadow: '0 0 8px rgba(212, 175, 55, 0.2)',
-    }}
-    aria-label="Về đầu trang"
-  >
-    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#FFD700" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 19V5M5 12l7-7 7 7" />
-    </svg>
-    <span className="text-xs font-bold uppercase text-[#FFD700] tracking-wider hidden sm:inline">Top</span>
-  </button>
-);
+/** Thanh trang trí + về đầu trang — public/panel/top.PNG */
+const FOOTER_TOP_BAR = '/panel/top.PNG';
 
 // Icon nhỏ cho tiêu đề cột (khiên + viên đỏ)
 const ColumnIcon = () => (
@@ -124,11 +107,24 @@ export default function Footer() {
         }}
       >
         <div className="max-w-6xl mx-auto px-4 pt-6 pb-8">
-          {/* Đường kẻ ngang + nút Back to Top giữa */}
-          <div className="flex items-center justify-center gap-4 border-b border-white/10 pb-4 mb-6">
-            <div className="flex-1 h-px bg-white/10" />
-            <BackToTopButton />
-            <div className="flex-1 h-px bg-white/10" />
+          {/* Ảnh top.PNG — căn giữa, bấm để về đầu trang */}
+          <div className="flex justify-center pb-4 mb-6 border-b border-white/10">
+            <button
+              type="button"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="group w-full max-w-3xl bg-transparent p-0 border-0 cursor-pointer transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD700]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#141416]"
+              aria-label="Về đầu trang"
+            >
+              <Image
+                src={FOOTER_TOP_BAR}
+                alt=""
+                width={2398}
+                height={200}
+                className="h-auto w-full object-contain bg-transparent"
+                style={{ backgroundColor: 'transparent' }}
+                aria-hidden
+              />
+            </button>
           </div>
 
           {/* 6 cột navigation */}

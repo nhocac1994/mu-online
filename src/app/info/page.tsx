@@ -62,7 +62,7 @@ export default function Info() {
     <div className="min-h-screen relative overflow-hidden bg-black" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
       {/* Content */}
-      <div className="relative z-10" style={{ paddingTop: '92px' }}>
+      <div className="relative z-10" style={{ paddingTop: '112px' }}>
         {/* Main Content */}
         <main className="relative z-10 py-8">
 

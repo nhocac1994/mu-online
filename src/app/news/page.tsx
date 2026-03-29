@@ -17,6 +17,7 @@ const badge = (type: string) => {
 
 const newsItems = [
   { type: 'Notice', title: 'HƯỚNG DẪN CHƠI - SEASON 1', date: '15/4/2026', link: '/news/guide', excerpt: 'Hướng dẫn chi tiết cách chơi game, từ tạo nhân vật đến các tính năng nâng cao.' },
+  { type: 'Notice', title: 'CÁC LỆNH TRONG GAME (CHAT)', date: '15/4/2026', link: '/news/commands', excerpt: 'Danh sách lệnh chat thường dùng: post, cộng điểm, reset, kho đồ và các lệnh tiện ích trên server.' },
   { type: 'Event', title: 'CÁC SỰ KIỆN TRONG GAME', date: '15/4/2026', link: '/news/events', excerpt: 'Double EXP, Drop Rate Event, PK Tournament và nhiều sự kiện đặc biệt.' },
   { type: 'Update', title: 'LỘ TRÌNH PHÁT TRIỂN SERVER', date: '15/4/2026', link: '/news/roadmap', excerpt: 'Kế hoạch phát triển, tính năng mới và cải thiện trải nghiệm.' },
   { type: 'Notice', title: 'THÔNG BÁO MỞ SERVER', date: '15/4/2026', link: '/news/opening', excerpt: 'Thông báo chính thức mở cửa server.' },
@@ -25,6 +26,7 @@ const newsItems = [
 
 const sidebarLinks = [
   { label: 'Hướng dẫn', href: '/news/guide' },
+  { label: 'Lệnh trong game', href: '/news/commands' },
   { label: 'Sự kiện', href: '/news/events' },
   { label: 'Cập nhật', href: '/news/roadmap' },
   { label: 'Thông báo', href: '/news/opening' },
@@ -45,7 +47,7 @@ export default function News() {
   return (
     <div className="min-h-screen relative bg-black" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
-      <div className="relative z-10 pt-24 pb-12 px-4">
+      <div className="relative z-10 pt-28 pb-12 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
@@ -111,7 +113,7 @@ export default function News() {
             <div className="rounded border border-white/40 bg-black/30 p-5">
               <h3 className="text-[#F39C12] font-bold uppercase tracking-wider text-sm mb-4">Tin gần đây</h3>
               <ul className="space-y-3">
-                {newsItems.slice(0, 4).map((n, i) => (
+                {newsItems.slice(0, 5).map((n, i) => (
                   <li key={i} className="border-b border-white/10 pb-3 last:border-0 last:pb-0">
                     <Link href={n.link} className="text-white text-sm hover:text-[#F39C12] transition-colors block">
                       {n.title}

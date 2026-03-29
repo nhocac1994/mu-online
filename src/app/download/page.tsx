@@ -55,7 +55,7 @@ export default function Download() {
   return (
     <div className="min-h-screen relative bg-black">
       <PageBackground />
-      <div className="relative z-10 pt-24 pb-12 px-4">
+      <div className="relative z-10 pt-28 pb-12 px-4">
         {/* Breadcrumb */}
         <div className="max-w-5xl mx-auto mb-4 flex items-center gap-2 text-sm text-white/80">
           <Link href="/" className="hover:text-[#FFD700] transition-colors" aria-label="Trang chủ">

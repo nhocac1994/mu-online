@@ -15,7 +15,7 @@ export default function RankingsPage() {
   return (
     <div className="min-h-screen relative bg-black" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
-      <div className="relative z-10 pt-24 pb-12 px-4">
+      <div className="relative z-10 pt-28 pb-12 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">

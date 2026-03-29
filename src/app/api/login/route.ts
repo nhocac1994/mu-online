@@ -74,29 +74,6 @@ export async function POST(request: NextRequest) {
       }, { status: 429 });
     }
 
-    // Tài khoản test để xem trang thông tin tài khoản (không cần backend)
-    const TEST_ACCOUNT = { username: 'adminsse', password: '123123' };
-    if (username === TEST_ACCOUNT.username && password === TEST_ACCOUNT.password) {
-      const testUser = {
-        username: 'adminsse',
-        characterName: 'AdminChar',
-        email: 'admin@test.local',
-        phone: '0901234567',
-        securityQuestion: 'pet',
-        securityAnswer: 'Fluffy',
-        joinDate: '2025-01-01',
-        lastLogin: new Date().toISOString().slice(0, 10),
-        accountLevel: 1,
-        accountExpire: '2079-06-06',
-        token: 'test-token-adminsse-' + Date.now(),
-      };
-      return NextResponse.json({
-        success: true,
-        message: 'Đăng nhập thành công (tài khoản test)',
-        data: testUser,
-      });
-    }
-
     // Gọi Backend API
     const backendResponse = await fetch(getBackendUrl('/api/auth/login'), {
       method: 'POST',

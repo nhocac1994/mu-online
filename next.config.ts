@@ -63,6 +63,8 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_BACKEND_API_URL: resolvedPublicBackendUrl,
   },
   images: {
+    /** Cho phép ảnh trong public/ kèm ?v=... (cache bust). Không khai báo search → mọi query đều hợp lệ. */
+    localPatterns: [{ pathname: '/**' }],
     remotePatterns: [
       {
         protocol: 'https',

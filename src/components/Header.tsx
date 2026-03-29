@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -35,6 +36,9 @@ const rightNavLinks = [
 ];
 const allNavLinks = [...leftNavLinks, ...rightNavLinks];
 
+/** Logo tròn giữa menu (PNG xóa nền) */
+const NAV_CENTER_ICON = '/panel/icon-mu.PNG';
+
 const LoginIcon = ({ className = 'w-6 h-6' }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -43,6 +47,7 @@ const LoginIcon = ({ className = 'w-6 h-6' }: { className?: string }) => (
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [menuPortalReady, setMenuPortalReady] = useState(false);
   const [logoError, setLogoError] = useState(false);
   const [siteConfig, setSiteConfig] = useState<SiteConfig | null>(siteConfigStatic as unknown as SiteConfig);
   const pathname = usePathname();
@@ -60,24 +65,22 @@ export default function Header() {
   }, [pathname]);
 
   useEffect(() => {
+    setMenuPortalReady(true);
+  }, []);
+
+  useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
     } else {
       document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
     }
     return () => {
       document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
     };
   }, [mobileMenuOpen]);
 
   const config = siteConfig || (siteConfigStatic as unknown as SiteConfig);
-  const logoUrl = (config as { logoImage?: string }).logoImage || '/icon.jpg';
+  const serverLabel = (config.serverName as string) || 'MU Online';
 
   return (
     <header
@@ -85,8 +88,7 @@ export default function Header() {
       className="fixed right-0 left-0 top-0 z-[100] overflow-visible"
       style={{
         background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.85) 100%)',
-        boxShadow: '0 4px 24px rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.03) inset',
-        borderBottom: '1px solid rgba(184, 115, 51, 0.45)',
+        boxShadow: '0 4px 24px rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.03) inset',    
       }}
     >
       {/* Mobile: ẩn nền đen; ép header sát top, không margin/padding tạo khoảng trống */}
@@ -120,7 +122,7 @@ export default function Header() {
       <div className="hidden md:block h-20 relative">
       <nav className="relative max-w-7xl mx-auto px-6 h-full min-h-0 flex items-center justify-between overflow-visible">
         {/* Trái: Trang chủ | Xếp hạng */}
-        <div className="hidden md:flex flex-1 items-center justify-end gap-8 pr-20 md:pr-24">
+        <div className="hidden md:flex flex-1 items-center justify-end gap-8 pr-[min(7.5rem,16vw)] lg:pr-32">
           {leftNavLinks.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -141,36 +143,33 @@ export default function Header() {
           })}
         </div>
 
-        {/* Logo 160px (desktop only): ẩn trên mobile để tránh trùng với logo trong thanh mobile */}
-        <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 flex-shrink-0 pointer-events-none w-30 h-30">
-          <Link href="/" className="pointer-events-auto flex items-center justify-center w-full h-full">
-            <div
-              className="w-30 h-30 rounded-full overflow-hidden border-[3px] flex items-center justify-center bg-black/50"
-              style={{
-                borderColor: 'rgba(205, 170, 100, 0.7)',
-                boxShadow: '0 0 30px rgba(0,0,0,0.5), 0 0 20px rgba(184, 115, 51, 0.2), inset 0 0 20px rgba(0,0,0,0.3)',
-              }}
-            >
-              {logoError ? (
-                <LogoFallback className="w-full h-full rounded-full" />
-              ) : (
-                <Image
-                  src={logoUrl}
-                  alt={(config.serverName as string) || 'Logo'}
-                  width={120}
-                  height={120}
-                  className="object-contain w-full h-full"
-                  priority
-                  unoptimized={logoUrl.startsWith('http')}
-                  onError={() => setLogoError(true)}
-                />
-              )}
-            </div>
+        {/* Logo icon-mu.png — lớn hơn thanh nav, tràn lên/xuống kiểu mẫu DemonuMu */}
+        <div className="hidden md:flex absolute left-1/2 top-[calc(50%+50px)] z-[110] -translate-x-1/2 -translate-y-1/2 flex-shrink-0 pointer-events-none w-[288px] h-[288px] min-[900px]:w-[248px] min-[900px]:h-[248px] lg:w-[288px] lg:h-[288px] items-center justify-center">
+          <Link
+            href="/"
+            className="pointer-events-auto flex h-full w-full items-center justify-center"
+            aria-label={serverLabel}
+          >
+            {logoError ? (
+              <LogoFallback className="h-[85%] w-[85%] rounded-full" />
+            ) : (
+              <Image
+                src={NAV_CENTER_ICON}
+                alt=""
+                width={2200}
+                height={1344}
+                className="h-full w-full object-contain bg-transparent drop-shadow-[0_4px_20px_rgba(0,0,0,0.55)]"
+                style={{ backgroundColor: 'transparent' }}
+                priority
+                onError={() => setLogoError(true)}
+                aria-hidden
+              />
+            )}
           </Link>
         </div>
 
         {/* Phải: Quyên góp | Bản tin */}
-        <div className="hidden md:flex flex-1 items-center justify-start gap-8 pl-20 md:pl-24">
+        <div className="hidden md:flex flex-1 items-center justify-start gap-8 pl-[min(7.5rem,16vw)] lg:pl-32">
           {rightNavLinks.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -205,8 +204,8 @@ export default function Header() {
       </Link>
       </div>
 
-      {/* Mobile: module riêng, tự set chiều cao h-20 */}
-      <div className="md:hidden flex items-center justify-between h-20 px-4">
+      {/* Mobile: menu mở = full-screen (bên dưới) — không còn drawer lệch/hở dưới thanh */}
+      <div className="relative z-[102] md:hidden flex h-28 min-h-28 items-center justify-between px-3 sm:px-4">
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -218,22 +217,21 @@ export default function Header() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-        <Link href="/" className="flex-1 flex justify-center">
-          <div
-            className="w-16 h-16 rounded-full border-2 flex items-center justify-center bg-black/50 overflow-hidden"
-            style={{ borderColor: 'rgba(205, 170, 100, 0.6)' }}
-          >
+        <Link href="/" className="flex flex-1 justify-center" aria-label={serverLabel}>
+          <div className="flex h-24 w-24 shrink-0 items-center justify-center bg-transparent">
             {logoError ? (
-              <LogoFallback className="w-full h-full rounded-full text-xl" />
+              <LogoFallback className="h-20 w-20 rounded-full text-xl" />
             ) : (
               <Image
-                src={logoUrl}
-                alt={(config.serverName as string) || 'Logo'}
-                width={64}
-                height={64}
-                className="object-contain w-full h-full"
+                src={NAV_CENTER_ICON}
+                alt=""
+                width={2200}
+                height={1344}
+                className="h-full w-full object-contain bg-transparent drop-shadow-md"
+                style={{ backgroundColor: 'transparent' }}
                 priority
                 onError={() => setLogoError(true)}
+                aria-hidden
               />
             )}
           </div>
@@ -251,58 +249,72 @@ export default function Header() {
         </Link>
       </div>
 
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <>
-            {/* Overlay: bấm ra ngoài để đóng menu */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="md:hidden fixed inset-0 top-20 z-[99] bg-black/50"
-              aria-hidden
-              onClick={() => setMobileMenuOpen(false)}
-            />
-            <motion.div
-              key="mobile-menu"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.25 }}
-              className="md:hidden overflow-hidden border-t border-[#B87333]/30 relative z-[101]"
-              style={{ background: 'rgba(30, 30, 35, 0.98)' }}
-            >
-              <div className="py-4 px-4 space-y-1">
-                <div className="flex items-center justify-between mb-2 px-2">
-                  <span className="text-sm font-semibold text-[#B87333] uppercase">Menu</span>
+      {menuPortalReady &&
+        createPortal(
+          <AnimatePresence>
+            {mobileMenuOpen && (
+              <motion.div
+                key="mobile-menu-fullscreen"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Menu điều hướng"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="fixed inset-0 z-[9999] flex flex-col md:hidden"
+                style={{
+                  paddingTop: 'env(safe-area-inset-top, 0px)',
+                  paddingBottom: 'env(safe-area-inset-bottom, 0px)',
+                  background: 'linear-gradient(180deg, #141418 0%, #0c0c0f 100%)',
+                }}
+              >
+                <div className="flex h-14 shrink-0 items-center justify-between gap-3 border-b border-[#B87333]/40 px-4">
+                  <span
+                    className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#D4AF37]"
+                    style={{ fontFamily: 'var(--font-main)' }}
+                  >
+                    Điều hướng
+                  </span>
                   <button
                     type="button"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="p-2 rounded border border-white/20 text-white hover:bg-white/10"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#B87333]/50 text-[#E8C547] transition-colors hover:border-[#FFD700]/70 hover:bg-[#FFD700]/10 hover:text-[#FFD700]"
                     aria-label="Đóng menu"
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 </div>
-                {allNavLinks.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-3 px-4 text-base font-medium uppercase tracking-wider rounded hover:bg-white/5"
-                    style={{ fontFamily: 'var(--font-main)', color: 'rgba(255, 255, 255, 0.98)' }}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </motion.div>
-          </>
+                <nav className="min-h-0 flex-1 overflow-y-auto px-3 py-3" aria-label="Menu chính">
+                  <div className="overflow-hidden rounded-xl border border-white/[0.08] bg-black/30">
+                    {allNavLinks.map((item) => {
+                      const isActive = pathname === item.href;
+                      return (
+                        <Link
+                          key={item.label}
+                          href={item.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={`block border-b border-white/[0.06] py-3 pl-3 pr-3 text-[0.875rem] font-medium uppercase tracking-wide transition-colors last:border-b-0 ${
+                            isActive
+                              ? 'border-l-[3px] border-l-[#FFD700] bg-[#FFD700]/[0.08] pl-[9px] text-[#FFD700]'
+                              : 'border-l-[3px] border-l-transparent pl-3 text-white/90 hover:bg-white/[0.06] hover:text-[#FFD700]'
+                          }`}
+                          style={{ fontFamily: 'var(--font-main)' }}
+                          data-active={isActive ? 'true' : undefined}
+                        >
+                          {item.label}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </nav>
+              </motion.div>
+            )}
+          </AnimatePresence>,
+          document.body
         )}
-      </AnimatePresence>
     </header>
   );
 }

@@ -4,9 +4,21 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import PageBackground from '@/components/PageBackground';
+import { MuPanelFrame } from '@/components/MuPanelFrame';
 import EventCountdown from '@/components/EventCountdown';
 import siteConfigStatic from '@/config/site.config.json';
 import { getSiteConfig, getDownloadConfig, type SiteConfig, type DownloadLinks } from '@/lib/config-api';
+
+const PANEL = {
+  event: '/panel/panel-event.PNG',
+  news: '/panel/panel-news.PNG',
+  topPlayer: '/panel/panel-topplayer.PNG',
+  topGuild: '/panel/panel-topguild.PNG',
+} as const;
+
+/** Ảnh nền panel (IHDR): event, news, topplayer, topguild đều 545×650 */
+const EVENT_PANEL_PX = { w: 545, h: 650 } as const;
+const NEWS_PANEL_PX = EVENT_PANEL_PX;
 
 /** Đặt true khi đã có file trong public/icons/ để tránh 404 */
 const CTA_USE_CUSTOM_PNG_ICONS = false;
@@ -89,8 +101,6 @@ const SAMPLE_GUILDS: GuildRow[] = [
 ];
 
 export default function Home() {
-  const [isClient, setIsClient] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [siteConfig, setSiteConfig] = useState(siteConfigStatic as unknown as SiteConfig);
   const [downloadLinks, setDownloadLinks] = useState<DownloadLinks | null>(null);
   const [topPlayers, setTopPlayers] = useState<PlayerRow[]>([]);
@@ -101,16 +111,6 @@ export default function Home() {
   const serverName = currentConfig?.serverName || 'MuDauTruongSS1.net';
   const serverVersion = currentConfig?.serverVersion || 'Season 1';
   const downloadSize = '397.5 MB';
-
-  useEffect(() => {
-    setIsClient(true);
-    if (typeof window !== 'undefined') {
-      const check = () => setIsMobile(window.innerWidth <= 768);
-      check();
-      window.addEventListener('resize', check);
-      return () => window.removeEventListener('resize', check);
-    }
-  }, []);
 
   useEffect(() => {
     const load = async () => {
@@ -161,6 +161,7 @@ export default function Home() {
 
   const news = [
     { title: `HƯỚNG DẪN CHƠI ${serverName.toUpperCase()} - ${serverVersion.toUpperCase()}`, date: '15/4/2026', type: 'Notice' as const, link: '/news/guide' },
+    { title: 'CÁC LỆNH TRONG GAME (CHAT)', date: '15/4/2026', type: 'Notice' as const, link: '/news/commands' },
     { title: 'CÁC SỰ KIỆN TRONG GAME', date: '15/4/2026', type: 'Event', link: '/news/events' },
     { title: 'LỘ TRÌNH PHÁT TRIỂN SERVER', date: '15/4/2026', type: 'Update', link: '/news/roadmap' },
     { title: 'THÔNG BÁO MỞ SERVER', date: '15/4/2026', type: 'Notice', link: '/news/opening' },
@@ -176,10 +177,10 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-x-hidden bg-black">
+    <div className="min-h-screen relative overflow-x-hidden bg-transparent">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         <PageBackground />
-        <main className="relative z-10 pt-10 md:pt-[160px]">
+        <main className="relative z-10 min-w-0 bg-transparent pt-28 md:pt-[160px]">
           {/* Hero: full viewport, logo + tên + 2 nút CTA */}
           <section className="min-h-[85vh] flex flex-col items-center justify-center px-4 py-12 relative">
             {/* Chỉ chữ: tên/domain từ config + SEASON 1, căn giữa */}
@@ -253,301 +254,271 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Một trang duy nhất: Sự kiện (giống ảnh 2) + Bản tin */}
-          <section className="max-w-6xl mx-auto px-4 py-8 grid lg:grid-cols-2 gap-6">
-            <div
-              className="rounded-lg overflow-hidden"
-              style={{
-                background: 'rgba(20, 20, 28, 0.92)',
-                border: '1px solid rgba(212, 175, 55, 0.75)',
-                boxShadow: '0 0 20px rgba(0,0,0,0.3), 0 0 8px rgba(212, 175, 55, 0.08)',
-              }}
+          {/* Sự kiện + Bản tin: MuPanelFrame + background-image — News cùng cấu trúc Events */}
+          <section className="mx-auto grid min-w-0 max-w-7xl grid-cols-1 items-start gap-8 px-5 py-8 md:px-8 lg:grid-cols-2 lg:gap-10">
+            <MuPanelFrame
+              src={PANEL.event}
+              alt="Sự kiện"
+              width={EVENT_PANEL_PX.w}
+              height={EVENT_PANEL_PX.h}
+              className="min-w-0 w-full"
+              overlayClassName="top-[12%] bottom-[9%] left-[5%] right-[5%]"
+              backgroundSize="contain"
             >
-              {/* Tiêu đề Sự kiện (không icon) */}
-              <div
-                className="pt-3 pb-2 border-b text-center"
-                style={{ borderColor: 'rgba(255, 215, 0, 0.45)' }}
-              >
-                <h3
-                  className="font-bold uppercase tracking-widest"
-                  style={{ color: '#FFD700', fontFamily: 'var(--font-main)', fontSize: 'clamp(1rem, 2.2vw, 1.25rem)' }}
+              <span className="sr-only">Sự kiện</span>
+              <div className="flex min-h-0 min-w-0 w-full max-w-full flex-1 flex-col overflow-hidden">
+                <div className="min-h-0 min-w-0 w-full max-w-full flex-1 overflow-x-hidden overflow-y-auto px-3 pt-2">
+                  <EventCountdown variant="eventsBoard" />
+                </div>
+                <div
+                  className="flex-shrink-0 pt-2 text-center uppercase tracking-wider text-white/55"
+                  style={{ fontSize: '0.68rem' }}
                 >
-                  Sự kiện
-                </h3>
+                  Prev 1 / 1 Next
+                </div>
               </div>
-              <div className="p-3">
-                <EventCountdown />
-              </div>
-              {/* Pagination */}
-              <div
-                className="px-4 py-2 border-t text-center uppercase tracking-wider"
-                style={{ borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.6)', fontSize: '0.7rem' }}
-              >
-                Prev 1 / 1 Next
-              </div>
-            </div>
-            {/* Bản tin mới — 5 hàng đều nhau, hàng cuối: Zalo / Facebook / YouTube */}
-            <div
-              className="rounded-lg overflow-hidden flex flex-col"
-              style={{
-                background: 'rgba(20, 20, 28, 0.92)',
-                border: '1px solid rgba(212, 175, 55, 0.75)',
-                boxShadow: '0 0 20px rgba(0,0,0,0.3), 0 0 8px rgba(212, 175, 55, 0.08)',
-              }}
+            </MuPanelFrame>
+
+            <MuPanelFrame
+              src={PANEL.news}
+              alt="Bản tin mới"
+              width={NEWS_PANEL_PX.w}
+              height={NEWS_PANEL_PX.h}
+              className="min-w-0 w-full"
+              innerClassName="max-md:min-h-[36rem]"
+              overlayClassName="top-[12%] bottom-[9%] left-[5%] right-[5%]"
+              backgroundSize="contain"
             >
-              {/* Header: BẢN TIN MỚI */}
-              <div
-                className="pt-3 pb-2 border-b text-center flex-shrink-0"
-                style={{ borderColor: 'rgba(255, 215, 0, 0.5)' }}
-              >
-                <h3
-                  className="font-bold uppercase tracking-widest"
-                  style={{
-                    color: '#FFD700',
-                    fontFamily: 'var(--font-main)',
-                    fontSize: 'clamp(1rem, 2.2vw, 1.25rem)',
-                    textShadow: '0 1px 2px rgba(0,0,0,0.5)',
-                  }}
-                >
-                  Bản tin mới
-                </h3>
-              </div>
-              {/* 5 hàng đều: 4 bản tin (hover màu theo badge) + 1 hàng icon mạng xã hội */}
-              <div className="flex flex-col flex-1 min-h-[240px] p-4">
-                {news.slice(0, 4).map((item, i) => {
-                  const isNotice = item.type === 'Notice';
-                  const isEvent = item.type === 'Event';
-                  const hoverBg = isNotice
-                    ? 'hover:bg-[#1e40af]/25'
-                    : isEvent
-                      ? 'hover:bg-[#ea580c]/25'
-                      : 'hover:bg-[#b91c1c]/25';
-                  return (
+              <span className="sr-only">Bản tin mới</span>
+              <div className="flex h-full min-h-0 min-w-0 w-full max-w-full flex-col overflow-hidden">
+                <div className="flex min-h-0 min-w-0 w-full max-w-full flex-1 flex-col overflow-x-hidden overflow-y-auto px-2 pb-1 sm:px-3">
+                  {/* Cách mép trên card một lần cho cả cụm tin — không dùng py từng Link (sẽ lặp 10px mỗi hàng) */}
+                  <div className="min-w-0 max-w-full space-y-0 pt-17 sm:pt-3 pt-2">
+                    {news.slice(0, 5).map((item, i) => {
+                      const isNotice = item.type === 'Notice';
+                      const isEvent = item.type === 'Event';
+                      const badgeBg = isNotice ? '#1e40af' : isEvent ? '#ea580c' : '#b91c1c';
+                      return (
+                        <Link
+                          key={i}
+                          href={item.link}
+                          className="group block min-w-0 max-w-full overflow-hidden border-b border-white/15 pb-1.5 last:border-b-0 md:pb-2.5"
+                        >
+                          <div className="flex min-w-0 max-w-full items-start justify-between gap-1.5 md:gap-2 pt-2">
+                            <div className="flex min-w-0 flex-1 items-start gap-1 sm:gap-2">
+                              <span
+                                className="mt-0.5 flex-shrink-0 rounded px-1 py-0.5 text-[7px] font-bold uppercase leading-none text-white tracking-wide sm:px-1.5 sm:text-[9px]"
+                                style={{
+                                  background: badgeBg,
+                                  letterSpacing: '0.04em',
+                                }}
+                              >
+                                {item.type}
+                              </span>
+                              <span
+                                className="min-w-0 flex-1 break-words font-bold uppercase leading-tight transition-colors group-hover:text-[#FFA733] sm:truncate md:leading-snug"
+                                style={{
+                                  color: '#FF8C00',
+                                  fontSize: 'clamp(0.62rem, 2.8vw, 0.78rem)',
+                                  fontFamily: 'var(--font-main)',
+                                }}
+                              >
+                                {item.title}
+                              </span>
+                            </div>
+                            <span className="flex-shrink-0 whitespace-nowrap text-right text-[0.62rem] font-medium tabular-nums text-white md:text-[0.75rem]">
+                              {item.date}
+                            </span>
+                          </div>
+                          <div className="mt-0.5 flex min-w-0 max-w-full items-center justify-between gap-2 pb-0.5 md:mt-1">
+                            <span className="min-w-0 truncate text-[0.58rem] uppercase tracking-wide text-white/85 md:text-[0.7rem]">
+                              Cập nhật
+                            </span>
+                            <span className="flex-shrink-0 whitespace-nowrap text-[0.6rem] text-white/55 transition-colors group-hover:text-[#FFD700] md:text-[0.72rem]">
+                              Xem →
+                            </span>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                  <div className="mt-1.5 flex max-w-full shrink-0 flex-wrap items-center justify-center border-t border-white/10 pt-2 pb-1 md:mt-2 md:pt-6">
+                    <div className="flex max-w-full flex-wrap items-center justify-center gap-3 sm:gap-8 pt-10">
+                      {siteConfig?.linkZalo && (
+                        <a
+                          href={siteConfig.linkZalo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex h-9 w-9 flex-shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/15 bg-white/10 transition-all duration-200 hover:scale-110 hover:bg-white/20 md:h-11 md:w-11"
+                          title="Zalo"
+                          aria-label="Zalo"
+                        >
+                          <Image src="/Zalo-icon.webp" alt="Zalo" width={40} height={40} className="h-16 w-16 object-contain md:h-7 md:w-7" />
+                        </a>
+                      )}
+                      {siteConfig?.linkFacebook && (
+                        <a
+                          href={siteConfig.linkFacebook}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex h-9 w-9 flex-shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/15 bg-white/10 transition-all duration-200 hover:scale-110 hover:bg-white/20 md:h-11 md:w-11"
+                          title="Facebook"
+                          aria-label="Facebook"
+                        >
+                          <Image src="/facebook-logo.png" alt="Facebook" width={40} height={40} className="h-16 w-16 object-contain md:h-7 md:w-7" />
+                        </a>
+                      )}
+                      {siteConfig?.linkYoutube && (
+                        <a
+                          href={siteConfig.linkYoutube}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex h-9 w-9 flex-shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/15 bg-white/10 transition-all duration-200 hover:scale-110 hover:bg-white/20 md:h-11 md:w-11"
+                          title="YouTube"
+                          aria-label="YouTube"
+                        >
+                          <Image src="/tiktok-logo.png" alt="YouTube" width={40} height={40} className="h-18 w-18 object-contain md:h-7 md:w-7" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  {/* Cùng vùng cuộn với tin + MXH — tránh bị đẩy ra ngoài viền panel (flex pin dưới) */}
+                  <div className="shrink-0 px-1 pt-2 pb-1 text-center text-[0.62rem] uppercase tracking-wider text-white/55 md:pt-2 md:text-[0.68rem]">
                     <Link
-                      key={i}
-                      href={item.link}
-                      className={`group flex items-center gap-3 flex-1 min-h-0 py-1.5 px-2 -mx-2 rounded-md transition-colors duration-200 ${hoverBg}`}
+                      href="/news"
+                      className="inline-block max-w-full truncate transition-colors hover:text-[#FFD700]"
                     >
-                      <span
-                        className="font-bold px-2 py-0.5 rounded flex-shrink-0 text-white uppercase"
-                        style={{
-                          background: isNotice ? '#1e40af' : isEvent ? '#ea580c' : '#b91c1c',
-                          fontSize: '10px',
-                          letterSpacing: '0.04em',
-                        }}
-                      >
-                        {item.type}
-                      </span>
-                      <div className="min-w-0 flex-1">
-                        <span className="text-white group-hover:text-[#FFD700] block leading-tight transition-colors font-semibold uppercase text-sm truncate">
-                          {item.title}
-                        </span>
-                        <span className="text-gray-500 mt-0.5 block text-xs">
-                          {item.date}
-                        </span>
-                      </div>
+                      Xem tất cả tin →
                     </Link>
-                  );
-                })}
-                {/* Hàng 5: icon Zalo, Facebook, YouTube — căn đều, khoảng cách đồng nhất */}
-                <div className="flex items-center justify-center flex-1 min-h-0 py-2">
-                  <div className="flex items-center justify-center gap-8">
-                    {siteConfig?.linkZalo && (
-                      <a
-                        href={siteConfig.linkZalo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center w-11 h-11 rounded-full overflow-hidden bg-black/50 hover:bg-black/70 hover:scale-110 transition-all duration-200 flex-shrink-0"
-                        title="Zalo"
-                        aria-label="Zalo"
-                      >
-                        <Image src="/Zalo-icon.webp" alt="Zalo" width={44} height={44} className="w-7 h-7 object-contain" />
-                      </a>
-                    )}
-                    {siteConfig?.linkFacebook && (
-                      <a
-                        href={siteConfig.linkFacebook}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center w-11 h-11 rounded-full overflow-hidden bg-black/50 hover:bg-black/70 hover:scale-110 transition-all duration-200 flex-shrink-0"
-                        title="Facebook"
-                        aria-label="Facebook"
-                      >
-                        <Image src="/facebook-logo.webp" alt="Facebook" width={44} height={44} className="w-7 h-7 object-contain" />
-                      </a>
-                    )}
-                    {siteConfig?.linkYoutube && (
-                      <a
-                        href={siteConfig.linkYoutube}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center w-11 h-11 rounded-full overflow-hidden bg-black/50 hover:bg-black/70 hover:scale-110 transition-all duration-200 flex-shrink-0"
-                        title="YouTube"
-                        aria-label="YouTube"
-                      >
-                        <Image src="/youtube-logo.webp" alt="YouTube" width={44} height={44} className="w-7 h-7 object-contain" />
-                      </a>
-                    )}
                   </div>
                 </div>
               </div>
-              {/* Footer: Xem tất cả tin — căn giữa, chữ trắng, font sạch, hover vàng */}
-              <div
-                className="px-4 py-3 border-t flex-shrink-0 text-center"
-                style={{ borderColor: 'rgba(255,255,255,0.22)' }}
-              >
-                <Link
-                  href="/news"
-                  className="inline-block text-white font-semibold uppercase tracking-wider transition-colors duration-200 hover:text-[#FFD700] hover:underline"
-                  style={{ fontSize: '0.9rem', fontFamily: 'var(--font-main)' }}
-                >
-                  Xem tất cả tin →
-                </Link>
-              </div>
-            </div>
+            </MuPanelFrame>
           </section>
 
-          {/* TOP PLAYERS + TOP GUILDS — dữ liệu từ trang xếp hạng, không có thì "Chưa có thông tin" */}
-          <section className="max-w-6xl mx-auto px-4 py-8 grid lg:grid-cols-2 gap-6">
-            {/* TOP PLAYERS */}
-            <div
-              className="rounded-lg border overflow-hidden"
-              style={{
-                background: 'rgba(30, 30, 35, 0.95)',
-                borderColor: 'rgba(255, 215, 0, 0.55)',
-              }}
+          {/* TOP PLAYERS + TOP GUILDS — cùng tỷ lệ/overlay như Events & Bản tin */}
+          <section className="mx-auto grid min-w-0 max-w-7xl grid-cols-1 items-start gap-8 px-5 py-8 md:px-8 lg:grid-cols-2 lg:gap-10">
+            <MuPanelFrame
+              src={PANEL.topPlayer}
+              alt="Top players"
+              width={EVENT_PANEL_PX.w}
+              height={EVENT_PANEL_PX.h}
+              overlayClassName="top-[12%] bottom-[9%] left-[5%] right-[5%]"
+              className="min-w-0 w-full"
+              backgroundSize="contain"
             >
-              <div
-                className="px-4 py-3 border-b text-center"
-                style={{ borderColor: 'rgba(255, 215, 0, 0.5)', background: 'rgba(0,0,0,0.3)' }}
-              >
-                <h3
-                  className="font-bold uppercase tracking-widest"
-                  style={{ color: '#FFD700', fontFamily: 'var(--font-main)', fontSize: 'clamp(1rem, 2.2vw, 1.25rem)' }}
-                >
-                  Top players
-                </h3>
-              </div>
-              <div className="p-4">
+              <span className="sr-only">Top players</span>
+              <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-2 pt-8 sm:px-3 sm:pt-17">
                 {rankLoading ? (
-                  <div className="flex justify-center py-8">
-                    <div className="animate-spin rounded-full h-8 w-8 border-2 border-[#FFD700] border-t-transparent" />
+                  <div className="flex justify-center py-10">
+                    <div className="h-8 w-8 animate-spin rounded-full border-2 border-[#FFD700] border-t-transparent" />
                   </div>
                 ) : topPlayers.length === 0 ? (
-                  <p className="text-center text-white/70 py-6" style={{ fontSize: 'clamp(0.85rem, 1.5vw, 0.95rem)' }}>
+                  <p className="py-8 text-center text-white/70" style={{ fontSize: 'clamp(0.8rem, 1.5vw, 0.9rem)' }}>
                     Chưa có thông tin
                   </p>
                 ) : (
                   <div className="overflow-x-auto">
-                    <table className="w-full" style={{ fontSize: 'clamp(0.8rem, 1.6vw, 0.9rem)' }}>
+                    <table className="w-full" style={{ fontSize: 'clamp(0.82rem, 1.4vw, 0.95rem)' }}>
                       <thead>
-                        <tr className="border-b border-white/40">
-                          <th className="text-left py-2.5 px-2 font-bold text-white/90">#</th>
-                          <th className="text-left py-2.5 px-2 font-bold text-white/90">Nhân vật</th>
-                          <th className="text-left py-2.5 px-2 font-bold text-white/90">Class</th>
-                          <th className="text-left py-2.5 px-2 font-bold text-white/90">Level</th>
-                          <th className="text-left py-2.5 px-2 font-bold text-white/90">RR</th>
+                        <tr>
+                          <th className="px-1 pb-4 sm:pb-10 pt-4 text-left font-bold text-white/90">#</th>
+                          <th className="px-1 pb-4 sm:pb-10 pt-4 text-left font-bold text-white/90">Nhân vật</th>
+                          <th className="px-1 pb-4 sm:pb-10 pt-4 text-left font-bold text-white/90">Class</th>
+                          <th className="px-1 pb-4 sm:pb-10 pt-4 text-left font-bold text-white/90">Level</th>
+                          <th className="px-1 pb-4 sm:pb-10 pt-4 text-left font-bold text-white/90">RR</th>
                         </tr>
                       </thead>
                       <tbody>
                         {topPlayers.map((p, i) => (
                           <tr key={`${p.character}-${i}`} className="border-b border-white/10">
-                            <td className="py-2.5 px-2 text-[#FFD700] font-medium">
+                            <td className="px-1 py-2 sm:pt-10 font-medium text-[#FFD700]">
                               {i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `#${i + 1}`}
                             </td>
-                            <td className="py-2.5 px-2 text-white">{p.character || '—'}</td>
-                            <td className="py-2.5 px-2 text-white/90">{classShort[p.class] ?? p.class}</td>
-                            <td className="py-2.5 px-2 text-white/90">{p.level ?? '—'}</td>
-                            <td className="py-2.5 px-2 text-white/90">{p.resets ?? 0}</td>
+                            <td className="max-w-[5.5rem] truncate px-1 py-2 sm:pt-10 text-white">{p.character || '—'}</td>
+                            <td className="px-1 py-2 sm:pt-10 text-white/90">{classShort[p.class] ?? p.class}</td>
+                            <td className="px-1 py-2 sm:pt-10 text-white/90">{p.level ?? '—'}</td>
+                            <td className="px-1 py-2 sm:pt-10 text-white/90">{p.resets ?? 0}</td>
                           </tr>
                         ))}
                       </tbody>
                     </table>
                   </div>
                 )}
-                <div className="mt-4 flex justify-center">
-                  <Link
-                    href="/rankings"
-                    className="px-6 py-2 text-sm font-semibold uppercase text-white rounded transition-all hover:brightness-110"
-                    style={{
-                      background: 'linear-gradient(180deg, #5c4535 0%, #4a3728 100%)',
-                      border: '1px solid rgba(255,255,255,0.35)',
-                    }}
-                  >
-                    Xem thêm
-                  </Link>
-                </div>
               </div>
-            </div>
-
-            {/* TOP GUILDS */}
-            <div
-              className="rounded-lg border overflow-hidden"
-              style={{
-                background: 'rgba(30, 30, 35, 0.95)',
-                borderColor: 'rgba(255, 215, 0, 0.55)',
-              }}
-            >
-              <div
-                className="px-4 py-3 border-b text-center"
-                style={{ borderColor: 'rgba(255, 215, 0, 0.5)', background: 'rgba(0,0,0,0.3)' }}
-              >
-                <h3
-                  className="font-bold uppercase tracking-widest"
-                  style={{ color: '#FFD700', fontFamily: 'var(--font-main)', fontSize: 'clamp(1rem, 2.2vw, 1.25rem)' }}
+              <div className="flex flex-shrink-0 justify-center pt-2">
+                <Link
+                  href="/rankings"
+                  className="rounded px-4 py-1.5 text-xs font-semibold uppercase text-white transition-all hover:brightness-110"
+                  style={{
+                    background: 'linear-gradient(180deg, #5c4535 0%, #4a3728 100%)',
+                    border: '1px solid rgba(255,255,255,0.35)',
+                  }}
                 >
-                  Top guilds
-                </h3>
+                  Xem thêm
+                </Link>
               </div>
-              <div className="p-4">
+            </MuPanelFrame>
+
+            <MuPanelFrame
+              src={PANEL.topGuild}
+              alt="Top guilds"
+              width={EVENT_PANEL_PX.w}
+              height={EVENT_PANEL_PX.h}
+              overlayClassName="top-[12%] bottom-[9%] left-[5%] right-[5%]"
+              className="min-w-0 w-full"
+              backgroundSize="contain"
+            >
+              <span className="sr-only">Top guilds</span>
+              <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-2 pt-8 sm:px-3 sm:pt-17">
                 {rankLoading ? (
-                  <div className="flex justify-center py-8">
-                    <div className="animate-spin rounded-full h-8 w-8 border-2 border-[#FFD700] border-t-transparent" />
+                  <div className="flex justify-center py-10">
+                    <div className="h-8 w-8 animate-spin rounded-full border-2 border-[#FFD700] border-t-transparent" />
                   </div>
                 ) : topGuilds.length === 0 ? (
-                  <p className="text-center text-white/70 py-6" style={{ fontSize: 'clamp(0.85rem, 1.5vw, 0.95rem)' }}>
+                  <p className="py-8 text-center text-white/70" style={{ fontSize: 'clamp(0.8rem, 1.5vw, 0.9rem)' }}>
                     Chưa có thông tin
                   </p>
                 ) : (
                   <div className="overflow-x-auto">
-                    <table className="w-full" style={{ fontSize: 'clamp(0.8rem, 1.6vw, 0.9rem)' }}>
+                    <table className="w-full" style={{ fontSize: 'clamp(0.72rem, 1.4vw, 0.85rem)' }}>
                       <thead>
-                        <tr className="border-b border-white/40">
-                          <th className="text-left py-2.5 px-2 font-bold text-white/90">#</th>
-                          <th className="text-left py-2.5 px-2 font-bold text-white/90">Guild</th>
-                          <th className="text-left py-2.5 px-2 font-bold text-white/90">Master</th>
-                          <th className="text-left py-2.5 px-2 font-bold text-white/90">TV</th>
+                        <tr>
+                          <th className="px-1 pb-4 sm:pb-10 pt-2 text-left font-bold text-white/90">#</th>
+                          <th className="px-1 pb-4 sm:pb-10 pt-2 text-left font-bold text-white/90">Guild</th>
+                          <th className="px-1 pb-4 sm:pb-10 pt-2 text-left font-bold text-white/90">Master</th>
+                          <th className="px-1 pb-4 sm:pb-10 pt-2 text-left font-bold text-white/90">TV</th>
                         </tr>
                       </thead>
                       <tbody>
                         {topGuilds.map((g, i) => (
                           <tr key={`${g.guildName}-${i}`} className="border-b border-white/10">
-                            <td className="py-2.5 px-2 text-[#FFD700] font-medium">
+                            <td className="px-1 py-2 sm:pt-10 font-medium text-[#FFD700]">
                               {i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `#${i + 1}`}
                             </td>
-                            <td className="py-2.5 px-2 text-white">{g.guildName || '—'}</td>
-                            <td className="py-2.5 px-2 text-white/90">{g.guildMaster || '—'}</td>
-                            <td className="py-2.5 px-2 text-white/90">{g.memberCount ?? 0}</td>
+                            <td className="max-w-[5rem] truncate px-1 py-2 sm:pt-10 text-white">{g.guildName || '—'}</td>
+                            <td className="max-w-[4.5rem] truncate px-1 py-2 sm:pt-10 text-white/90">{g.guildMaster || '—'}</td>
+                            <td className="px-1 py-2 sm:pt-10 text-white/90">{g.memberCount ?? 0}</td>
                           </tr>
                         ))}
                       </tbody>
                     </table>
                   </div>
                 )}
-                <div className="mt-4 flex justify-center">
-                  <Link
-                    href="/rankings"
-                    className="px-6 py-2 text-sm font-semibold uppercase text-white rounded transition-all hover:brightness-110"
-                    style={{
-                      background: 'linear-gradient(180deg, #5c4535 0%, #4a3728 100%)',
-                      border: '1px solid rgba(255,255,255,0.35)',
-                    }}
-                  >
-                    Xem thêm
-                  </Link>
-                </div>
               </div>
-            </div>
+              <div className="flex flex-shrink-0 justify-center pt-2">
+                <Link
+                  href="/rankings"
+                  className="rounded px-4 py-1.5 text-xs font-semibold uppercase text-white transition-all hover:brightness-110"
+                  style={{
+                    background: 'linear-gradient(180deg, #5c4535 0%, #4a3728 100%)',
+                    border: '1px solid rgba(255,255,255,0.35)',
+                  }}
+                >
+                  Xem thêm
+                </Link>
+              </div>
+            </MuPanelFrame>
           </section>
         </main>
     </div>

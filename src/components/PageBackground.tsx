@@ -7,7 +7,7 @@
 export default function PageBackground() {
   return (
     <div
-      className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
+      className="page-site-bg fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: 'url(/panael-mu.jpg)',
         filter: 'brightness(0.5) contrast(1.1)',
