@@ -86,7 +86,7 @@ export default function Register() {
   return (
     <div className="min-h-screen relative bg-black flex flex-col" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
-      <div className="relative z-10 flex flex-col flex-1 pt-28 pb-12 px-4">
+      <div className="relative z-10 flex flex-1 flex-col px-4 pb-12 pt-48">
       {/* Breadcrumb */}
       <div className="max-w-xl mx-auto w-full mb-6 flex items-center gap-2 text-sm text-gray-400">
         <Link href="/" className="hover:text-white transition-colors" aria-label="Trang chủ">

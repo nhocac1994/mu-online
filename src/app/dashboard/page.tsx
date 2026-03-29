@@ -7,7 +7,8 @@ import PageBackground from '@/components/PageBackground';
 import siteConfigStatic from '@/config/site.config.json';
 import { getSiteConfig, type SiteConfig } from '@/lib/config-api';
 
-const cardClass = 'rounded border border-white/40 bg-black/30 p-4 sm:p-6';
+const cardClass =
+  'rounded border border-white/30 bg-black/55 p-4 backdrop-blur-md sm:p-6';
 const titleClass = 'text-[#F39C12] font-bold uppercase tracking-wider text-sm mb-3 sm:mb-4';
 
 interface Character {
@@ -457,17 +458,19 @@ export default function Dashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen relative bg-black flex items-center justify-center">
+      <div className="relative min-h-screen bg-black">
         <PageBackground />
-        <div className="relative z-10 text-gray-400 text-lg">Đang tải...</div>
+        <div className="relative z-10 flex min-h-screen items-center justify-center">
+          <div className="text-lg text-gray-400">Đang tải...</div>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen relative bg-black" style={{ fontFamily: 'var(--font-main)' }}>
+    <div className="relative min-h-screen bg-black" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
-      <div className="relative z-10 pt-28 pb-12 px-4">
+      <div className="relative z-10 px-4 pb-12 pt-48">
       <div className="max-w-6xl mx-auto">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
@@ -561,7 +564,7 @@ export default function Dashboard() {
                   <p className="text-white"><span className="text-gray-400">Cấp độ:</span> <span className="text-[#F39C12]">{selectedCharacter?.level ?? dashboardData?.character?.level ?? 0}</span></p>
                   <p className="text-white"><span className="text-gray-400">Class:</span> <span className="text-[#F39C12]">{formatText(selectedCharacter?.className || getClassName(dashboardData?.character?.class ?? 0))}</span></p>
                   <p className="text-white"><span className="text-gray-400">Kinh nghiệm:</span> <span className="text-[#F39C12]">{formatMoney(dashboardData?.character?.experience ?? 0)} / {formatMoney(dashboardData?.character?.nextLevelExp ?? 0)}</span></p>
-                  <div className="w-full bg-black/50 rounded-full h-2 mt-2">
+                  <div className="mt-2 h-2 w-full rounded-full bg-[#1a1a1a]">
                     <div className="h-2 rounded-full bg-[#F39C12]/80 transition-all" style={{ width: `${dashboardData?.character?.expProgress ?? 0}%` }}></div>
                   </div>
                 </div>
@@ -644,11 +647,11 @@ export default function Dashboard() {
               <h3 className={titleClass}>HP & MP</h3>
               <div className="space-y-2 text-sm">
                 <p className="text-white"><span className="text-gray-400">Life:</span> <span className="text-[#F39C12]">{Math.floor(selectedCharacter?.life ?? dashboardData?.character?.life ?? 0)} / {Math.floor(selectedCharacter?.maxLife ?? dashboardData?.character?.maxLife ?? 0)}</span></p>
-                <div className="w-full bg-black/50 rounded-full h-2">
-                  <div className="bg-red-500/90 h-2 rounded-full" style={{ width: `${Math.min(100, ((selectedCharacter?.life ?? dashboardData?.character?.life ?? 0) / (selectedCharacter?.maxLife ?? dashboardData?.character?.maxLife ?? 1)) * 100)}%` }}></div>
+                <div className="h-2 w-full rounded-full bg-[#1a1a1a]">
+                  <div className="h-2 rounded-full bg-red-500/90" style={{ width: `${Math.min(100, ((selectedCharacter?.life ?? dashboardData?.character?.life ?? 0) / (selectedCharacter?.maxLife ?? dashboardData?.character?.maxLife ?? 1)) * 100)}%` }}></div>
                 </div>
                 <p className="text-white"><span className="text-gray-400">Mana:</span> <span className="text-[#F39C12]">{Math.floor(selectedCharacter?.mana ?? dashboardData?.character?.mana ?? 0)} / {Math.floor(selectedCharacter?.maxMana ?? dashboardData?.character?.maxMana ?? 0)}</span></p>
-                <div className="w-full bg-black/50 rounded-full h-2">
+                <div className="h-2 w-full rounded-full bg-[#1a1a1a]">
                   <div className="bg-blue-500/90 h-2 rounded-full" style={{ width: `${Math.min(100, ((selectedCharacter?.mana ?? dashboardData?.character?.mana ?? 0) / (selectedCharacter?.maxMana ?? dashboardData?.character?.maxMana ?? 1)) * 100)}%` }}></div>
                 </div>
               </div>
@@ -672,8 +675,8 @@ export default function Dashboard() {
             <h3 className={titleClass}>Reset</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
               {/* Reset Thường */}
-              <div className="rounded-lg p-4 border border-white/35 bg-black/20">
-                <h4 className="text-sm font-semibold text-[#F39C12] mb-2">Reset Thường</h4>
+              <div className="rounded-lg border border-white/30 bg-black/40 p-4 backdrop-blur-sm">
+                <h4 className="mb-2 text-sm font-semibold text-[#F39C12]">Reset Thường</h4>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between"><span className="text-gray-400">Daily:</span><span className="text-white font-medium">{dashboardData?.reset.dailyReset ?? 0}</span></div>
                   <div className="flex justify-between"><span className="text-gray-400">Weekly:</span><span className="text-white font-medium">{dashboardData?.reset.weeklyReset ?? 0}</span></div>
@@ -683,8 +686,8 @@ export default function Dashboard() {
               </div>
 
               {/* Master Reset */}
-              <div className="rounded-lg p-4 border border-white/35 bg-black/20">
-                <h4 className="text-sm font-semibold text-[#F39C12] mb-2">Master Reset</h4>
+              <div className="rounded-lg border border-white/30 bg-black/40 p-4 backdrop-blur-sm">
+                <h4 className="mb-2 text-sm font-semibold text-[#F39C12]">Master Reset</h4>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between"><span className="text-gray-400">Daily:</span><span className="text-white font-medium">{dashboardData?.reset.masterDailyReset ?? 0}</span></div>
                   <div className="flex justify-between"><span className="text-gray-400">Weekly:</span><span className="text-white font-medium">{dashboardData?.reset.masterWeeklyReset ?? 0}</span></div>
@@ -694,8 +697,8 @@ export default function Dashboard() {
               </div>
 
               {/* Lần Reset Cuối */}
-              <div className="rounded-lg p-4 border border-white/35 bg-black/20">
-                <h4 className="text-sm font-semibold text-[#F39C12] mb-2">Lần Reset Cuối</h4>
+              <div className="rounded-lg border border-white/30 bg-black/40 p-4 backdrop-blur-sm">
+                <h4 className="mb-2 text-sm font-semibold text-[#F39C12]">Lần Reset Cuối</h4>
                 <div className="space-y-2 text-sm">
                   {dashboardData?.reset.lastDailyReset && (
                     <div className="flex justify-between"><span className="text-gray-400">Daily:</span><span className="text-green-400">{new Date(dashboardData.reset.lastDailyReset).toLocaleDateString('vi-VN')}</span></div>
@@ -737,7 +740,7 @@ export default function Dashboard() {
       {/* Account Management Modal */}
       {showAccountModal && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
-          <div className="rounded border border-white/40 bg-[#1a1a1d] p-6 w-full max-w-md">
+          <div className="w-full max-w-md rounded border border-white/30 bg-black/75 p-6 backdrop-blur-md">
             <h3 className="text-[#F39C12] font-bold uppercase tracking-wider text-sm mb-4">Quản lý tài khoản</h3>
             <div className="space-y-4">
               <div>
@@ -765,7 +768,7 @@ export default function Dashboard() {
       {/* Password Change Modal */}
       {showPasswordModal && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
-          <div className="rounded border border-white/40 bg-[#1a1a1d] p-6 w-full max-w-md">
+          <div className="w-full max-w-md rounded border border-white/30 bg-black/75 p-6 backdrop-blur-md">
             <h3 className="text-[#F39C12] font-bold uppercase tracking-wider text-sm mb-4">Đổi mật khẩu</h3>
             <div className="space-y-4">
               <div>

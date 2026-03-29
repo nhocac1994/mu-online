@@ -20,7 +20,7 @@ export default function NewsGuide() {
     <div className="min-h-screen relative overflow-hidden bg-black" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
       <div className="fixed inset-0 bg-black/40 z-[1]" aria-hidden />
-      <div className="relative z-10" style={{ paddingTop: '92px' }}>
+      <div className="relative z-10 pt-48">
         <section className="py-4 bg-black/30">
           <div className="container mx-auto px-4">
             <nav className="flex space-x-2 text-sm">

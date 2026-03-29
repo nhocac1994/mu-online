@@ -6,7 +6,8 @@ import PageBackground from '@/components/PageBackground';
 import RankingTable from '@/components/RankingTable';
 import GuildRankingTable from '@/components/GuildRankingTable';
 
-const cardClass = 'rounded border border-white/40 bg-black/30 p-4 sm:p-6';
+const cardClass =
+  'rounded border border-white/30 bg-black/55 p-4 backdrop-blur-md sm:p-6';
 const titleClass = 'text-[#F39C12] font-bold uppercase tracking-wider text-sm';
 
 export default function RankingsPage() {
@@ -15,7 +16,7 @@ export default function RankingsPage() {
   return (
     <div className="min-h-screen relative bg-black" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
-      <div className="relative z-10 pt-28 pb-12 px-4">
+      <div className="relative z-10 px-4 pb-12 pt-48">
       <div className="max-w-5xl mx-auto">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
@@ -32,11 +33,10 @@ export default function RankingsPage() {
         <h1 className="text-2xl font-bold text-white mb-1 text-center">Bảng xếp hạng</h1>
         <p className="text-sm text-gray-400 text-center mb-8">Top nhân vật và guild của server</p>
 
-        {/* Card chứa tab + bảng (như ảnh 2: tab ngay trên bảng) */}
-        <div className="rounded border border-white/40 bg-black/30 overflow-hidden">
-          {/* Tab ngay trên bảng */}
-          <div className="flex justify-center border-b border-white/35 bg-black/40 p-2">
-            <div className="inline-flex rounded border border-white/40 bg-black/60 p-1">
+        {/* Card tab + bảng — đen bán trong suốt, hình nền lộ phía sau */}
+        <div className="overflow-hidden rounded border border-white/30 bg-black/55 backdrop-blur-md">
+          <div className="flex justify-center border-b border-white/25 bg-black/40 p-2 backdrop-blur-sm">
+            <div className="inline-flex rounded border border-white/30 bg-black/45 p-1 backdrop-blur-sm">
               <button
                 type="button"
                 onClick={() => setActiveTab('characters')}

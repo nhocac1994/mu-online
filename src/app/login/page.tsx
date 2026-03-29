@@ -51,11 +51,11 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen relative bg-black flex flex-col" style={{ fontFamily: 'var(--font-main)' }}>
+    <div className="min-h-screen relative bg-black flex flex-col mt-10" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
-      <div className="relative z-10 flex flex-col flex-1 pt-28 pb-12 px-4">
+      <div className="relative z-10 flex flex-col flex-1 pt-48 pb-12 px-4">
       {/* Breadcrumb */}
-      <div className="max-w-md mx-auto w-full mb-6 flex items-center gap-2 text-sm text-gray-400">
+      <div className="max-w-md mx-auto w-full mt-10 mb-6 flex items-center gap-2 text-sm text-gray-400">
         <Link href="/" className="hover:text-white transition-colors" aria-label="Trang chủ">
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -67,9 +67,10 @@ export default function Login() {
       </div>
 
       {/* Form */}
-      <main className="max-w-md mx-auto w-full flex-1 flex flex-col justify-start">
-        <h1 className="text-2xl font-bold text-white mb-1 text-center">ĐĂNG NHẬP</h1>
-        <p className="text-sm text-gray-400 text-center mb-8">Đăng nhập vào tài khoản của bạn</p>
+      <main className="mx-auto flex w-full max-w-md flex-1 flex-col justify-start">
+        <div className="rounded-lg border border-white/25 bg-black/60 p-6 shadow-xl backdrop-blur-md sm:p-8">
+        <h1 className="mb-1 text-center text-2xl font-bold text-white">ĐĂNG NHẬP</h1>
+        <p className="mb-8 text-center text-sm text-gray-400">Đăng nhập vào tài khoản của bạn</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -124,12 +125,13 @@ export default function Login() {
           </button>
         </form>
 
-        <p className="text-center text-gray-400 text-sm mt-8">
+        <p className="mt-8 text-center text-sm text-gray-400">
           Chưa có tài khoản?{' '}
           <Link href="/register" className="font-semibold hover:underline" style={{ color: '#F39C12' }}>
             Đăng ký ngay
           </Link>
         </p>
+        </div>
       </main>
       </div>
     </div>

@@ -67,7 +67,7 @@ export default function NewsCommands() {
     <div className="relative min-h-screen overflow-hidden bg-black" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
       <div className="pointer-events-none fixed inset-0 z-[1] bg-black/40" aria-hidden />
-      <div className="relative z-10 pt-28 pb-12 px-4">
+      <div className="relative z-10 px-4 pb-12 pt-48">
         <section className="bg-black/30 py-4">
           <div className="container mx-auto px-4">
             <nav className="flex flex-wrap gap-x-2 gap-y-1 text-sm">

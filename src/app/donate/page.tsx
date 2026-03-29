@@ -7,7 +7,7 @@ import PageBackground from '@/components/PageBackground';
 import siteConfigStatic from '@/config/site.config.json';
 import { getBankTransferConfig, type BankTransfer } from '@/lib/config-api';
 
-const cardClass = 'rounded border border-white/40 bg-black/30 p-6';
+const cardClass = 'rounded border border-white/30 bg-black/60 p-6 backdrop-blur-md';
 const titleClass = 'text-[#F39C12] font-bold uppercase tracking-wider text-sm';
 
 export default function Donate() {
@@ -26,7 +26,7 @@ export default function Donate() {
   return (
     <div className="min-h-screen relative bg-black" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
-      <div className="relative z-10 pt-28 pb-12 px-4">
+      <div className="relative z-10 px-4 pb-12 pt-48">
       <div className="max-w-4xl mx-auto">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
@@ -54,7 +54,7 @@ export default function Donate() {
               <li className="flex items-center gap-2"><span className="w-2 h-2 bg-[#F39C12] rounded-full shrink-0" /> Ưu đãi đặc biệt nhận 5 chaos / 30 life</li>
             </ul>
           </div>
-          <div className="rounded border border-white/40 bg-black/30 p-6">
+          <div className={cardClass}>
             <h2 className={titleClass}>Thông tin donate</h2>
             <p className="text-gray-400 text-xs mt-0.5 mb-4">Thông tin tài khoản ngân hàng</p>
             <div className="flex flex-wrap items-start gap-6">

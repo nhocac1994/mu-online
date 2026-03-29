@@ -7,7 +7,7 @@ import siteConfigStatic from '@/config/site.config.json';
 import { getSiteConfig, getDownloadConfig, type SiteConfig, type DownloadLinks } from '@/lib/config-api';
 
 const SECTION_HEADER_STYLE = {
-  background: 'rgba(40, 40, 45, 0.95)',
+  background: 'rgb(40, 40, 45)',
   color: '#E8A84A',
   fontFamily: 'var(--font-main)',
   fontSize: '0.9rem',
@@ -53,9 +53,9 @@ export default function Download() {
   const downloadSize = '397.5';
 
   return (
-    <div className="min-h-screen relative bg-black">
+    <div className="relative min-h-screen bg-black">
       <PageBackground />
-      <div className="relative z-10 pt-28 pb-12 px-4">
+      <div className="relative z-10 px-4 pb-12 pt-48">
         {/* Breadcrumb */}
         <div className="max-w-5xl mx-auto mb-4 flex items-center gap-2 text-sm text-white/80">
           <Link href="/" className="hover:text-[#FFD700] transition-colors" aria-label="Trang chủ">
@@ -70,19 +70,14 @@ export default function Download() {
 
         {/* Container chính: viền vàng, icon skull trên cùng giữa */}
         <div
-          className="max-w-5xl mx-auto rounded-lg overflow-hidden"
-          style={{
-            background: 'rgba(28, 28, 32, 0.92)',
-            border: '1px solid rgba(212, 175, 55, 0.7)',
-            boxShadow: '0 0 24px rgba(0,0,0,0.4)',
-          }}
+          className="mx-auto max-w-5xl overflow-hidden rounded-lg border border-[rgba(212,175,55,0.65)] bg-black/60 shadow-[0_0_24px_rgba(0,0,0,0.4)] backdrop-blur-xl"
         >
           {/* Icon skull trang trí — giữa trên cùng */}
           <div className="flex justify-center pt-4 pb-2">
             <span
               className="inline-flex items-center justify-center w-10 h-10 rounded-full"
               style={{
-                background: 'rgba(60, 60, 65, 0.8)',
+                background: 'rgb(60, 60, 65)',
                 border: '1px solid rgba(255, 255, 255, 0.15)',
               }}
               aria-hidden
@@ -102,17 +97,13 @@ export default function Download() {
               {/* Client Downloads */}
               <div className="rounded border overflow-hidden" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
                 <div style={SECTION_HEADER_STYLE}>Client Downloads</div>
-                <div className="p-4 space-y-3 bg-black/20">
+                <div className="space-y-3 bg-black/40 p-4 backdrop-blur-sm">
                   {/* Card MediaFire */}
                   <a
                     href={links?.mediafire || '#'}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block rounded p-4 transition-colors hover:bg-white/5"
-                    style={{
-                      border: '1px solid rgba(212, 175, 55, 0.6)',
-                      background: 'rgba(30, 30, 35, 0.6)',
-                    }}
+                    className="block rounded border border-[rgba(212,175,55,0.55)] bg-black/50 p-4 backdrop-blur-sm transition-colors hover:bg-black/60"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="min-w-0">
@@ -138,11 +129,7 @@ export default function Download() {
                     href={links?.mega || '#'}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block rounded p-4 transition-colors hover:bg-white/5"
-                    style={{
-                      border: '1px solid rgba(212, 175, 55, 0.6)',
-                      background: 'rgba(30, 30, 35, 0.6)',
-                    }}
+                    className="block rounded border border-[rgba(212,175,55,0.55)] bg-black/50 p-4 backdrop-blur-sm transition-colors hover:bg-black/60"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="min-w-0">
@@ -169,8 +156,8 @@ export default function Download() {
               {/* Tool Downloads — chỉ header */}
               <div className="rounded border overflow-hidden" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
                 <div style={SECTION_HEADER_STYLE}>Tool Downloads</div>
-                <div className="p-4 bg-black/20 min-h-[60px] flex items-center justify-center">
-                  <p className="text-gray-500 text-sm">Chưa có công cụ</p>
+                <div className="flex min-h-[60px] items-center justify-center bg-black/40 p-4 backdrop-blur-sm">
+                  <p className="text-sm text-gray-500">Chưa có công cụ</p>
                 </div>
               </div>
 
@@ -180,7 +167,7 @@ export default function Download() {
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
                     <thead>
-                      <tr style={{ background: 'rgba(50, 50, 55, 0.9)' }}>
+                      <tr style={{ background: 'rgb(50, 50, 55)' }}>
                         <th className="text-left py-2.5 px-3 font-bold" style={{ color: '#E8A84A' }}>COMPONENT</th>
                         <th className="text-left py-2.5 px-3 font-bold" style={{ color: '#E8A84A' }}>REQUIREMENTS</th>
                       </tr>
@@ -190,7 +177,7 @@ export default function Download() {
                         <tr
                           key={i}
                           className="text-white/90"
-                          style={{ background: i % 2 === 0 ? 'rgba(25, 25, 28, 0.8)' : 'rgba(32, 32, 36, 0.8)' }}
+                          style={{ background: i % 2 === 0 ? 'rgb(25, 25, 28)' : 'rgb(32, 32, 36)' }}
                         >
                           <td className="py-2 px-3">{row.component}</td>
                           <td className="py-2 px-3">{row.requirement}</td>
@@ -207,15 +194,15 @@ export default function Download() {
               {/* Patch Downloads — chỉ header */}
               <div className="rounded border overflow-hidden" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
                 <div style={SECTION_HEADER_STYLE}>Patch Downloads</div>
-                <div className="p-4 bg-black/20 min-h-[60px] flex items-center justify-center">
-                  <p className="text-gray-500 text-sm">Chưa có bản patch</p>
+                <div className="flex min-h-[60px] items-center justify-center bg-black/40 p-4 backdrop-blur-sm">
+                  <p className="text-sm text-gray-500">Chưa có bản patch</p>
                 </div>
               </div>
 
               {/* Drivers — logo NVIDIA, AMD, Intel */}
               <div className="rounded border overflow-hidden" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
                 <div style={SECTION_HEADER_STYLE}>Drivers</div>
-                <div className="p-6 bg-black/20 flex flex-wrap items-center justify-center gap-6">
+                <div className="flex flex-wrap items-center justify-center gap-6 bg-black/40 p-6 backdrop-blur-sm">
                   <a
                     href="https://www.nvidia.com/Download/index.aspx"
                     target="_blank"

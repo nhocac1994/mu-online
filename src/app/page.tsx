@@ -14,10 +14,32 @@ const PANEL = {
   news: '/panel/panel-news.PNG',
   topPlayer: '/panel/panel-topplayer.PNG',
   topGuild: '/panel/panel-topguild.PNG',
+  /** Nút “Xem thêm” — file thật: public/panel/xemthem.PNG (Linux/production phân biệt hoa thường) */
+  xemThem: '/panel/xemthem.PNG',
 } as const;
 
+const XEMTHEM_IMG_PX = { w: 133, h: 40 } as const;
+
+function PanelXemThemLink({ href, alt }: { href: string; alt: string }) {
+  return (
+    <Link
+      href={href}
+      className="inline-flex max-w-full justify-center rounded transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD700]/50"
+    >
+      <Image
+        src={PANEL.xemThem}
+        alt={alt}
+        width={XEMTHEM_IMG_PX.w}
+        height={XEMTHEM_IMG_PX.h}
+        className="h-8 w-auto max-w-[min(133px,78vw)] object-contain object-center md:h-9"
+        unoptimized
+      />
+    </Link>
+  );
+}
+
 /** Ảnh nền panel (IHDR): event, news, topplayer, topguild đều 545×650 */
-const EVENT_PANEL_PX = { w: 545, h: 650 } as const;
+const EVENT_PANEL_PX = { w: 550, h: 650 } as const;
 const NEWS_PANEL_PX = EVENT_PANEL_PX;
 
 /** Đặt true khi đã có file trong public/icons/ để tránh 404 */
@@ -110,7 +132,7 @@ export default function Home() {
   const currentConfig = siteConfig || (siteConfigStatic as unknown as SiteConfig);
   const serverName = currentConfig?.serverName || 'MuDauTruongSS1.net';
   const serverVersion = currentConfig?.serverVersion || 'Season 1';
-  const downloadSize = '397.5 MB';
+  const downloadSize = '274.075 MB';
 
   useEffect(() => {
     const load = async () => {
@@ -180,9 +202,9 @@ export default function Home() {
     <div className="min-h-screen relative overflow-x-hidden bg-transparent">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         <PageBackground />
-        <main className="relative z-10 min-w-0 bg-transparent pt-28 md:pt-[160px]">
+        <main className="relative z-10 min-w-0 bg-transparent pt-20 md:pt-48">
           {/* Hero: full viewport, logo + tên + 2 nút CTA */}
-          <section className="min-h-[85vh] flex flex-col items-center justify-center px-4 py-12 relative">
+          <section className="flex flex-col items-center justify-center px-4 py-12 relative">
             {/* Chỉ chữ: tên/domain từ config + SEASON 1, căn giữa */}
             <div className="flex flex-col items-center justify-center text-center mb-2 md:mb-4 w-full">
               <Image
@@ -201,24 +223,24 @@ export default function Home() {
                 href="/register"
                 className="flex-1 min-w-0 flex items-center gap-4 px-6 py-5 rounded-xl transition-all hover:brightness-110"
                 style={{
-                  background: 'rgba(45, 45, 50, 0.85)',
-                  border: '1px solid rgba(212, 175, 55, 0.6)',
+                  background: 'rgba(0, 0, 0, 0.85)',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
                   boxShadow: '0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)',
                 }}
               >
                 <div className="flex-shrink-0" style={{ color: '#D4AF37' }}>
-                  <CTAIcon src={CTA_ICON_REGISTER} alt="Đăng ký" fallback={<RegisterIcon className="w-12 h-12 md:w-14 md:h-14" />} />
+                  <CTAIcon src={CTA_ICON_REGISTER} alt="Đăng ký" fallback={<RegisterIcon className="w-10 h-10 md:w-10 md:h-10" />} />
                 </div>
                 <div className="text-left min-w-0">
                   <span
                     className="block font-bold uppercase text-white tracking-wide"
-                    style={{ fontSize: 'clamp(1rem, 2.2vw, 1.35rem)' }}
+                    style={{ fontSize: 'clamp(0.8rem, 2.2vw, 1.35rem)' }}
                   >
                     ĐĂNG KÝ
                   </span>
                   <span
                     className="block text-white/85 uppercase mt-1 tracking-wide"
-                    style={{ fontSize: 'clamp(0.8rem, 1.5vw, 0.9rem)' }}
+                    style={{ fontSize: 'clamp(0.6rem, 1.5vw, 0.9rem)' }}
                   >
                     Tạo tài khoản chơi game
                   </span>
@@ -228,24 +250,24 @@ export default function Home() {
                 href="/download"
                 className="flex-1 min-w-0 flex items-center gap-4 px-6 py-5 rounded-xl transition-all hover:brightness-110"
                 style={{
-                  background: 'rgba(45, 45, 50, 0.85)',
-                  border: '1px solid rgba(212, 175, 55, 0.6)',
+                  background: 'rgba(0, 0, 0, 0.85)',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
                   boxShadow: '0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)',
                 }}
               >
                 <div className="flex-shrink-0" style={{ color: '#D4AF37' }}>
-                  <CTAIcon src={CTA_ICON_DOWNLOAD} alt="Tải xuống" fallback={<DownloadIcon className="w-12 h-12 md:w-14 md:h-14" />} />
+                  <CTAIcon src={CTA_ICON_DOWNLOAD} alt="Tải xuống" fallback={<DownloadIcon className="w-10 h-10 md:w-10 md:h-10" />} />
                 </div>
                 <div className="text-left min-w-0">
                   <span
                     className="block font-bold uppercase text-white tracking-wide"
-                    style={{ fontSize: 'clamp(1rem, 2.2vw, 1.35rem)' }}
+                    style={{ fontSize: 'clamp(0.8rem, 2.2vw, 1.35rem)' }}
                   >
                     TẢI XUỐNG
                   </span>
                   <span
                     className="block text-white/85 uppercase mt-1 tracking-wide"
-                    style={{ fontSize: 'clamp(0.8rem, 1.5vw, 0.9rem)' }}
+                    style={{ fontSize: 'clamp(0.6rem, 1.5vw, 0.9rem)' }}
                   >
                     Phiên bản đầy đủ {downloadSize.replace('.', ',')}
                   </span>
@@ -254,7 +276,7 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Sự kiện + Bản tin: MuPanelFrame + background-image — News cùng cấu trúc Events */}
+          {/* Sự kiện + Bản tin — chỉ căn padding/mép Events; News giữ nguyên cấu hình riêng */}
           <section className="mx-auto grid min-w-0 max-w-7xl grid-cols-1 items-start gap-8 px-5 py-8 md:px-8 lg:grid-cols-2 lg:gap-10">
             <MuPanelFrame
               src={PANEL.event}
@@ -265,13 +287,14 @@ export default function Home() {
               overlayClassName="top-[12%] bottom-[9%] left-[5%] right-[5%]"
               backgroundSize="contain"
             >
-              <span className="sr-only">Sự kiện</span>
               <div className="flex min-h-0 min-w-0 w-full max-w-full flex-1 flex-col overflow-hidden">
-                <div className="min-h-0 min-w-0 w-full max-w-full flex-1 overflow-x-hidden overflow-y-auto px-3 pt-2">
-                  <EventCountdown variant="eventsBoard" />
+                <div className="min-h-0 w-full max-w-full flex-1 overflow-x-hidden overflow-y-auto px-2 pb-2 sm:px-3">
+                  <div className="pt-[10px] sm:pt-3">
+                    <EventCountdown variant="eventsBoard" />
+                  </div>
                 </div>
                 <div
-                  className="flex-shrink-0 pt-2 text-center uppercase tracking-wider text-white/55"
+                  className="flex-shrink-0 border-t border-white/10 px-2 py-2 text-center uppercase tracking-wider text-white/55 sm:px-3"
                   style={{ fontSize: '0.68rem' }}
                 >
                   Prev 1 / 1 Next
@@ -293,7 +316,7 @@ export default function Home() {
               <div className="flex h-full min-h-0 min-w-0 w-full max-w-full flex-col overflow-hidden">
                 <div className="flex min-h-0 min-w-0 w-full max-w-full flex-1 flex-col overflow-x-hidden overflow-y-auto px-2 pb-1 sm:px-3">
                   {/* Cách mép trên card một lần cho cả cụm tin — không dùng py từng Link (sẽ lặp 10px mỗi hàng) */}
-                  <div className="min-w-0 max-w-full space-y-0 pt-17 sm:pt-3 pt-2">
+                  <div className="min-w-0 max-w-full space-y-0 pt-17 sm:pt-2 pt-2">
                     {news.slice(0, 5).map((item, i) => {
                       const isNotice = item.type === 'Notice';
                       const isEvent = item.type === 'Event';
@@ -304,8 +327,8 @@ export default function Home() {
                           href={item.link}
                           className="group block min-w-0 max-w-full overflow-hidden border-b border-white/15 pb-1.5 last:border-b-0 md:pb-2.5"
                         >
-                          <div className="flex min-w-0 max-w-full items-start justify-between gap-1.5 md:gap-2 pt-2">
-                            <div className="flex min-w-0 flex-1 items-start gap-1 sm:gap-2">
+                          <div className="flex min-w-0 max-w-full items-start justify-between gap-1.5 sm:gap-4 sm:pt-4">
+                            <div className="flex min-w-0 flex-1 items-start gap-1 sm:gap-4">
                               <span
                                 className="mt-0.5 flex-shrink-0 rounded px-1 py-0.5 text-[7px] font-bold uppercase leading-none text-white tracking-wide sm:px-1.5 sm:text-[9px]"
                                 style={{
@@ -353,7 +376,7 @@ export default function Home() {
                           title="Zalo"
                           aria-label="Zalo"
                         >
-                          <Image src="/Zalo-icon.webp" alt="Zalo" width={40} height={40} className="h-16 w-16 object-contain md:h-7 md:w-7" />
+                          <Image src="/Zalo-icon.webp" alt="Zalo" width={40} height={40} className="h-26 w-26 object-contain sm:h-10 sm:w-10" />
                         </a>
                       )}
                       {siteConfig?.linkFacebook && (
@@ -365,7 +388,7 @@ export default function Home() {
                           title="Facebook"
                           aria-label="Facebook"
                         >
-                          <Image src="/facebook-logo.png" alt="Facebook" width={40} height={40} className="h-16 w-16 object-contain md:h-7 md:w-7" />
+                          <Image src="/facebook-logo.png" alt="Facebook" width={40} height={40} className="h-26 w-26 object-contain sm:h-10 sm:w-10" />
                         </a>
                       )}
                       {siteConfig?.linkYoutube && (
@@ -374,24 +397,19 @@ export default function Home() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex h-9 w-9 flex-shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/15 bg-white/10 transition-all duration-200 hover:scale-110 hover:bg-white/20 md:h-11 md:w-11"
-                          title="YouTube"
-                          aria-label="YouTube"
+                          title="TikTok"
+                          aria-label="TikTok"
                         >
-                          <Image src="/tiktok-logo.png" alt="YouTube" width={40} height={40} className="h-18 w-18 object-contain md:h-7 md:w-7" />
+                          <Image src="/tiktok-logo.png" alt="TikTok" width={40} height={40} className="h-26 w-26 object-contain sm:h-15 sm:w-15" />
                         </a>
                       )}
                     </div>
-                  </div>
-                  {/* Cùng vùng cuộn với tin + MXH — tránh bị đẩy ra ngoài viền panel (flex pin dưới) */}
-                  <div className="shrink-0 px-1 pt-2 pb-1 text-center text-[0.62rem] uppercase tracking-wider text-white/55 md:pt-2 md:text-[0.68rem]">
-                    <Link
-                      href="/news"
-                      className="inline-block max-w-full truncate transition-colors hover:text-[#FFD700]"
-                    >
-                      Xem tất cả tin →
-                    </Link>
-                  </div>
+                  </div>  
                 </div>
+              </div>
+              {/* Cùng vùng cuộn với tin + MXH — tránh bị đẩy ra ngoài viền panel (flex pin dưới) */}
+              <div className="flex flex-shrink-0 justify-center pt-2">
+                   <PanelXemThemLink href="/news" alt="Xem tất cả tin tức" />
               </div>
             </MuPanelFrame>
           </section>
@@ -422,23 +440,23 @@ export default function Home() {
                     <table className="w-full" style={{ fontSize: 'clamp(0.82rem, 1.4vw, 0.95rem)' }}>
                       <thead>
                         <tr>
-                          <th className="px-1 pb-4 sm:pb-10 pt-4 text-left font-bold text-white/90">#</th>
-                          <th className="px-1 pb-4 sm:pb-10 pt-4 text-left font-bold text-white/90">Nhân vật</th>
-                          <th className="px-1 pb-4 sm:pb-10 pt-4 text-left font-bold text-white/90">Class</th>
-                          <th className="px-1 pb-4 sm:pb-10 pt-4 text-left font-bold text-white/90">Level</th>
-                          <th className="px-1 pb-4 sm:pb-10 pt-4 text-left font-bold text-white/90">RR</th>
+                          <th className="px-1 pb-4 sm:pb-4 pt-4 text-left font-bold text-white/90">#</th>
+                          <th className="px-1 pb-4 sm:pb-4 pt-4 text-left font-bold text-white/90">Nhân vật</th>
+                          <th className="px-1 pb-4 sm:pb-4 pt-4 text-left font-bold text-white/90">Class</th>
+                          <th className="px-1 pb-4 sm:pb-4 pt-4 text-left font-bold text-white/90">Level</th>
+                          <th className="px-1 pb-4 sm:pb-4 pt-4 text-left font-bold text-white/90">RR</th>
                         </tr>
                       </thead>
                       <tbody>
                         {topPlayers.map((p, i) => (
-                          <tr key={`${p.character}-${i}`} className="border-b border-white/10">
-                            <td className="px-1 py-2 sm:pt-10 font-medium text-[#FFD700]">
+                          <tr key={`${p.character}-${i}`} className="border-b border-white/4">
+                            <td className="px-1 py-2 sm:pt-4 font-medium text-[#FFD700]">
                               {i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `#${i + 1}`}
                             </td>
-                            <td className="max-w-[5.5rem] truncate px-1 py-2 sm:pt-10 text-white">{p.character || '—'}</td>
-                            <td className="px-1 py-2 sm:pt-10 text-white/90">{classShort[p.class] ?? p.class}</td>
-                            <td className="px-1 py-2 sm:pt-10 text-white/90">{p.level ?? '—'}</td>
-                            <td className="px-1 py-2 sm:pt-10 text-white/90">{p.resets ?? 0}</td>
+                            <td className="max-w-[5.5rem] truncate px-1 py-2 sm:pt-4 text-white">{p.character || '—'}</td>
+                            <td className="px-1 py-2 sm:pt-4 text-white/90">{classShort[p.class] ?? p.class}</td>
+                            <td className="px-1 py-2 sm:pt-4 text-white/90">{p.level ?? '—'}</td>
+                            <td className="px-1 py-2 sm:pt-4 text-white/90">{p.resets ?? 0}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -447,16 +465,7 @@ export default function Home() {
                 )}
               </div>
               <div className="flex flex-shrink-0 justify-center pt-2">
-                <Link
-                  href="/rankings"
-                  className="rounded px-4 py-1.5 text-xs font-semibold uppercase text-white transition-all hover:brightness-110"
-                  style={{
-                    background: 'linear-gradient(180deg, #5c4535 0%, #4a3728 100%)',
-                    border: '1px solid rgba(255,255,255,0.35)',
-                  }}
-                >
-                  Xem thêm
-                </Link>
+                <PanelXemThemLink href="/rankings" alt="Xem thêm bảng xếp hạng nhân vật" />
               </div>
             </MuPanelFrame>
 
@@ -484,21 +493,21 @@ export default function Home() {
                     <table className="w-full" style={{ fontSize: 'clamp(0.72rem, 1.4vw, 0.85rem)' }}>
                       <thead>
                         <tr>
-                          <th className="px-1 pb-4 sm:pb-10 pt-2 text-left font-bold text-white/90">#</th>
-                          <th className="px-1 pb-4 sm:pb-10 pt-2 text-left font-bold text-white/90">Guild</th>
-                          <th className="px-1 pb-4 sm:pb-10 pt-2 text-left font-bold text-white/90">Master</th>
-                          <th className="px-1 pb-4 sm:pb-10 pt-2 text-left font-bold text-white/90">TV</th>
+                          <th className="px-1 pb-4 sm:pb-4 pt-2 text-left font-bold text-white/90">#</th>
+                          <th className="px-1 pb-4 sm:pb-4 pt-2 text-left font-bold text-white/90">Guild</th>
+                          <th className="px-1 pb-4 sm:pb-4 pt-2 text-left font-bold text-white/90">Master</th>
+                          <th className="px-1 pb-4 sm:pb-4 pt-2 text-left font-bold text-white/90">TV</th>
                         </tr>
                       </thead>
                       <tbody>
                         {topGuilds.map((g, i) => (
-                          <tr key={`${g.guildName}-${i}`} className="border-b border-white/10">
-                            <td className="px-1 py-2 sm:pt-10 font-medium text-[#FFD700]">
+                          <tr key={`${g.guildName}-${i}`} className="border-b border-white/4">
+                            <td className="px-1 py-2 sm:pt-4 font-medium text-[#FFD700]">
                               {i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `#${i + 1}`}
                             </td>
-                            <td className="max-w-[5rem] truncate px-1 py-2 sm:pt-10 text-white">{g.guildName || '—'}</td>
-                            <td className="max-w-[4.5rem] truncate px-1 py-2 sm:pt-10 text-white/90">{g.guildMaster || '—'}</td>
-                            <td className="px-1 py-2 sm:pt-10 text-white/90">{g.memberCount ?? 0}</td>
+                            <td className="max-w-[5rem] truncate px-1 py-2 sm:pt-4 text-white">{g.guildName || '—'}</td>
+                            <td className="max-w-[4.5rem] truncate px-1 py-2 sm:pt-4 text-white/90">{g.guildMaster || '—'}</td>
+                            <td className="px-1 py-2 sm:pt-4 text-white/90">{g.memberCount ?? 0}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -507,16 +516,7 @@ export default function Home() {
                 )}
               </div>
               <div className="flex flex-shrink-0 justify-center pt-2">
-                <Link
-                  href="/rankings"
-                  className="rounded px-4 py-1.5 text-xs font-semibold uppercase text-white transition-all hover:brightness-110"
-                  style={{
-                    background: 'linear-gradient(180deg, #5c4535 0%, #4a3728 100%)',
-                    border: '1px solid rgba(255,255,255,0.35)',
-                  }}
-                >
-                  Xem thêm
-                </Link>
+                <PanelXemThemLink href="/rankings" alt="Xem thêm bảng xếp hạng guild" />
               </div>
             </MuPanelFrame>
           </section>

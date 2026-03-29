@@ -200,7 +200,7 @@ export default function MyAccount() {
       <PageBackground />
       <div className="fixed inset-0 bg-black/40 z-[1]" aria-hidden />
       {/* Content */}
-      <div className="relative z-10 pt-28">
+      <div className="relative z-10 pt-48">
         {/* Main Content */}
         <main className="relative z-10 container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">

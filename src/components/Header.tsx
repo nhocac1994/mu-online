@@ -205,7 +205,7 @@ export default function Header() {
       </div>
 
       {/* Mobile: menu mở = full-screen (bên dưới) — không còn drawer lệch/hở dưới thanh */}
-      <div className="relative z-[102] md:hidden flex h-28 min-h-28 items-center justify-between px-3 sm:px-4">
+      <div className="relative z-[102] md:hidden flex h-20 min-h-20 items-center justify-between px-3 sm:px-4">
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -220,7 +220,7 @@ export default function Header() {
         <Link href="/" className="flex flex-1 justify-center" aria-label={serverLabel}>
           <div className="flex h-24 w-24 shrink-0 items-center justify-center bg-transparent">
             {logoError ? (
-              <LogoFallback className="h-20 w-20 rounded-full text-xl" />
+              <LogoFallback className="h-46 w-46 rounded-full text-xl" />
             ) : (
               <Image
                 src={NAV_CENTER_ICON}

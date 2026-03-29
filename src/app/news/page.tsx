@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import PageBackground from '@/components/PageBackground';
 
-const cardClass = 'rounded border border-white/40 bg-black/30 p-5 hover:border-white/50 transition-colors';
+const cardClass =
+  'rounded border border-white/30 bg-black/55 p-5 backdrop-blur-md transition-colors hover:border-white/45';
 const badge = (type: string) => {
   const colors: Record<string, string> = {
     Notice: 'bg-blue-600',
@@ -45,10 +46,10 @@ export default function News() {
     : newsItems;
 
   return (
-    <div className="min-h-screen relative bg-black" style={{ fontFamily: 'var(--font-main)' }}>
+    <div className="relative min-h-screen bg-black" style={{ fontFamily: 'var(--font-main)' }}>
       <PageBackground />
-      <div className="relative z-10 pt-28 pb-12 px-4">
-      <div className="max-w-5xl mx-auto">
+      <div className="relative z-10 px-4 pb-12 pt-48">
+        <div className="mx-auto max-w-5xl">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
           <Link href="/" className="hover:text-white transition-colors" aria-label="Trang chủ">
@@ -88,7 +89,7 @@ export default function News() {
           {/* Danh sách tin */}
           <div className="lg:col-span-2 space-y-4">
             {filtered.length === 0 ? (
-              <div className="rounded border border-white/40 bg-black/30 p-8 text-center text-gray-400 text-sm">
+              <div className="rounded border border-white/30 bg-black/55 p-8 text-center text-sm text-gray-400 backdrop-blur-md">
                 Không tìm thấy tin nào.
               </div>
             ) : (
@@ -110,8 +111,8 @@ export default function News() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            <div className="rounded border border-white/40 bg-black/30 p-5">
-              <h3 className="text-[#F39C12] font-bold uppercase tracking-wider text-sm mb-4">Tin gần đây</h3>
+            <div className="rounded border border-white/30 bg-black/55 p-5 backdrop-blur-md">
+              <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#F39C12]">Tin gần đây</h3>
               <ul className="space-y-3">
                 {newsItems.slice(0, 5).map((n, i) => (
                   <li key={i} className="border-b border-white/10 pb-3 last:border-0 last:pb-0">
@@ -123,8 +124,8 @@ export default function News() {
                 ))}
               </ul>
             </div>
-            <div className="rounded border border-white/40 bg-black/30 p-5">
-              <h3 className="text-[#F39C12] font-bold uppercase tracking-wider text-sm mb-4">Danh mục</h3>
+            <div className="rounded border border-white/30 bg-black/55 p-5 backdrop-blur-md">
+              <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#F39C12]">Danh mục</h3>
               <ul className="space-y-2">
                 {sidebarLinks.map((l) => (
                   <li key={l.href}>
@@ -140,7 +141,7 @@ export default function News() {
             </div>
           </div>
         </div>
-      </div>
+        </div>
       </div>
     </div>
   );
