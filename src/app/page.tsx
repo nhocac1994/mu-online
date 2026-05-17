@@ -182,6 +182,8 @@ export default function Home() {
   }, []);
 
   const news = [
+    { title: 'HƯỚNG DẪN HỢP THÀNH — ĐỒ MỚI', date: '17/5/2026', type: 'Hot' as const, link: '/news/chaos-mix' },
+    { title: 'HƯỚNG DẪN KHẢM ĐỒNG (MIX OPTION)', date: '17/5/2026', type: 'Hot' as const, link: '/news/kham-dong' },
     { title: `HƯỚNG DẪN CHƠI ${serverName.toUpperCase()} - ${serverVersion.toUpperCase()}`, date: '15/4/2026', type: 'Notice' as const, link: '/news/guide' },
     { title: 'CÁC LỆNH TRONG GAME (CHAT)', date: '15/4/2026', type: 'Notice' as const, link: '/news/commands' },
     { title: 'CÁC SỰ KIỆN TRONG GAME', date: '15/4/2026', type: 'Event', link: '/news/events' },

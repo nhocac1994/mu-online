@@ -1,0 +1,6512 @@
+{
+  "generatedAt": "2026-05-17T10:39:56.772Z",
+  "categories": [
+    "Set DK",
+    "Set DL",
+    "Set DW",
+    "Set Elf",
+    "Set MG",
+    "Vũ khí DK/MG",
+    "Vũ khí DW/DL",
+    "Vũ khí Elf",
+    "Vũ khí RF"
+  ],
+  "recipes": [
+    {
+      "mixIndex": 5,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Ao Hac Long",
+      "category": "Set DK",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 1,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Áo (ID 1) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 4,
+      "money": 20000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Ao Hoa Long",
+      "category": "Set DK",
+      "zenLabel": "20M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 6,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 1,
+          "label": "Áo (ID 6) +9, Luck, +5 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 6,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Ao Phuong Hoang",
+      "category": "Set DK",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 16,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Áo (ID 16) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 7,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Ao Than Long",
+      "category": "Set DK",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 17,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Áo (ID 17) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 17,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Chan Hac Long",
+      "category": "Set DK",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 1,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Giày (ID 1) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 16,
+      "money": 20000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Chan Hoa Long",
+      "category": "Set DK",
+      "zenLabel": "20M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 6,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 1,
+          "label": "Giày (ID 6) +9, Luck, +5 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 18,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Chan Phuong Hoang",
+      "category": "Set DK",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 16,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Giày (ID 16) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 19,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Chan Than Long",
+      "category": "Set DK",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 17,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Giày (ID 17) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 13,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Gang Hac Long",
+      "category": "Set DK",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 1,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng tay (ID 1) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 12,
+      "money": 20000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Gang Hoa Long",
+      "category": "Set DK",
+      "zenLabel": "20M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 6,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 1,
+          "label": "Găng tay (ID 6) +9, Luck, +5 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 14,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Gang Phuong Hoang",
+      "category": "Set DK",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 16,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng tay (ID 16) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 15,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Gang Than Long",
+      "category": "Set DK",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 17,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng tay (ID 17) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 1,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Mu Hac Long",
+      "category": "Set DK",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 1,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Mũ (ID 1) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 0,
+      "money": 20000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Mu Hoa Long",
+      "category": "Set DK",
+      "zenLabel": "20M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 6,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Mũ (ID 6) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 2,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Mu Phuong Hoang",
+      "category": "Set DK",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 16,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Mũ (ID 16) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 3,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Mu Than Long",
+      "category": "Set DK",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 17,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Mũ (ID 17) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 9,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Quan Hac Long",
+      "category": "Set DK",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 1,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Quần (ID 1) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 8,
+      "money": 20000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Quan Hoa Long",
+      "category": "Set DK",
+      "zenLabel": "20M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 6,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 1,
+          "label": "Quần (ID 6) +9, Luck, +5 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 10,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Quan Phuong Hoang",
+      "category": "Set DK",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 16,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Quần (ID 16) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 11,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Quan Than Long",
+      "category": "Set DK",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 17,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Quần (ID 17) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 95,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Ao Chi Ton",
+      "category": "Set DL",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 27,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Áo (ID 27) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 94,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Ao Hac Vuong",
+      "category": "Set DL",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 26,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Áo (ID 26) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 93,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Ao Huyen Thiet",
+      "category": "Set DL",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 25,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Áo (ID 25) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 104,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Chan Chi Ton",
+      "category": "Set DL",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 27,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Giày (ID 27) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 103,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Chan Hac Vuong",
+      "category": "Set DL",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 26,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Giày (ID 26) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 102,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Chan Huyen Thiet",
+      "category": "Set DL",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 25,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Giày (ID 25) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 101,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Gang Chi Ton",
+      "category": "Set DL",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 27,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng tay (ID 27) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 100,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Gang Hac Vuong",
+      "category": "Set DL",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 26,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng tay (ID 26) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 99,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Gang Huyen Thiet",
+      "category": "Set DL",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 25,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Găng tay (ID 25) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 92,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Mu Chi Ton",
+      "category": "Set DL",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 27,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Mũ (ID 27) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 91,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Mu Hac Vuong",
+      "category": "Set DL",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 26,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Mũ (ID 26) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 90,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Mu Huyen Thiet",
+      "category": "Set DL",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 25,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Mũ (ID 25) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 98,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Quan Chi Ton",
+      "category": "Set DL",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 27,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Quần (ID 27) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 97,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Quan Hac Vuong",
+      "category": "Set DL",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 26,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Quần (ID 26) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 96,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Quan Huyen Thiet",
+      "category": "Set DL",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 25,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Quần (ID 25) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 33,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Ao Ma Thuat",
+      "category": "Set DW",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 7,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Áo (ID 7) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 35,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Ao Ma Vuong",
+      "category": "Set DW",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 18,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Áo (ID 18) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 34,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Ao Trieu Hon",
+      "category": "Set DW",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 3,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Áo (ID 3) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 42,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Chan Ma Thuat",
+      "category": "Set DW",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 7,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Giày (ID 7) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 44,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Chan Ma Vuong",
+      "category": "Set DW",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 18,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Giày (ID 18) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 43,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Chan Trieu Hon",
+      "category": "Set DW",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 3,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Giày (ID 3) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 39,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Gang Ma Thuat",
+      "category": "Set DW",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 7,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Găng tay (ID 7) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 41,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Gang Ma Vuong",
+      "category": "Set DW",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 18,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng tay (ID 18) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 40,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Gang Trieu Hon",
+      "category": "Set DW",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 3,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng tay (ID 3) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 30,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Mu Ma Thuat",
+      "category": "Set DW",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 7,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Mũ (ID 7) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 32,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Mu Ma Vuong",
+      "category": "Set DW",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 18,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Mũ (ID 18) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 31,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Mu Trieu Hon",
+      "category": "Set DW",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 3,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Mũ (ID 3) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 36,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Quan Ma Thuat",
+      "category": "Set DW",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 7,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Quần (ID 7) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 38,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Quan Ma Vuong",
+      "category": "Set DW",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 18,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Quần (ID 18) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 37,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Quan Trieu Hon",
+      "category": "Set DW",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 3,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Quần (ID 3) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 66,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Ao Giai Nhan",
+      "category": "Set Elf",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 14,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Áo (ID 14) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 65,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Ao Kim Ngan",
+      "category": "Set Elf",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 13,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Áo (ID 13) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 64,
+      "money": 20000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Ao Ngoc Bich",
+      "category": "Set Elf",
+      "zenLabel": "20M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 12,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Áo (ID 12) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 67,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Ao Thanh Nu",
+      "category": "Set Elf",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 19,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Áo (ID 19) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 78,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Chan Giai Nhan",
+      "category": "Set Elf",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 14,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Giày (ID 14) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 77,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Chan Kim Ngan",
+      "category": "Set Elf",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 13,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Giày (ID 13) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 76,
+      "money": 20000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Chan Ngoc Bich",
+      "category": "Set Elf",
+      "zenLabel": "20M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 12,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Giày (ID 12) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 79,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Chan Thanh Nu",
+      "category": "Set Elf",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 19,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Giày (ID 19) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 74,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Gang Giai Nhan",
+      "category": "Set Elf",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 14,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng tay (ID 14) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 73,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Gang Kim Ngan",
+      "category": "Set Elf",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 13,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng tay (ID 13) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 72,
+      "money": 20000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Gang Ngoc Bich",
+      "category": "Set Elf",
+      "zenLabel": "20M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 12,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Găng tay (ID 12) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 75,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Gang Thanh Nu",
+      "category": "Set Elf",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 19,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng tay (ID 19) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 62,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Mu Giai Nhan",
+      "category": "Set Elf",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 14,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Mũ (ID 14) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 61,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Mu Kim Ngan",
+      "category": "Set Elf",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 13,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Mũ (ID 13) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 60,
+      "money": 20000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Mu Ngoc Bich",
+      "category": "Set Elf",
+      "zenLabel": "20M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 12,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Mũ (ID 12) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 63,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Mu Thanh Nu",
+      "category": "Set Elf",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 7,
+          "index": 19,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Mũ (ID 19) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 70,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Quan Giai Nhan",
+      "category": "Set Elf",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 14,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Quần (ID 14) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 69,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Quan Kim Ngan",
+      "category": "Set Elf",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 13,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Quần (ID 13) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 68,
+      "money": 20000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Quan Ngoc Bich",
+      "category": "Set Elf",
+      "zenLabel": "20M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 12,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Quần (ID 12) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 71,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Quan Thanh Nu",
+      "category": "Set Elf",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 19,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Quần (ID 19) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 120,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Ao Phong Vu",
+      "category": "Set MG",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 9,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Áo (ID 9) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 129,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Chan Phong Vu",
+      "category": "Set MG",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 9,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Giày (ID 9) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 126,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Gang Phong Vu",
+      "category": "Set MG",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 9,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Găng tay (ID 9) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 123,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Quan Phong Vu",
+      "category": "Set MG",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 9,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Quần (ID 9) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 145,
+      "money": 50000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Ao Anh Dao",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 0,
+          "index": 18,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Vũ khí (Kiếm) (ID 18) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 122,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Ao Cuong Phong",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 20,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Áo (ID 20) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 121,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Ao Loi Phong",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 8,
+          "index": 15,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Áo (ID 15) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 131,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Chan Cuong Phong",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 20,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Giày (ID 20) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 130,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Chan Loi Phong",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 11,
+          "index": 15,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Giày (ID 15) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 142,
+      "money": 50000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Cuong Phong Dao",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 0,
+          "index": 16,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Vũ khí (Kiếm) (ID 16) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 146,
+      "money": 100000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Dao Sinh Menh",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "100M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 0,
+          "index": 31,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Vũ khí (Kiếm) (ID 31) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 128,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Gang Cuong Phong",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 20,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng tay (ID 20) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 127,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Gang Loi Phong",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 10,
+          "index": 15,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng tay (ID 15) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 140,
+      "money": 30000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Kiem Dien",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 0,
+          "index": 13,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Vũ khí (Kiếm) (ID 13) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 141,
+      "money": 40000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Kiem Huy Diet",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 0,
+          "index": 14,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Vũ khí (Kiếm) (ID 14) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 144,
+      "money": 40000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Loi Phong Dao",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 0,
+          "index": 15,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Vũ khí (Kiếm) (ID 15) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 125,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Quan Cuong Phong",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 20,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Quần (ID 20) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 124,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Quan Loi Phong",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 9,
+          "index": 15,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Quần (ID 15) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 150,
+      "money": 100000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Quyen Truong Thien Tu",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "100M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 2,
+          "index": 12,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng (ID 12) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 143,
+      "money": 100000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Thien Tu Kiem",
+      "category": "Vũ khí DK/MG",
+      "zenLabel": "100M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 0,
+          "index": 20,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Vũ khí (Kiếm) (ID 20) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 165,
+      "money": 100000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Gay Hoa Long",
+      "category": "Vũ khí DW/DL",
+      "zenLabel": "100M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 5
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 5
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 5
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 5,
+          "index": 11,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Gậy (ID 11) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 162,
+      "money": 30000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Gay Huy Diet",
+      "category": "Vũ khí DW/DL",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 5,
+          "index": 6,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Gậy (ID 6) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 164,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Gay KunDun",
+      "category": "Vũ khí DW/DL",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 5,
+          "index": 9,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Gậy (ID 9) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 160,
+      "money": 10000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Gay Ma Thuat",
+      "category": "Vũ khí DW/DL",
+      "zenLabel": "10M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 5,
+          "index": 3,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Gậy (ID 3) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 161,
+      "money": 20000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Gay Phuc Sinh",
+      "category": "Vũ khí DW/DL",
+      "zenLabel": "20M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 5,
+          "index": 5,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Gậy (ID 5) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 163,
+      "money": 40000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "Gay Trieu Hon",
+      "category": "Vũ khí DW/DL",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 5,
+          "index": 8,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Gậy (ID 8) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 169,
+      "money": 50000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Khien Hoa Long",
+      "category": "Vũ khí DW/DL",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 6,
+          "index": 12,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Khiên (ID 12) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 166,
+      "money": 40000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Khien Ma Thuat",
+      "category": "Vũ khí DW/DL",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 6,
+          "index": 6,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Khiên (ID 6) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 168,
+      "money": 40000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Khien Nguu Vuong",
+      "category": "Vũ khí DW/DL",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 6,
+          "index": 8,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Khiên (ID 8) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 167,
+      "money": 50000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Khien Trieu Hon",
+      "category": "Vũ khí DW/DL",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 6,
+          "index": 14,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Khiên (ID 14) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 151,
+      "money": 30000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Cung Bac",
+      "category": "Vũ khí Elf",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 4,
+          "index": 4,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Cung/Nỏ (ID 4) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 153,
+      "money": 50000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Cung Thien Menh",
+      "category": "Vũ khí Elf",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 4,
+          "index": 6,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Cung/Nỏ (ID 6) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 152,
+      "money": 40000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Mai Hoa Cung",
+      "category": "Vũ khí Elf",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 4,
+          "index": 5,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Cung/Nỏ (ID 5) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 154,
+      "money": 100000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "My Nhan Cung",
+      "category": "Vũ khí Elf",
+      "zenLabel": "100M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 4,
+          "index": 17,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Cung/Nỏ (ID 17) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 159,
+      "money": 100000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "No Hoa Long",
+      "category": "Vũ khí Elf",
+      "zenLabel": "100M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 5
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 5
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 5
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 4,
+          "index": 19,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Cung/Nỏ (ID 19) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 156,
+      "money": 30000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "No Kim Ngan",
+      "category": "Vũ khí Elf",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 4,
+          "index": 13,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Cung/Nỏ (ID 13) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 157,
+      "money": 40000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "No Thanh",
+      "category": "Vũ khí Elf",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 4,
+          "index": 14,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Cung/Nỏ (ID 14) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 158,
+      "money": 50000000,
+      "rates": [
+        5,
+        10,
+        10,
+        10
+      ],
+      "name": "No Thanh Nu",
+      "category": "Vũ khí Elf",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 5,
+        "al1": 10,
+        "al2": 10,
+        "al3": 10
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 4
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 2
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 4,
+          "index": 16,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Cung/Nỏ (ID 16) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 155,
+      "money": 20000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "No Thien Thanh",
+      "category": "Vũ khí Elf",
+      "zenLabel": "20M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 4,
+          "index": 12,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Cung/Nỏ (ID 12) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 147,
+      "money": 30000000,
+      "rates": [
+        20,
+        25,
+        25,
+        25
+      ],
+      "name": "Quyen Truong Bong Toi",
+      "category": "Vũ khí RF",
+      "zenLabel": "30M Zen",
+      "ratesLabel": {
+        "al0": 20,
+        "al1": 25,
+        "al2": 25,
+        "al3": 25
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 2,
+          "index": 9,
+          "level": 9,
+          "skill": 0,
+          "luck": 1,
+          "add": 2,
+          "exc": 1,
+          "label": "Găng (ID 9) +9, Luck, +2 option, có Exc"
+        }
+      ]
+    },
+    {
+      "mixIndex": 149,
+      "money": 50000000,
+      "rates": [
+        10,
+        15,
+        15,
+        15
+      ],
+      "name": "Quyen Truong Dai Vuong",
+      "category": "Vũ khí RF",
+      "zenLabel": "50M Zen",
+      "ratesLabel": {
+        "al0": 10,
+        "al1": 15,
+        "al2": 15,
+        "al3": 15
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 3
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 2,
+          "index": 11,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng (ID 11) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    },
+    {
+      "mixIndex": 148,
+      "money": 40000000,
+      "rates": [
+        15,
+        20,
+        20,
+        20
+      ],
+      "name": "Quyen Truong Kim Cuong",
+      "category": "Vũ khí RF",
+      "zenLabel": "40M Zen",
+      "ratesLabel": {
+        "al0": 15,
+        "al1": 20,
+        "al2": 20,
+        "al3": 20
+      },
+      "materials": [
+        {
+          "item": "Ngọc Hỗn Nguyên",
+          "count": 1
+        },
+        {
+          "item": "Cụm Ngọc Tâm Linh",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Ước Nguyện",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sáng Tạo",
+          "count": 2
+        },
+        {
+          "item": "Cụm Ngọc Sinh Mệnh",
+          "count": 1
+        },
+        {
+          "item": "Ngọc Tạo Hóa",
+          "count": 1
+        }
+      ],
+      "mainItems": [
+        {
+          "count": 2,
+          "type": 2,
+          "index": 10,
+          "level": 13,
+          "skill": 0,
+          "luck": 1,
+          "add": 5,
+          "exc": 2,
+          "label": "Găng (ID 10) +13, Luck, +5 option, Exc≥2"
+        }
+      ]
+    }
+  ]
+}

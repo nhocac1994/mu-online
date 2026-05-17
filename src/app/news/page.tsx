@@ -17,6 +17,8 @@ const badge = (type: string) => {
 };
 
 const newsItems = [
+  { type: 'Hot', title: 'HƯỚNG DẪN HỢP THÀNH — ĐỒ MỚI', date: '17/5/2026', link: '/news/chaos-mix', excerpt: 'Công thức hợp thành set Hỏa Long, Ma Vương, vũ khí mới tại Goblin: nguyên liệu, Zen, tỷ lệ thành công.' },
+  { type: 'Hot', title: 'HƯỚNG DẪN KHẢM ĐỒNG (MIX OPTION)', date: '17/5/2026', link: '/news/kham-dong', excerpt: '13 dòng option khảm lên đồ Exc: nguyên liệu, 100M Zen, tỷ lệ 5%/10% Acc thường/VIP.' },
   { type: 'Notice', title: 'HƯỚNG DẪN CHƠI - SEASON 1', date: '15/4/2026', link: '/news/guide', excerpt: 'Hướng dẫn chi tiết cách chơi game, từ tạo nhân vật đến các tính năng nâng cao.' },
   { type: 'Notice', title: 'CÁC LỆNH TRONG GAME (CHAT)', date: '15/4/2026', link: '/news/commands', excerpt: 'Danh sách lệnh chat thường dùng: post, cộng điểm, reset, kho đồ và các lệnh tiện ích trên server.' },
   { type: 'Event', title: 'CÁC SỰ KIỆN TRONG GAME', date: '15/4/2026', link: '/news/events', excerpt: 'Double EXP, Drop Rate Event, PK Tournament và nhiều sự kiện đặc biệt.' },
@@ -26,6 +28,8 @@ const newsItems = [
 ];
 
 const sidebarLinks = [
+  { label: 'Hợp thành', href: '/news/chaos-mix' },
+  { label: 'Khảm đồng', href: '/news/kham-dong' },
   { label: 'Hướng dẫn', href: '/news/guide' },
   { label: 'Lệnh trong game', href: '/news/commands' },
   { label: 'Sự kiện', href: '/news/events' },

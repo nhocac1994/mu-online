@@ -53,6 +53,8 @@ const footerColumns = [
     title: 'Về server',
     links: [
       { label: 'Thông tin server', href: '/info' },
+      { label: 'Hợp thành', href: '/news/chaos-mix' },
+      { label: 'Khảm đồng', href: '/news/kham-dong' },
       { label: 'Hướng dẫn', href: '/news/guide' },
     ],
   },

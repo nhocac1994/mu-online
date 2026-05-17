@@ -11,7 +11,9 @@
     "build:analyze": "ANALYZE=true next build",
     "build:production": "NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 next build",
     "clean": "rm -rf .next && rm -rf node_modules/.cache && rm -rf out",
-    "build:clean": "npm run clean && npm run build:static"
+    "build:clean": "npm run clean && npm run build:static",
+    "parse:chaos-mix": "node scripts/parse-custommix.mjs",
+    "parse:custom-option": "node scripts/parse-customoption.mjs"
   },
   "dependencies": {
     "@types/axios": "^0.9.36",
