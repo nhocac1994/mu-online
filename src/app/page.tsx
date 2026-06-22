@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import PageBackrow from '@/components/PageBackrow';
+import HeroBanner from '@/components/HeroBanner';
 import TwoColumnLayout from '@/components/TwoColumnLayout';
 import Footer from '@/components/Footer';
 import { getNewsList, newsArticleLink, formatNewsDateLong, type NewsArticleListItem } from '@/lib/news-api';
@@ -45,8 +46,12 @@ export default function Home() {
   return (
     <div className="we-page">
       <div className="we-home-stage">
-        <PageBackrow />
-        <TwoColumnLayout onBackrow>
+        <div className="we-home-backdrop" aria-hidden>
+          <PageBackrow />
+        </div>
+        <HeroBanner />
+        <div className="we-home-front">
+          <TwoColumnLayout onBackrow>
           {loading ? (
             <div className="we-loading-center"><div className="we-spinner" /></div>
           ) : (
@@ -83,7 +88,8 @@ export default function Home() {
               )}
             </>
           )}
-        </TwoColumnLayout>
+          </TwoColumnLayout>
+        </div>
       </div>
 
       <Footer />

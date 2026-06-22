@@ -13,6 +13,8 @@
   --we-border: #dddddd;
   --we-nav-bg: #000000;
   --we-header-h: 46px;
+  --we-home-logo-top: clamp(25px, 10vw, 60px);
+  --we-home-banner-overlap: clamp(80px, 11vw, 150px);
   --we-blue: #0066cc;
   --we-orange: #ff6600;
   --we-green: #009900;
@@ -32,21 +34,33 @@
 
 .we-home-stage {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
   width: 100%;
+  isolation: isolate;
+  background: #000;
+}
+
+/* Ảnh nền banner — chiếm chiều cao, nằm phía sau */
+.we-home-backdrop {
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Modal — kéo lên đè phần dưới banner */
+.we-home-front {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  margin-top: calc(-1 * var(--we-home-banner-overlap));
 }
 
 /* Nền chung — width 100%, height auto (full ảnh, không crop) */
 .we-page-backrow {
-  grid-area: 1 / 1;
   width: 100%;
-  z-index: 0;
   position: relative;
   pointer-events: none;
   line-height: 0;
   background: #000;
-  align-self: start;
 }
 
 .we-page-backrow-img {
@@ -55,6 +69,7 @@
   max-width: 100%;
   display: block;
   vertical-align: top;
+  aspect-ratio: 4096 / 2556;
 }
 
 .we-page-backrow::after {
@@ -63,18 +78,133 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.12) 0%,
-    rgba(0, 0, 0, 0.2) 45%,
-    rgba(0, 0, 0, 0.5) 100%
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.45) 100%
   );
 }
 
-/* Hero + content cùng nằm trên 1 nền backrow */
-.we-home-stage .we-content-area--on-backrow {
-  grid-area: 1 / 1;
+/* Logo NAME.PNG — absolute, nằm trên ảnh banner */
+.we-home-hero-logo-wrap {
+  position: absolute;
+  top: var(--we-home-logo-top);
+  left: 0;
+  right: 0;
   z-index: 2;
-  padding: 450px 15px 30px;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hào quang vàng phát sáng phía sau logo */
+.we-home-hero-logo-wrap::before,
+.we-home-hero-logo-wrap::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.we-home-hero-logo-wrap::before {
+  z-index: 0;
+  width: min(360px, 46vw);
+  height: min(360px, 46vw);
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 100, 0.55) 0%,
+    rgba(255, 175, 50, 0.22) 38%,
+    rgba(255, 140, 0, 0.08) 58%,
+    transparent 72%
+  );
+  animation: we-logo-aura 3s ease-in-out infinite;
+}
+
+.we-home-hero-logo-wrap::after {
+  z-index: 0;
+  width: min(320px, 40vw);
+  height: min(320px, 40vw);
+  border: 1px solid rgba(255, 210, 120, 0.35);
+  box-shadow:
+    0 0 24px rgba(255, 190, 70, 0.35),
+    0 0 48px rgba(255, 160, 40, 0.2);
+  animation: we-logo-pulse-ring 2.6s ease-out infinite;
+}
+
+.we-home-hero-logo {
   position: relative;
+  z-index: 1;
+  max-width: min(320px, 40vw);
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  animation: we-logo-glow 3s ease-in-out infinite;
+}
+
+@keyframes we-logo-aura {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: translate(-50%, -50%) scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+@keyframes we-logo-pulse-ring {
+  0% {
+    opacity: 0.75;
+    transform: translate(-50%, -50%) scale(0.88);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.38);
+  }
+}
+
+@keyframes we-logo-glow {
+  0%,
+  100% {
+    filter:
+      drop-shadow(0 0 10px rgba(255, 190, 70, 0.55))
+      drop-shadow(0 0 22px rgba(255, 160, 40, 0.35))
+      drop-shadow(0 6px 24px rgba(0, 0, 0, 0.75));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 18px rgba(255, 220, 120, 0.95))
+      drop-shadow(0 0 36px rgba(255, 180, 60, 0.65))
+      drop-shadow(0 0 56px rgba(255, 140, 0, 0.35))
+      drop-shadow(0 6px 24px rgba(0, 0, 0, 0.75));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .we-home-hero-logo-wrap::before,
+  .we-home-hero-logo-wrap::after,
+  .we-home-hero-logo {
+    animation: none;
+  }
+
+  .we-home-hero-logo {
+    filter:
+      drop-shadow(0 0 14px rgba(255, 190, 70, 0.7))
+      drop-shadow(0 6px 24px rgba(0, 0, 0, 0.75));
+  }
+}
+
+/* Modal trắng — trên logo và ảnh nền */
+.we-home-stage .we-content-area--on-backrow {
+  position: relative;
+  z-index: 3;
+  padding: 0 15px 30px;
 }
 
 .we-home-head {
@@ -118,7 +248,8 @@
 }
 
 .we-content-panel {
-  max-width: 1100px;
+  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
   background: var(--we-panel-bg);
   padding: 18px 20px 22px;
@@ -162,8 +293,10 @@
   min-width: 0;
 }
 
-/* Navigation */
+/* Navigation — luôn nằm trên cùng */
 .we-nav {
+  position: relative;
+  z-index: 1000;
   background: var(--we-nav-bg);
   border-bottom: 2px solid var(--we-red);
 }
@@ -356,10 +489,26 @@
 @media (max-width: 768px) {
   :root {
     --we-header-h: 50px;
+    --we-home-logo-top: clamp(10px, 5vw, 50px);
+    --we-home-banner-overlap: clamp(48px, 10vw, 90px);
   }
 
   .we-home-stage .we-content-area--on-backrow {
-    padding: 200px 12px 24px;
+    padding: 0 12px 24px;
+  }
+
+  .we-home-hero-logo {
+    max-width: min(110px, 58vw);
+  }
+
+  .we-home-hero-logo-wrap::before {
+    width: min(140px, 62vw);
+    height: min(140px, 62vw);
+  }
+
+  .we-home-hero-logo-wrap::after {
+    width: min(120px, 58vw);
+    height: min(120px, 58vw);
   }
 
   .we-home-logo {

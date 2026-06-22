@@ -6,8 +6,8 @@ import { getSiteConfig, type SiteConfig } from '@/lib/config-api';
 
 const LOGO_VERSION = '20260622';
 
-/** Logo + tên game — nằm chung trong khối nội dung trang chủ */
-export default function HomeLogoHeader() {
+/** Logo NAME.PNG — căn giữa trên nền banner hero */
+export default function HeroBanner() {
   const [config, setConfig] = useState<SiteConfig>(siteConfigStatic as unknown as SiteConfig);
 
   useEffect(() => {
@@ -15,21 +15,19 @@ export default function HomeLogoHeader() {
   }, []);
 
   const serverName = config?.serverName || config?.nameGame || 'Mu Online';
-  const gameTitle = config?.gameTitle || 'Mu Online Season 1';
   const logoSrc = `/NAME.PNG?v=${LOGO_VERSION}`;
 
   return (
-    <div className="we-home-head">
+    <div className="we-home-hero-logo-wrap">
       <img
         src={logoSrc}
         alt={serverName}
-        className="we-home-logo"
-        width={220}
-        height={220}
+        className="we-home-hero-logo"
+        width={320}
+        height={320}
         loading="eager"
         decoding="async"
       />
-      <p className="we-home-subtitle">{gameTitle}</p>
     </div>
   );
 }
