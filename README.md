@@ -1,88 +1,106 @@
-# Mu Online — Full Stack
+# Frontend — Mu Online (Next.js)
 
-Monorepo: **frontend** (Next.js) + **backend** (Express + SQL Server).
+Website Mu Online Season 1. Gọi Backend API qua Next.js API routes (`/api/*`).
 
-## Cấu trúc dự án
+## Cấu trúc thư mục
 
 ```
-mu-online-react 2/
-├── frontend/              # Website Next.js (chạy :3000)
-│   ├── src/app/           # Trang + API routes proxy
-│   ├── src/components/
-│   ├── src/lib/
-│   ├── public/
-│   ├── package.json
-│   └── README.md          # Chi tiết cấu trúc frontend
+frontend/
+├── public/                 # Ảnh, favicon, manifest (phục vụ tĩnh)
+│   ├── favicon/
+│   ├── icons/
+│   └── manifest.json
 │
-├── backend/               # API Express (chạy :3001 hoặc :55777 VPS)
-│   ├── src/routes/        # auth, rankings, admin, launcher...
-│   ├── admin-panel/       # Trang admin HTML từ xa (/admin)
-│   ├── config/            # site-config.json, news.json
-│   ├── launcher/          # File patch client
-│   └── package.json
+├── src/
+│   ├── app/                # App Router (trang + API routes)
+│   │   ├── page.tsx        # Trang chủ
+│   │   ├── layout.tsx      # Layout gốc
+│   │   ├── globals.css
+│   │   ├── login/          # Đăng nhập game
+│   │   ├── register/       # Đăng ký
+│   │   ├── dashboard/      # Tài khoản / nhân vật
+│   │   ├── rankings/       # Bảng xếp hạng
+│   │   ├── news/           # Tin tức
+│   │   ├── admin/          # Admin website (proxy backend)
+│   │   ├── download/       # Tải client
+│   │   ├── donate/         # Donate
+│   │   ├── info/           # Thông tin server
+│   │   └── api/            # Next.js API (proxy → backend)
+│   │       ├── login/
+│   │       ├── register/
+│   │       ├── characters/
+│   │       ├── dashboard/
+│   │       ├── rankings/
+│   │       ├── admin/
+│   │       ├── config/
+│   │       └── remote/     # Proxy config/site từ backend
+│   │
+│   ├── components/         # UI dùng chung
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── RankingTable.tsx
+│   │   ├── GuildRankingTable.tsx
+│   │   └── admin/          # ConfigEditor, NewsEditor
+│   │
+│   ├── lib/                # Logic client + server helpers
+│   │   ├── api-client.ts
+│   │   ├── ranking-api.ts
+│   │   ├── news-api.ts
+│   │   ├── config-api.ts
+│   │   ├── mu-classes.ts   # Tên class MU
+│   │   └── guild-mark.ts   # Logo guild từ G_Mark
+│   │
+│   ├── config/             # Cấu hình site (fallback local)
+│   ├── hooks/
+│   ├── styles/
+│   └── middleware.ts       # Bảo mật / redirect
 │
-├── MuOnline.sql           # Schema database
-├── package.json           # Script gốc: npm run dev / dev:backend
-└── README.md
+├── .env.local              # Biến môi trường (không commit)
+├── env.local.template      # Mẫu .env.local
+├── next.config.ts
+├── package.json
+├── tsconfig.json
+├── vercel.json             # Deploy Vercel
+└── netlify.toml            # Deploy Netlify
 ```
 
-## Chạy nhanh
-
-### Backend
+## Chạy local
 
 ```bash
-cd backend
-npm install
-npm run dev          # http://localhost:3001
-```
+# Từ thư mục gốc dự án
+npm run dev
 
-### Frontend
-
-```bash
-# Cách 1 — từ thư mục gốc
-npm run install:frontend
-npm run dev          # http://localhost:3000
-
-# Cách 2 — trong frontend/
+# Hoặc vào trực tiếp frontend
 cd frontend
 npm install
-cp env.local.template .env.local
+cp env.local.template .env.local   # sửa NEXT_PUBLIC_BACKEND_API_URL
 npm run dev
 ```
 
-## Cấu hình
+Mở: **http://localhost:3000**
 
-**Backend** — `backend/.env` hoặc `backend/config/app.config.json`:
+Backend mặc định: `http://localhost:3001` hoặc VPS `http://103.77.174.211:55777`
 
-- `DB_SERVER`, `DB_NAME`, `DB_USERNAME`, `DB_PASSWORD`
-- `PORT`, `CORS_ORIGIN`
-- `ADMIN_USERNAME`, `ADMIN_PASSWORD`
+## Biến môi trường
 
-**Frontend** — `frontend/.env.local`:
+| Biến | Mô tả |
+|------|--------|
+| `NEXT_PUBLIC_BACKEND_API_URL` | URL backend API (bắt buộc) |
+| `NEXT_PUBLIC_SITE_URL` | Domain production (Vercel HTTPS) |
 
-```env
-NEXT_PUBLIC_BACKEND_API_URL=http://103.77.174.211:55777
+## Luồng dữ liệu
+
+```
+Trình duyệt → Next.js /api/* → Backend Express :55777 → SQL Server
 ```
 
-## Deploy
+Database **không** kết nối trực tiếp từ trình duyệt; chỉ qua backend.
 
-| Thành phần | Ghi chú |
-|------------|---------|
-| Frontend | Vercel / Netlify — root directory: `frontend` |
-| Backend | VPS — chạy `mu-online-backend.exe` hoặc `npm start` trong `backend/` |
+## Admin
 
-Xem thêm: [frontend/DEPLOY.md](./frontend/DEPLOY.md)
+| Vị trí | URL |
+|--------|-----|
+| Admin website | `/admin` (Next.js) |
+| Admin backend từ xa | `http://IP:55777/admin` (HTML trên backend) |
 
-## Tài liệu
-
-- [Frontend README](./frontend/README.md)
-- [Hướng dẫn chạy local](./frontend/HUONG_DAN_CHAY_LOCAL.md)
-- [Kiểm tra kết nối](./frontend/KIEM_TRA_KET_NOI.md)
-- [Push Git](./HUONG_DAN_PUSH_GIT.md)
-
-## Công nghệ
-
-| Frontend | Backend |
-|----------|---------|
-| Next.js 16, React 19 | Node.js, Express |
-| TypeScript, Tailwind | TypeScript, MSSQL |
+Cùng tài khoản `ADMIN_USERNAME` / `ADMIN_PASSWORD` trên backend.

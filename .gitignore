@@ -1,9 +1,6 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 node_modules/
-**/node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -12,8 +9,7 @@ node_modules/
 /coverage
 
 # next.js
-frontend/.next/
-**/.next/
+/.next/
 /out/
 
 # production
@@ -31,7 +27,6 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
-frontend/.env.local
 
 # Database test files (contains sensitive info)
 test-db-connection.js
@@ -50,15 +45,12 @@ clean_*.js
 clean_*.sh
 restart-*.sh
 
-# Documentation files (keep only một số file .md)
+# Documentation files
 *.md
 !README.md
-!frontend/README.md
-!SECURITY_GUIDE.md
-!frontend/DEPLOY.md
-!HUONG_DAN_PUSH_GIT.md
-!frontend/HUONG_DAN_CHAY_LOCAL.md
-!frontend/KIEM_TRA_KET_NOI.md
+!DEPLOY.md
+!HUONG_DAN_CHAY_LOCAL.md
+!KIEM_TRA_KET_NOI.md
 
 # Sensitive configuration files
 *config*.js
@@ -81,11 +73,10 @@ restart-*.sh
 
 # vercel
 .vercel
-frontend/.vercel
 
 # typescript
 *.tsbuildinfo
-frontend/next-env.d.ts
+next-env.d.ts
 
 # IDE
 .vscode/
@@ -96,30 +87,13 @@ frontend/next-env.d.ts
 # OS
 Thumbs.db
 
-# SQL files (except MuOnline.sql if needed for schema)
+# SQL files
 *.sql
-!MuOnline.sql
 
-# Backend API build files
-backend-api/dist/*.exe
-backend-api/dist/mu-backend-api.exe
-backend-api/*.exe
-backend-api/config.txt
-backend-api/.env
-backend-api/config.vps
-
-# Backend build directory (keep source, ignore compiled)
-backend-api/dist/*.js.map
-
-# Test files
-*test*.html
-*test*.sh
-
-# Backend (chỉ đẩy frontend lên repo)
+# Backend — chỉ đẩy frontend lên GitHub
 /backend/
-
-# Backup / bản cũ
 backend 2/
 backend.zip
 backend 2.zip
 frontend.zip
+frontend/
