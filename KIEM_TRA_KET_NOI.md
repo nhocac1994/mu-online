@@ -11,20 +11,21 @@ npm run dev
 npm start
 ```
 
-Backend sẽ chạy trên port mặc định (thường là 3001 hoặc port trong .env)
+Backend sẽ chạy trên port mặc định (thường là 3001 hoặc port trong `.env`).
 
 ### 2. Kiểm tra Backend URL trong Frontend
 
-File: `frontend/src/config/backend.config.ts`
+File: `src/config/backend.config.ts`
 
-Mặc định: `http://14.225.208.182:56666`
+Dev local mặc định: `http://localhost:3001`
 
-**Nếu dev local, cần tạo file `.env.local` trong `frontend/`:**
+**Tạo file `.env.local` ở thư mục gốc project:**
 
 ```bash
-cd frontend
 echo "NEXT_PUBLIC_BACKEND_API_URL=http://localhost:3001" > .env.local
 ```
+
+Production/VPS: thay bằng URL backend thật (không commit file này).
 
 ### 3. Kiểm tra API Config có hoạt động không
 
@@ -36,17 +37,14 @@ Mở browser console và kiểm tra logs:
 
 ### 4. Test API trực tiếp
 
-Mở browser và truy cập:
+Mở browser và truy cập (thay URL theo `.env.local`):
+
 ```
 http://localhost:3001/api/config
 ```
 
-Hoặc nếu backend chạy trên IP khác:
-```
-http://14.225.208.182:56666/api/config
-```
-
 Kết quả mong đợi:
+
 ```json
 {
   "success": true,
@@ -69,6 +67,7 @@ Nếu thấy lỗi CORS trong console:
 ### 6. Kiểm tra File Config
 
 File config phải tồn tại tại:
+
 ```
 backend/config/site-config.json
 ```
@@ -76,8 +75,8 @@ backend/config/site-config.json
 ### 7. Debug Steps
 
 1. **Mở Browser Console** (F12)
-2. **Xem Network tab** - kiểm tra request đến `/api/config`
-3. **Xem Console tab** - kiểm tra logs:
+2. **Xem Network tab** — kiểm tra request đến `/api/config`
+3. **Xem Console tab** — kiểm tra logs:
    - Nếu thấy `❌` → có lỗi
    - Nếu thấy `⚠️` → warning, vẫn dùng fallback
    - Nếu thấy `✅` → thành công

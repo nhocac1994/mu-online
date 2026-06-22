@@ -8,7 +8,7 @@ const DEFAULT_PUBLIC_BACKEND_API_URL = "http://localhost:3001";
 /**
  * Đọc NEXT_PUBLIC_BACKEND_API_URL trực tiếp từ file .env* trong project.
  * Lý do: nếu biến đã tồn tại trong shell/IDE (export ...), dotenv sẽ KHÔNG ghi đè
- * → .env.local đúng URL nhưng app vẫn dùng IP cũ (vd 14.225.208.182:56666).
+ * → .env.local đúng URL nhưng app vẫn dùng giá trị cũ trong shell.
  */
 function parseEnvFileValue(content: string, key: string): string {
   for (const line of content.split(/\r?\n/)) {
