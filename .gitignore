@@ -12,8 +12,7 @@ node_modules/
 /coverage
 
 # next.js
-/.next/
-.next/
+frontend/.next/
 **/.next/
 /out/
 
@@ -32,6 +31,7 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
+frontend/.env.local
 
 # Database test files (contains sensitive info)
 test-db-connection.js
@@ -53,9 +53,12 @@ restart-*.sh
 # Documentation files (keep only một số file .md)
 *.md
 !README.md
+!frontend/README.md
 !SECURITY_GUIDE.md
-!DEPLOY.md
+!frontend/DEPLOY.md
 !HUONG_DAN_PUSH_GIT.md
+!frontend/HUONG_DAN_CHAY_LOCAL.md
+!frontend/KIEM_TRA_KET_NOI.md
 
 # Sensitive configuration files
 *config*.js
@@ -78,10 +81,11 @@ restart-*.sh
 
 # vercel
 .vercel
+frontend/.vercel
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+frontend/next-env.d.ts
 
 # IDE
 .vscode/
@@ -91,7 +95,6 @@ next-env.d.ts
 
 # OS
 Thumbs.db
-.env.local
 
 # SQL files (except MuOnline.sql if needed for schema)
 *.sql
@@ -114,3 +117,9 @@ backend-api/dist/*.js.map
 
 # Backend (chỉ đẩy frontend lên repo)
 /backend/
+
+# Backup / bản cũ
+backend 2/
+backend.zip
+backend 2.zip
+frontend.zip

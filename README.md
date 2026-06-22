@@ -1,96 +1,88 @@
-# 🎮 Mu Online - Full Stack Application
+# Mu Online — Full Stack
 
-Dự án Mu Online với Frontend (Next.js) và Backend (Node.js/Express) tách biệt.
+Monorepo: **frontend** (Next.js) + **backend** (Express + SQL Server).
 
-## 📁 Cấu Trúc Dự Án
+## Cấu trúc dự án
 
 ```
 mu-online-react 2/
-├── frontend/          # Frontend Next.js Application
-│   ├── src/          # Source code
-│   ├── public/       # Static files
-│   ├── package.json  # Frontend dependencies
-│   └── ...
+├── frontend/              # Website Next.js (chạy :3000)
+│   ├── src/app/           # Trang + API routes proxy
+│   ├── src/components/
+│   ├── src/lib/
+│   ├── public/
+│   ├── package.json
+│   └── README.md          # Chi tiết cấu trúc frontend
 │
-├── backend/          # Backend Node.js/Express API
-│   ├── src/         # Source code
-│   ├── dist/        # Compiled JavaScript
-│   ├── package.json # Backend dependencies
-│   └── ...
+├── backend/               # API Express (chạy :3001 hoặc :55777 VPS)
+│   ├── src/routes/        # auth, rankings, admin, launcher...
+│   ├── admin-panel/       # Trang admin HTML từ xa (/admin)
+│   ├── config/            # site-config.json, news.json
+│   ├── launcher/          # File patch client
+│   └── package.json
 │
-└── MuOnline.sql      # Database schema
+├── MuOnline.sql           # Schema database
+├── package.json           # Script gốc: npm run dev / dev:backend
+└── README.md
 ```
 
-## 🚀 Cài Đặt và Chạy
+## Chạy nhanh
 
-### 1. Backend
+### Backend
 
 ```bash
 cd backend
 npm install
-npm run dev    # Development mode
-# hoặc
-npm run build
-npm start      # Production mode
+npm run dev          # http://localhost:3001
 ```
-
-Backend chạy tại: `http://localhost:3001`
-
-### 2. Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev    # Development mode
-# hoặc
-npm run build
-npm start      # Production mode
-```
-
-Frontend chạy tại: `http://localhost:3000`
-
-## ⚙️ Cấu Hình
-
-### Backend (.env trong thư mục backend/)
-
-```env
-DB_SERVER=127.0.0.1
-DB_NAME=MuOnline
-DB_USERNAME=sa
-DB_PASSWORD=your-password
-PORT=3001
-CORS_ORIGIN=*
-```
-
-### Frontend (.env.local trong thư mục frontend/)
-
-```env
-NEXT_PUBLIC_BACKEND_API_URL=http://localhost:3001
-```
-
-## 📚 Tài Liệu
-
-- [Hướng Dẫn Kết Nối Frontend-Backend](./frontend/HUONG_DAN_KET_NOI_FRONTEND_BACKEND.md)
-- [Backend README](./backend/README.md)
-- [Frontend README](./frontend/README.md)
-- [Security Guide](./frontend/SECURITY_GUIDE.md)
-
-## 🔧 Công Nghệ Sử Dụng
 
 ### Frontend
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS
 
-### Backend
-- Node.js
-- Express
-- TypeScript
-- MSSQL
+```bash
+# Cách 1 — từ thư mục gốc
+npm run install:frontend
+npm run dev          # http://localhost:3000
 
-## 📝 Ghi Chú
+# Cách 2 — trong frontend/
+cd frontend
+npm install
+cp env.local.template .env.local
+npm run dev
+```
 
-- Backend và Frontend chạy độc lập
-- Frontend gọi Backend API qua Next.js API routes
-- Database chỉ kết nối từ Backend (bảo mật)
+## Cấu hình
+
+**Backend** — `backend/.env` hoặc `backend/config/app.config.json`:
+
+- `DB_SERVER`, `DB_NAME`, `DB_USERNAME`, `DB_PASSWORD`
+- `PORT`, `CORS_ORIGIN`
+- `ADMIN_USERNAME`, `ADMIN_PASSWORD`
+
+**Frontend** — `frontend/.env.local`:
+
+```env
+NEXT_PUBLIC_BACKEND_API_URL=http://103.77.174.211:55777
+```
+
+## Deploy
+
+| Thành phần | Ghi chú |
+|------------|---------|
+| Frontend | Vercel / Netlify — root directory: `frontend` |
+| Backend | VPS — chạy `mu-online-backend.exe` hoặc `npm start` trong `backend/` |
+
+Xem thêm: [frontend/DEPLOY.md](./frontend/DEPLOY.md)
+
+## Tài liệu
+
+- [Frontend README](./frontend/README.md)
+- [Hướng dẫn chạy local](./frontend/HUONG_DAN_CHAY_LOCAL.md)
+- [Kiểm tra kết nối](./frontend/KIEM_TRA_KET_NOI.md)
+- [Push Git](./HUONG_DAN_PUSH_GIT.md)
+
+## Công nghệ
+
+| Frontend | Backend |
+|----------|---------|
+| Next.js 16, React 19 | Node.js, Express |
+| TypeScript, Tailwind | TypeScript, MSSQL |
