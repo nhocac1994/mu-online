@@ -1,7 +1,7 @@
 // Backend API Configuration
-// URL của Backend API Server — đặt trong .env.local: NEXT_PUBLIC_BACKEND_API_URL=...
-// Sau khi sửa .env.local phải dừng và chạy lại `npm run dev` (Next.js nhúng NEXT_PUBLIC_* lúc build/start).
-const DEFAULT_BACKEND_URL = 'http://103.77.174.211:55777';
+// URL của Backend API Server — đặt trong .env.local hoặc Vercel Environment Variables:
+// NEXT_PUBLIC_BACKEND_API_URL=https://your-backend-host:port
+const DEFAULT_BACKEND_URL = 'http://localhost:3001';
 
 function normalizeBaseUrl(url: string): string {
   return url.trim().replace(/\/+$/, '');
@@ -16,13 +16,7 @@ function resolveBackendBase(): string {
     typeof process !== 'undefined' && process.env.NEXT_PUBLIC_BACKEND_API_URL
       ? String(process.env.NEXT_PUBLIC_BACKEND_API_URL).trim()
       : '';
-  // Bundle/shell cũ hay còn IP VPS không dùng nữa → ép về mặc định mới
-  if (raw && raw.includes('14.225.208.182')) {
-    return normalizeBaseUrl(DEFAULT_BACKEND_URL);
-  }
   if (raw) return normalizeBaseUrl(raw);
-  // Không fallback localhost:3001 trên trình duyệt — trước đây làm trống env vẫn trỏ nhầm API local.
-  // Muốn backend chạy máy bạn: ghi rõ trong .env.local NEXT_PUBLIC_BACKEND_API_URL=http://localhost:PORT
   return normalizeBaseUrl(DEFAULT_BACKEND_URL);
 }
 

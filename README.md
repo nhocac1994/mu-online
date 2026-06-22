@@ -55,8 +55,7 @@ frontend/
 │   ├── styles/
 │   └── middleware.ts       # Bảo mật / redirect
 │
-├── .env.local              # Biến môi trường (không commit)
-├── env.local.template      # Mẫu .env.local
+├── .env.local              # Biến môi trường (không commit — tạo thủ công)
 ├── next.config.ts
 ├── package.json
 ├── tsconfig.json
@@ -67,19 +66,21 @@ frontend/
 ## Chạy local
 
 ```bash
-# Từ thư mục gốc dự án
-npm run dev
-
-# Hoặc vào trực tiếp frontend
-cd frontend
 npm install
-cp env.local.template .env.local   # sửa NEXT_PUBLIC_BACKEND_API_URL
 npm run dev
+```
+
+Tạo file `.env.local` (không commit):
+
+```env
+NEXT_PUBLIC_BACKEND_API_URL=http://localhost:3001
 ```
 
 Mở: **http://localhost:3000**
 
-Backend mặc định: `http://localhost:3001` hoặc VPS `http://103.77.174.211:55777`
+Backend dev mặc định: `http://localhost:3001` (nếu chưa set `.env.local`).
+
+Production/VPS: set `NEXT_PUBLIC_BACKEND_API_URL` trên Vercel hoặc `.env.local`.
 
 ## Biến môi trường
 
@@ -91,7 +92,7 @@ Backend mặc định: `http://localhost:3001` hoặc VPS `http://103.77.174.211
 ## Luồng dữ liệu
 
 ```
-Trình duyệt → Next.js /api/* → Backend Express :55777 → SQL Server
+Trình duyệt → Next.js /api/* → Backend Express → SQL Server
 ```
 
 Database **không** kết nối trực tiếp từ trình duyệt; chỉ qua backend.
@@ -101,6 +102,6 @@ Database **không** kết nối trực tiếp từ trình duyệt; chỉ qua bac
 | Vị trí | URL |
 |--------|-----|
 | Admin website | `/admin` (Next.js) |
-| Admin backend từ xa | `http://IP:55777/admin` (HTML trên backend) |
+| Admin backend từ xa | `{BACKEND_URL}/admin` (HTML trên backend) |
 
 Cùng tài khoản `ADMIN_USERNAME` / `ADMIN_PASSWORD` trên backend.

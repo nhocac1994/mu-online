@@ -2,8 +2,8 @@ import fs from "fs";
 import path from "path";
 import type { NextConfig } from "next";
 
-/** Mặc định khi chưa set .env — đồng bộ với src/config/backend.config.ts */
-const DEFAULT_PUBLIC_BACKEND_API_URL = "http://103.77.174.211:55777";
+/** Mặc định dev local — production/VPS: set NEXT_PUBLIC_BACKEND_API_URL trong .env.local hoặc Vercel */
+const DEFAULT_PUBLIC_BACKEND_API_URL = "http://localhost:3001";
 
 /**
  * Đọc NEXT_PUBLIC_BACKEND_API_URL trực tiếp từ file .env* trong project.
@@ -44,9 +44,7 @@ function readBackendUrlFromEnvFiles(cwd: string): string {
 }
 
 function sanitizeBackendUrl(url: string): string {
-  const u = url.trim();
-  if (u.includes("14.225.208.182")) return DEFAULT_PUBLIC_BACKEND_API_URL;
-  return u;
+  return url.trim();
 }
 
 const resolvedPublicBackendUrl = sanitizeBackendUrl(
