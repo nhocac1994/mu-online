@@ -38,6 +38,8 @@ export interface EventConfig {
     duration: number;
   };
   color: string;
+  /** Phần thưởng rơi (optional — backend có thể bổ sung sau) */
+  drop?: string;
 }
 
 export interface DownloadLinks {

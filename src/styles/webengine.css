@@ -764,6 +764,62 @@
   width: 25px;
 }
 
+/* Event Time table */
+.we-event-table {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: collapse;
+}
+
+.we-event-table th {
+  text-align: left;
+  color: var(--we-text);
+  font-weight: 700;
+  padding: 8px 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+.we-event-table th:nth-child(2),
+.we-event-table td:nth-child(2) {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.we-event-table th:last-child,
+.we-event-table td:last-child {
+  text-align: right;
+}
+
+.we-event-table td {
+  padding: 9px 6px;
+  color: var(--we-text);
+  vertical-align: top;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.we-event-table tr:last-child td {
+  border-bottom: none;
+}
+
+.we-event-time {
+  font-weight: 700;
+  color: var(--we-text);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.we-event-time.is-running {
+  color: var(--we-green);
+}
+
+.we-event-time.is-soon {
+  color: var(--we-red);
+}
+
+.we-event-drop {
+  color: var(--we-text-muted);
+}
+
 /* Page title */
 .we-page-title {
   color: var(--we-red);
