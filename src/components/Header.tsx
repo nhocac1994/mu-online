@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation';
 const navLinks = [
   { label: 'Trang Chủ', href: '/' },
   { label: 'Tải Game', href: '/download' },
-  { label: 'Hướng Dẫn', href: '/guide' },
   { label: 'Bản Tin', href: '/news' },
   { label: 'Xếp Hạng', href: '/rankings' },
   { label: 'Đăng Ký', href: '/register' },

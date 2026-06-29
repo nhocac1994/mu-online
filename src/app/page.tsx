@@ -58,8 +58,11 @@ export default function Home() {
             <>
               {pageNews.map((item, i) => (
                 <article key={i} className="we-news-card">
-                  <div className="we-news-card-head">
-                    <h3>[{item.type.toUpperCase()}] {item.title}</h3>
+                  <div className={`we-news-card-head t-${item.type.toLowerCase()}`}>
+                    <h3>
+                      <span className="we-news-badge">{item.type.toUpperCase()}</span>
+                      {item.title}
+                    </h3>
                   </div>
                   <div className="we-news-card-body">
                     <h4>{item.title}</h4>

@@ -49,15 +49,18 @@ export default function NewsPage() {
 
   return (
     <div className="we-page">
-      <SubPageLayout breadcrumbs={[{ label: 'Bản Tin' }]} title="Bản Tin">
+      <SubPageLayout breadcrumbs={[{ label: 'Bản Tin' }]} title="Bản Tin" showSidebar={false}>
         {loading ? (
           <div className="we-loading-center"><div className="we-spinner" /></div>
         ) : (
           <>
             {pageItems.map((item) => (
               <article key={item.link} className="we-news-card">
-                <div className="we-news-card-head">
-                  <h3>[{item.type.toUpperCase()}] {item.title}</h3>
+                <div className={`we-news-card-head t-${item.type.toLowerCase()}`}>
+                  <h3>
+                    <span className="we-news-badge">{item.type.toUpperCase()}</span>
+                    {item.title}
+                  </h3>
                 </div>
                 <div className="we-news-card-body">
                   <h4>{item.title}</h4>
