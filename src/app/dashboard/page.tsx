@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import SubPageLayout from '@/components/SubPageLayout';
+import ClassIcon from '@/components/ClassIcon';
 import siteConfigStatic from '@/config/site.config.json';
 import { getSiteConfig, type SiteConfig } from '@/lib/config-api';
 import { getMuClassName } from '@/lib/mu-classes';
@@ -552,7 +553,15 @@ export default function Dashboard() {
               <div className="we-box-body">
                 <DashRow label="Máy chủ" value="Trực tuyến" valueClass="we-dash-value--ok" />
                 <DashRow label="Cấp độ" value={selectedCharacter?.level ?? dashboardData?.character?.level ?? 0} />
-                <DashRow label="Lớp nhân vật" value={formatText(selectedCharacter?.className || getClassName(dashboardData?.character?.class ?? 0))} />
+                <DashRow
+                  label="Lớp nhân vật"
+                  value={
+                    <span className="we-dash-class">
+                      <ClassIcon classId={selectedCharacter?.class ?? dashboardData?.character?.class ?? 0} size={22} className="we-class-icon--inline" />
+                      {formatText(selectedCharacter?.className || getClassName(dashboardData?.character?.class ?? 0))}
+                    </span>
+                  }
+                />
                 <DashRow
                   label="Kinh nghiệm"
                   value={`${formatMoney(dashboardData?.character?.experience ?? 0)} / ${formatMoney(dashboardData?.character?.nextLevelExp ?? 0)}`}
@@ -587,7 +596,15 @@ export default function Dashboard() {
                 <DashRow label="Năng lượng" value={selectedCharacter?.stats?.energy ?? dashboardData?.character?.energy ?? 0} />
                 <DashRow label="Chỉ huy" value={selectedCharacter?.stats?.leadership ?? dashboardData?.character?.leadership ?? 0} valueClass="we-dash-value--gold" />
                 <DashRow label="Cấp độ" value={selectedCharacter?.level ?? dashboardData?.character?.level ?? 0} valueClass="we-dash-value--ok" />
-                <DashRow label="Lớp nhân vật" value={formatText(selectedCharacter?.className || getClassName(dashboardData?.character?.class ?? 0))} />
+                <DashRow
+                  label="Lớp nhân vật"
+                  value={
+                    <span className="we-dash-class">
+                      <ClassIcon classId={selectedCharacter?.class ?? dashboardData?.character?.class ?? 0} size={22} className="we-class-icon--inline" />
+                      {formatText(selectedCharacter?.className || getClassName(dashboardData?.character?.class ?? 0))}
+                    </span>
+                  }
+                />
                 <DashRow label="Số lần PK" value={selectedCharacter?.pkCount ?? dashboardData?.character?.pkCount ?? 0} />
                 <DashRow label="Cấp PK" value={selectedCharacter?.pkLevel ?? dashboardData?.character?.pkLevel ?? 0} />
                 <DashRow label="Số Reset" value={selectedCharacter?.resetCount ?? dashboardData?.character?.resetCount ?? 0} valueClass="we-dash-value--accent" />

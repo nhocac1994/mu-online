@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import siteConfigStatic from '@/config/site.config.json';
 import { getSiteConfig, getEventsConfig, type SiteConfig, type EventConfig } from '@/lib/config-api';
+import ClassIcon from '@/components/ClassIcon';
 
 interface PlayerRow {
   character: string;
@@ -12,12 +13,6 @@ interface PlayerRow {
   score?: number;
   level?: number | null;
 }
-
-const CLASS_SHORT: Record<number, string> = {
-  0: 'DW', 1: 'SM', 2: 'GM', 16: 'DK', 17: 'BK', 18: 'BM',
-  32: 'FE', 33: 'ME', 34: 'HE', 48: 'MG', 50: 'DL', 64: 'DL',
-  65: 'BS', 66: 'DM', 80: 'RF', 81: 'FM',
-};
 
 /** Tên hiển thị gọn (bỏ ngoặc vuông) */
 function eventDisplayName(name: string): string {
@@ -319,9 +314,7 @@ export default function Sidebar() {
                 {topPlayers.map((p, i) => (
                   <tr key={`${p.character}-${i}`}>
                     <td>
-                      <span className="we-class-badge" style={{ marginRight: 6, verticalAlign: 'middle' }}>
-                        {CLASS_SHORT[p.class] || '?'}
-                      </span>
+                      <ClassIcon classId={p.class} size={22} className="we-class-icon--inline" />
                       {p.character}
                     </td>
                     <td style={{ textAlign: 'right', fontWeight: 700 }}>{p.score ?? 0}</td>

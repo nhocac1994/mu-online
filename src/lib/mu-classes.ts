@@ -26,3 +26,36 @@ export const MU_CLASS_NAMES: Readonly<Record<number, string>> = {
 export function getMuClassName(classId: number): string {
   return MU_CLASS_NAMES[classId] ?? `Class ${classId}`;
 }
+
+/** Mã viết tắt 2 ký tự cho từng class (badge dự phòng khi không có icon). */
+export const MU_CLASS_SHORT: Readonly<Record<number, string>> = {
+  0: 'DW', 1: 'SM', 2: 'GM',
+  16: 'DK', 17: 'BK', 18: 'BM',
+  32: 'FE', 33: 'ME', 34: 'HE',
+  48: 'MG', 50: 'DL', 64: 'DL',
+  65: 'BS', 66: 'DM',
+  80: 'RF', 81: 'FM',
+  96: 'GL', 97: 'ML',
+};
+
+export function getMuClassShort(classId: number): string {
+  return MU_CLASS_SHORT[classId] ?? '?';
+}
+
+/**
+ * Icon class trong /public/icons. Chỉ có sẵn các dòng cơ bản:
+ * dw (DW/SM/GM), dk (DK/BK/BM), ef (FE/ME/HE), mg (MG), dl (DL).
+ * Trả về null nếu chưa có icon → dùng badge chữ thay thế.
+ */
+const MU_CLASS_ICON_BASE: Readonly<Record<number, string>> = {
+  0: 'dw', 1: 'dw', 2: 'dw',
+  16: 'dk', 17: 'dk', 18: 'dk',
+  32: 'ef', 33: 'ef', 34: 'ef',
+  48: 'mg',
+  50: 'dl', 64: 'dl',
+};
+
+export function getMuClassIcon(classId: number): string | null {
+  const base = MU_CLASS_ICON_BASE[classId];
+  return base ? `/icons/${base}.png` : null;
+}

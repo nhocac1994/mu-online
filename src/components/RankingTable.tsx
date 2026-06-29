@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { RANKING_LEVEL_FALLBACK } from '@/lib/ranking-fallback-data';
 import type { CharacterRankingRow } from '@/lib/ranking-api';
+import ClassIcon from '@/components/ClassIcon';
 
 function isSameRankingData(a: CharacterRankingRow[], b: CharacterRankingRow[]): boolean {
   if (a.length !== b.length) return false;
@@ -24,12 +25,6 @@ interface RankingTableProps {
   enableSearch?: boolean;
   embedded?: boolean;
 }
-
-const CLASS_SHORT: Record<number, string> = {
-  0: 'DW', 1: 'SM', 2: 'GM', 16: 'DK', 17: 'BK', 18: 'BM',
-  32: 'FE', 33: 'ME', 34: 'HE', 48: 'MG', 50: 'DL', 64: 'DL',
-  65: 'BS', 66: 'DM', 80: 'RF', 81: 'FM',
-};
 
 const SAMPLE_CHARACTERS: CharacterRankingRow[] = RANKING_LEVEL_FALLBACK.map((c) => ({
   account: c.account,
@@ -181,7 +176,7 @@ export default function RankingTable({
                   <td>{index + 1}</td>
                   <td>🇻🇳</td>
                   <td>
-                    <span className="we-class-badge">{CLASS_SHORT[char.class] || '?'}</span>
+                    <ClassIcon classId={char.class} />
                   </td>
                   <td className="char-name">
                     {char.character}

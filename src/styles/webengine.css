@@ -1061,6 +1061,31 @@
   border-radius: 2px;
 }
 
+/* Icon class (dw/dk/ef/mg/dl.png) */
+.we-class-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.we-class-icon--inline {
+  margin-right: 6px;
+}
+
+/* Dashboard: icon + tên lớp nhân vật trên một hàng */
+.we-dash-class {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.we-dash-class .we-class-icon {
+  width: 22px;
+  height: 22px;
+}
+
 /* Pagination */
 .we-pagination {
   display: flex;
