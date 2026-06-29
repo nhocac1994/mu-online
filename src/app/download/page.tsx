@@ -98,7 +98,7 @@ export default function DownloadPage() {
           </div>
         )}
 
-        <div className="we-box">
+        {/* <div className="we-box">
           <div className="we-box-head">Video hướng dẫn cài đặt game</div>
           <div className="we-box-body">
             <div className="we-video-wrap">
@@ -110,7 +110,7 @@ export default function DownloadPage() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </SubPageLayout>
       <Footer />
     </div>
